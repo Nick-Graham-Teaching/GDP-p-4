@@ -35,6 +35,7 @@ public class Movement : NetworkBehaviour
     private float velocity;
     private bool slow = false;
     private bool chaos = false;
+    private bool blind = false;
     
     private float timer = 0;
     private float delayTime = 10f;
@@ -140,6 +141,13 @@ public class Movement : NetworkBehaviour
 		bool canMove = GameObject.Find("Client").transform.Find("Player").GetComponent<Movement>().hostCanMove;
 		if (canMove) GameObject.Find("Client").transform.Find("Player").GetComponent<Movement>().hostCanMove = false;
 		else if (!canMove) GameObject.Find("Client").transform.Find("Player").GetComponent<Movement>().hostCanMove = true;
+		if (!hostCanMove)
+		{ 
+			if (isSprinting) isSprinting = false;
+			if (slow) slow = false;
+			if (chaos) chaos = false;
+			if (blind) blind = false;
+		}
 	}
 	
 	
@@ -191,19 +199,37 @@ public class Movement : NetworkBehaviour
 		GameObject.Find("Host").transform.Find("Player").transform.GetComponent<Movement>()
 			.chaos = true;
 	}
-
+	
+	/// <summary>
+	/// Acceleration
+	/// </summary>
 	[ServerRpc]
-	void UpdatePurifyChaosServerRpc()
+	void UpdateIsSprintingServerRpc()
 	{
-		PurifyChaosClientRpc();
+		IsSprintingClientRpc();
 	}
 
 	[ClientRpc]
-	void PurifyChaosClientRpc()
+	void IsSprintingClientRpc()
 	{
-		chaos = false;
+		isSprinting = true;
 	}
 
+	/// <summary>
+	/// Blind
+	/// </summary>
+	[ServerRpc]
+	void UpdateBlindServerRpc()
+	{
+		BlindClientRpc();
+	}
+
+	[ClientRpc]
+	void BlindClientRpc()
+	{
+		GameObject.Find("Host").transform.Find("Camera").transform.GetComponent<Camera>().fieldOfView = 10f;
+	}
+	
 	/// <summary>
 	/// Update movement status
 	/// </summary>
@@ -244,7 +270,7 @@ public class Movement : NetworkBehaviour
 			anim.SetFloat("Direction", direction);
 
 			// set sprinting
-			isSprinting = ((Input.GetKey(sprintJoystick) || Input.GetKey(sprintKeyboard)) && input != Vector2.zero && direction >= 0f);
+			//isSprinting = ((Input.GetKey(sprintJoystick) || Input.GetKey(sprintKeyboard)) && input != Vector2.zero && direction >= 0f);
 			anim.SetBool("isSprinting", isSprinting);
 
 			// Update target direction relative to the camera view (or not if the Keep Direction option is checked)
@@ -306,11 +332,12 @@ public class Movement : NetworkBehaviour
 					UpdatePurifySlowServerRpc();
 					Debug.Log("Purify slow");
 				}
-
-				if (Input.GetKeyDown(KeyCode.T) && chaos)
+				
+				// Accelerate
+				if (Input.GetKeyDown(KeyCode.Space))
 				{
-					UpdatePurifyChaosServerRpc();
-					Debug.Log("Purify chaos");
+					UpdateIsSprintingServerRpc();
+					Debug.Log("Sprinting");
 				}
 			}
 
@@ -357,6 +384,12 @@ public class Movement : NetworkBehaviour
 				{
 					Debug.Log("Chaos pressed");
 					UpdateChaosStatusServerRpc();
+				}
+				
+				// blind
+				if (Input.GetKeyDown(KeyCode.Y))
+				{
+					Debug.Log("Blind pressed");
 				}
 			}
 		}

@@ -941,7 +941,6 @@ MonoBehaviour:
   turnSpeed: 10
   sprintJoystick: 332
   sprintKeyboard: 32
-  slow: 1
 --- !u!1 &2524713471688813573
 GameObject:
   m_ObjectHideFlags: 0
@@ -2882,7 +2881,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 40
   orthographic: 0
   orthographic size: 5
   m_Depth: 0
