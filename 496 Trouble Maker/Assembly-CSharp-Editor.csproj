@@ -41,9 +41,6 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\MapMagic\Compatibility\RTP\Editor\RTPEditor.cs" />
-     <Compile Include="Assets\MapMagic\Compatibility\MegaSplat\Editor\MegaSplatEditor.cs" />
-     <Compile Include="Assets\MapMagic\Compatibility\CTS\Editor\CTSEditor.cs" />
      <Compile Include="Assets\ScreenLogger\Editor\ScreenLoggerEditor.cs" />
      <Reference Include="UnityEngine">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.11f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
@@ -855,25 +852,9 @@
       <Project>{e3c34705-08fa-b495-1078-c1f3ae68b439}</Project>
       <Name>Assembly-CSharp</Name>
     </ProjectReference>
-    <ProjectReference Include="Den.Tools.Editor.csproj">
-      <Project>{72766d3c-01a0-c8bc-e972-0a6bc6d6b09d}</Project>
-      <Name>Den.Tools.Editor</Name>
-    </ProjectReference>
     <ProjectReference Include="AimingRig.csproj">
       <Project>{4c7ec864-148b-48a4-0ed7-d0437c9ad553}</Project>
       <Name>AimingRig</Name>
-    </ProjectReference>
-    <ProjectReference Include="MapMagic.csproj">
-      <Project>{612c5eda-4e13-40ed-a373-324316e3aabb}</Project>
-      <Name>MapMagic</Name>
-    </ProjectReference>
-    <ProjectReference Include="Den.Tools.csproj">
-      <Project>{0981e06a-3c32-b300-7569-d3271d52a719}</Project>
-      <Name>Den.Tools</Name>
-    </ProjectReference>
-    <ProjectReference Include="MapMagic.Editor.csproj">
-      <Project>{d414df91-0220-bcba-2cdb-00f153392912}</Project>
-      <Name>MapMagic.Editor</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

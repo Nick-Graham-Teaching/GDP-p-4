@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using Den.Tools;
 using UnityEngine;
 using Unity.Netcode;
 using UnityEngine.UIElements;
@@ -10,7 +9,9 @@ public class GameManager : MonoBehaviour
     public bool begin = false;
     private Transform cSpawnTransform;
     private Transform notCspawnTransform;
-    
+    private Transform mazePos;
+    public GameObject maze;
+
     private float timer = 0;
     private float delayTime = 5.0f;
 
@@ -26,12 +27,19 @@ public class GameManager : MonoBehaviour
     {
         get{return notCspawnTransform.position;}
     }
+
+    public GameObject CreateMaze()
+    {
+        return Instantiate(maze, mazePos.position, default);
+    }
+    
     // Start is called before the first frame update
     void Start()
     {
         instance = this;
         cSpawnTransform = transform.Find("Cube");
         notCspawnTransform = transform.Find("Overview");
+        mazePos = GameObject.Find("Ground").transform;
         camera = transform.Find("Main Camera").gameObject;
     }
 
@@ -56,27 +64,7 @@ public class GameManager : MonoBehaviour
                 NetworkManager.Singleton.StartClient();
             }
         }
-
-        if (Input.GetKeyDown(KeyCode.T))
-        {
-            Debug.Log("Begin");
-            begin = true;
-        }
-
-        if (begin)
-        {
-            timer += Time.deltaTime;
-            if (timer > delayTime)
-            {
-                GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
-                foreach (var g in players)
-                {
-                    g.GetComponent<Player>().ChangeTurn();
-                }
-                timer = 0;
-                //Debug.Log("Change");
-            }
-        }
+        
     }
     
     public void CloseCamera()

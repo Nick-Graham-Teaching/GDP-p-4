@@ -7,6 +7,8 @@ using Unity.VisualScripting;
 public class Player : NetworkBehaviour
 {
     private Transform player;
+    private float timer = 0;
+    private float delayTime = 5.0f;
     
     // Start is called before the first frame update
     void Start()
@@ -26,27 +28,27 @@ public class Player : NetworkBehaviour
 
         if (IsHost)
         {
-            this.name = "Host";
+            name = "Host";
             player.position = GameManager.instance.ChallengerSpawnPos;
             player.GetComponent<Movement>().setIsCTrue();
             player.Find("Body").gameObject.SetActive(true);
             if (!IsLocalPlayer)
             {
                 player.Find("Body").gameObject.SetActive(false);
-                this.name = "Client";
+                name = "Client";
             }
             
         }
         else
         {
-            this.name = "Client";
+            name = "Client";
             player.position = GameManager.instance.ObsSpawnPos;
             player.GetComponent<Movement>().setIsCFalse();
             Destroy(player.GetComponent<Rigidbody>());
             if (!IsLocalPlayer)
             {
                 player.Find("Body").gameObject.SetActive(true);
-                this.name = "Host";
+                name = "Host";
             }
             
         }
@@ -56,25 +58,14 @@ public class Player : NetworkBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        
     }
     
     public void ChangeTurn()
     {
-        bool move = player.GetComponent<Movement>().getMove();
-        if (!move)
-        {
-            player.GetComponent<Movement>().setHostCanMove(true);
-            //Debug.Log(player.GetComponent<Movement>().slow);
-        }
-        else if(move)
-        {
-            player.GetComponent<Movement>().setHostCanMove(false);
-            //Debug.Log(player.GetComponent<Movement>().slow);
-        }
-        move = player.GetComponent<Movement>().getMove();
-        Debug.Log(this.name);
-        Debug.Log(move);
+        
     }
+
+    
     
 }

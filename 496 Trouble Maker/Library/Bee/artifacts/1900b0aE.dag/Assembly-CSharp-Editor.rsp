@@ -350,10 +350,6 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Cinemachine.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/com.unity.cinemachine.editor.ref.dll"
--r:"Library/Bee/artifacts/1900b0aE.dag/Den.Tools.Editor.ref.dll"
--r:"Library/Bee/artifacts/1900b0aE.dag/Den.Tools.ref.dll"
--r:"Library/Bee/artifacts/1900b0aE.dag/MapMagic.Editor.ref.dll"
--r:"Library/Bee/artifacts/1900b0aE.dag/MapMagic.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.Burst.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.Burst.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.Collections.ref.dll"
@@ -393,9 +389,6 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.TestRunner.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
-"Assets/MapMagic/Compatibility/CTS/Editor/CTSEditor.cs"
-"Assets/MapMagic/Compatibility/MegaSplat/Editor/MegaSplatEditor.cs"
-"Assets/MapMagic/Compatibility/RTP/Editor/RTPEditor.cs"
 "Assets/ScreenLogger/Editor/ScreenLoggerEditor.cs"
 -langversion:9.0
 

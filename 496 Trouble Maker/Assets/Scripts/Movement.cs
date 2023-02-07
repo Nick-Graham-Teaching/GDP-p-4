@@ -18,7 +18,7 @@ public class Movement : NetworkBehaviour
     public float turnSpeed = 10f;
     public KeyCode sprintJoystick = KeyCode.JoystickButton2;
     public KeyCode sprintKeyboard = KeyCode.Space;
-
+    
     private bool isC;
     private bool hostCanMove = true;
     private bool begin = false;
@@ -34,9 +34,10 @@ public class Movement : NetworkBehaviour
     private Camera mainCamera;
     private float velocity;
     private bool slow = false;
+    private bool chaos = false;
     
     private float timer = 0;
-    private float delayTime = 5.0f;
+    private float delayTime = 10f;
     
 	// Use this for initialization
 	void Start ()
@@ -61,15 +62,6 @@ public class Movement : NetworkBehaviour
 		isC = false;
 	}
 
-	public bool getMove()
-	{
-		return hostCanMove;
-	}
-	public void setHostCanMove(bool tf)
-	{
-		hostCanMove = tf;
-	}
-	
 	private void Update()
 	{
 		if (IsLocalPlayer)
@@ -92,8 +84,70 @@ public class Movement : NetworkBehaviour
 		syncRot.Value = rot;
 	}
 
+	/// <summary>
+	/// Game end
+	/// </summary>
 	[ServerRpc]
-	void UpdateSlowStatusServerRpc()
+	void UpdateGameStatusServerRpc()
+	{
+		GameStatusClientRpc();
+	}
+
+	[ClientRpc]
+	void GameStatusClientRpc()
+	{
+		hostCanMove = false;
+		GameObject.Find("Host").transform.Find("Player").transform.GetComponent<Movement>().begin = false;
+		GameObject.Find("Client").transform.Find("Player").transform.GetComponent<Movement>().begin = false;
+		GameObject.Find("Canvas").transform.Find("Timer").gameObject.SetActive(false);
+		Debug.Log("Game over, Challenger win!");
+	}
+	/// <summary>
+	///  Game Start
+	/// </summary>
+	[ServerRpc]
+	void UpdateBeginServerRpc()
+	{
+		BeginClientRpc();
+	}
+
+	[ClientRpc]
+	void BeginClientRpc()
+	{
+		begin = true;
+		GameObject.Find("Canvas").transform.Find("Timer").gameObject.SetActive(true);
+		GameObject.Find("Client").transform.Find("Player").GetComponent<Movement>().begin = true;
+		Debug.Log("Game Start");
+		GameObject maze = GameManager.instance.CreateMaze();
+		transform.position = maze.transform.Find("StartPos").transform.position;
+		GameObject.Find("Client").transform.position = maze.transform.Find("Overview").transform.position;
+	}
+	
+	/// <summary>
+	/// Change Turn
+	/// </summary>
+	[ServerRpc]
+	void UpdateTurnServerRpc()
+	{
+		TurnChangeClientRpc();
+	}
+
+	[ClientRpc]
+	void TurnChangeClientRpc()
+	{
+		if(hostCanMove) hostCanMove = false;
+		else if(!hostCanMove) hostCanMove = true;
+		bool canMove = GameObject.Find("Client").transform.Find("Player").GetComponent<Movement>().hostCanMove;
+		if (canMove) GameObject.Find("Client").transform.Find("Player").GetComponent<Movement>().hostCanMove = false;
+		else if (!canMove) GameObject.Find("Client").transform.Find("Player").GetComponent<Movement>().hostCanMove = true;
+	}
+	
+	
+	/// <summary>
+	/// Slow down
+	/// </summary>
+	[ServerRpc]
+	void UpdateSlowDownServerRpc()
 	{
 		SlowDownClientRpc();
 	}
@@ -104,10 +158,26 @@ public class Movement : NetworkBehaviour
 		if(IsOwner) return;
 		GameObject.Find("Host").transform.Find("Player").transform.GetComponent<Movement>()
 			.slow = true;
-		Debug.Log(transform.parent.name);
-		Debug.Log(slow);
+	}
+
+	/// <summary>
+	/// Purify Slow down
+	/// </summary>
+	[ServerRpc]
+	void UpdatePurifySlowServerRpc()
+	{
+		PurifySlowClientRpc();
+	}
+
+	[ClientRpc]
+	void PurifySlowClientRpc()
+	{
+		slow = false;
 	}
 	
+	/// <summary>
+	/// Update movement status
+	/// </summary>
 	void SyncInput()
 	{
 		anim.SetFloat("Speed", syncSpeed.Value);
@@ -117,6 +187,9 @@ public class Movement : NetworkBehaviour
 		transform.rotation = syncRot.Value;
 	}
 
+	/// <summary>
+	/// Basic Movement/Abilities
+	/// </summary>
 	void LocalInput()
 	{
 		if (isC) // Challenger
@@ -159,16 +232,51 @@ public class Movement : NetworkBehaviour
 
 				transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(euler), turnSpeed * turnSpeedMultiplier * Time.deltaTime);
 			}
-			if (hostCanMove&&slow)
-			{ transform.position += transform.forward * speed * Time.deltaTime * 0.5f; }
-
-			else if (hostCanMove&&!slow)
-			{ transform.position += transform.forward * speed * Time.deltaTime * 5;}
-
-			if (Input.GetKeyDown(KeyCode.K))
+			
+			// Game start
+			if (IsHost && Input.GetKeyDown(KeyCode.Alpha1))
 			{
-				Debug.Log(slow);
-				//slow = false;
+				UpdateBeginServerRpc();
+			}
+
+			// Change turn
+			if (begin)
+			{
+				timer += Time.deltaTime;
+				if (timer > delayTime)
+				{
+					UpdateTurnServerRpc();
+					timer = 0;
+				}
+			}
+
+			if (!hostCanMove)
+			{
+				transform.position += transform.forward * 0f;
+			}
+			else if (hostCanMove && slow)
+			{
+				transform.position += transform.forward * speed * Time.deltaTime * 0.5f;
+			}
+
+			else if (hostCanMove && chaos)
+			{
+				transform.position += transform.forward * speed * Time.deltaTime * -5;
+			}
+
+			else
+			{
+				transform.position += transform.forward * speed * Time.deltaTime * 5;
+			}
+
+			if (hostCanMove) // Avilites
+			{
+				// Purify slow down
+				if (Input.GetKeyDown(KeyCode.K)&&slow)
+				{
+					UpdatePurifySlowServerRpc();
+					Debug.Log("Purify slow");
+				}
 			}
 
 		}
@@ -206,16 +314,14 @@ public class Movement : NetworkBehaviour
 				if (Input.GetKeyDown(KeyCode.R)) 
 				{
 					Debug.Log("slow preesed!");
-					if (slow) { slow = false; }
-					else { slow = true; }
+					UpdateSlowDownServerRpc();
 				}
 			}
-			if (Input.GetKeyDown(KeyCode.R)) 
+
+			if (Input.GetKeyDown(KeyCode.Q))
 			{
-				Debug.Log("slow preesed!");
-				UpdateSlowStatusServerRpc();
+				Debug.Log(hostCanMove);
 			}
-			
 		}
 		
 		UpdateInputServerRpc(speed, direction, isSprinting, transform.position, transform.rotation);
@@ -245,5 +351,13 @@ public class Movement : NetworkBehaviour
             var right = transform.TransformDirection(Vector3.right);
             targetDirection = input.x * right + Mathf.Abs(input.y) * forward;
         }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+	    if (other.tag == "Finish")
+	    {
+		    UpdateGameStatusServerRpc();
+	    }
     }
 }
