@@ -174,7 +174,36 @@ public class Movement : NetworkBehaviour
 	{
 		slow = false;
 	}
-	
+
+	/// <summary>
+	/// Chaos
+	/// </summary>
+	[ServerRpc]
+	void UpdateChaosStatusServerRpc()
+	{
+		ChaosStatusClientRpc();
+	}
+
+	[ClientRpc]
+	void ChaosStatusClientRpc()
+	{
+		if(IsOwner) return;
+		GameObject.Find("Host").transform.Find("Player").transform.GetComponent<Movement>()
+			.chaos = true;
+	}
+
+	[ServerRpc]
+	void UpdatePurifyChaosServerRpc()
+	{
+		PurifyChaosClientRpc();
+	}
+
+	[ClientRpc]
+	void PurifyChaosClientRpc()
+	{
+		chaos = false;
+	}
+
 	/// <summary>
 	/// Update movement status
 	/// </summary>
@@ -269,13 +298,19 @@ public class Movement : NetworkBehaviour
 				transform.position += transform.forward * speed * Time.deltaTime * 5;
 			}
 
-			if (hostCanMove) // Avilites
+			if (hostCanMove) // Abilites
 			{
 				// Purify slow down
-				if (Input.GetKeyDown(KeyCode.K)&&slow)
+				if (Input.GetKeyDown(KeyCode.R)&&slow)
 				{
 					UpdatePurifySlowServerRpc();
 					Debug.Log("Purify slow");
+				}
+
+				if (Input.GetKeyDown(KeyCode.T) && chaos)
+				{
+					UpdatePurifyChaosServerRpc();
+					Debug.Log("Purify chaos");
 				}
 			}
 
@@ -308,19 +343,21 @@ public class Movement : NetworkBehaviour
 			Vector3 moveDirection = new Vector3(input.x, 0.0f, input.y);
 			transform.position += transform.forward * speed * Time.deltaTime * 5;
 
-			if (!hostCanMove)
+			if (!hostCanMove) // Abilities
 			{
 				// slow ability
 				if (Input.GetKeyDown(KeyCode.R)) 
 				{
-					Debug.Log("slow preesed!");
+					Debug.Log("slow pressed!");
 					UpdateSlowDownServerRpc();
 				}
-			}
 
-			if (Input.GetKeyDown(KeyCode.Q))
-			{
-				Debug.Log(hostCanMove);
+				// chaos ability
+				if (Input.GetKeyDown(KeyCode.T))
+				{
+					Debug.Log("Chaos pressed");
+					UpdateChaosStatusServerRpc();
+				}
 			}
 		}
 		
