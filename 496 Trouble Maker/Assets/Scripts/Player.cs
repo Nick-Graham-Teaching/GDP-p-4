@@ -30,7 +30,7 @@ public class Player : NetworkBehaviour
         {
             name = "Host";
             player.position = GameManager.instance.ChallengerSpawnPos;
-            player.GetComponent<Movement>().setIsCTrue();
+            player.GetComponent<Movement>().SetIsCTrue();
             player.Find("Body").gameObject.SetActive(true);
             player.transform.GetComponent<Collider>().enabled = true;
             if (!IsLocalPlayer)
@@ -45,7 +45,7 @@ public class Player : NetworkBehaviour
         {
             name = "Client";
             player.position = GameManager.instance.ObsSpawnPos;
-            player.GetComponent<Movement>().setIsCFalse();
+            player.GetComponent<Movement>().SetIsCFalse();
             Destroy(player.GetComponent<Rigidbody>());
             if (!IsLocalPlayer)
             {

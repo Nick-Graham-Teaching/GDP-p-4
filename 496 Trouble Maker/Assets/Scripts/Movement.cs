@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Cinemachine;
 using UnityEngine;
 using Unity.Netcode;
 using UnityEngine.PlayerLoop;
@@ -14,56 +15,48 @@ public class Movement : NetworkBehaviour
 	private NetworkVariable<Quaternion> syncRot = new NetworkVariable<Quaternion>();
 
 	public bool useCharacterForward = false;
-    public bool lockToCameraForward = false;
-    public float turnSpeed = 10f;
-    public KeyCode sprintJoystick = KeyCode.JoystickButton2;
-    public KeyCode sprintKeyboard = KeyCode.Space;
+	public bool lockToCameraForward = false;
+	public float turnSpeed = 10f;
+	public KeyCode sprintJoystick = KeyCode.JoystickButton2;
+	public KeyCode sprintKeyboard = KeyCode.Space;
 
-    private bool isC;
-    private bool hostCanMove = true;
-    private bool begin = false;
-    
-    private float turnSpeedMultiplier;
-    private float speed = 0f;
-    private float direction = 0f;
-    private bool isSprinting = false;
-    private Animator anim;
-    private Vector3 targetDirection;
-    private Vector2 input;
-    private Quaternion freeRotation;
-    private Camera mainCamera;
-    private float velocity;
-    private bool slow = false;
-    private bool chaos = false;
-    private bool blind = false;
-    private bool stun = false;
-    
-    private float timer = 0;
-    private float delayTime = 10f;
-    
+	private bool isC;
+	private bool hostCanMove = false;
+	private bool begin = false;
+	
+	private float turnSpeedMultiplier;
+	private float speed = 0f;
+	private float direction = 0f;
+	private bool isSprinting = false;
+	private Animator anim;
+	private Vector3 targetDirection;
+	private Vector2 input;
+	private Quaternion freeRotation;
+	private Camera mainCamera;
+	private float velocity;
+	private bool slow = false;
+	private bool chaos = false;
+	private bool blind = false;
+	private bool stun = false;
+	private bool GrowUp = false;
+	private Vector3 lastPos = new Vector3();
+	
+	private float timer = 0;
+	private float stunTimer = 0;
+	private float delayTime = 10f;
+	
 	// Use this for initialization
 	void Start ()
 	{
-	    anim = GetComponent<Animator>();
-	    mainCamera = transform.parent.Find("Camera").GetComponent<Camera>();
+		anim = GetComponent<Animator>();
+		mainCamera = transform.parent.Find("Camera").GetComponent<Camera>();
 	}
 
+
+	public void SetIsCTrue() { isC = true; }
+	public void SetIsCFalse() { isC = false; }
+	
 	// Update is called once per frame
-	void FixedUpdate ()
-	{
-		
-	}
-
-	public void setIsCTrue()
-	{
-		isC = true;
-	}
-
-	public void setIsCFalse()
-	{
-		isC = false;
-	}
-
 	private void Update()
 	{
 		if (IsLocalPlayer)
@@ -90,10 +83,7 @@ public class Movement : NetworkBehaviour
 	/// Game end
 	/// </summary>
 	[ServerRpc]
-	void UpdateGameStatusServerRpc()
-	{
-		GameStatusClientRpc();
-	}
+	void UpdateGameStatusServerRpc() { GameStatusClientRpc(); }
 
 	[ClientRpc]
 	void GameStatusClientRpc()
@@ -108,10 +98,7 @@ public class Movement : NetworkBehaviour
 	///  Game Start
 	/// </summary>
 	[ServerRpc]
-	void UpdateBeginServerRpc()
-	{
-		BeginClientRpc();
-	}
+	void UpdateBeginServerRpc() { BeginClientRpc(); }
 
 	[ClientRpc]
 	void BeginClientRpc()
@@ -129,10 +116,7 @@ public class Movement : NetworkBehaviour
 	/// Change Turn
 	/// </summary>
 	[ServerRpc]
-	void UpdateTurnServerRpc()
-	{
-		TurnChangeClientRpc();
-	}
+	void UpdateTurnServerRpc() { TurnChangeClientRpc(); }
 
 	[ClientRpc]
 	void TurnChangeClientRpc()
@@ -148,7 +132,15 @@ public class Movement : NetworkBehaviour
 			if (slow) slow = false;
 			if (chaos) chaos = false;
 			if (blind) blind = false;
+			if (GrowUp) GrowUp = false;
 		}
+		if (hostCanMove)
+		{
+			lastPos = GameObject.Find("Host").transform.Find("Player").transform.localPosition;
+			GameObject.Find("Client").transform.Find("Player").GetComponent<Movement>().lastPos = GameObject.Find("Host").
+				transform.Find("Player").transform.localPosition;
+		}
+		
 	}
 	
 	
@@ -156,10 +148,7 @@ public class Movement : NetworkBehaviour
 	/// Slow down
 	/// </summary>
 	[ServerRpc]
-	void UpdateSlowDownServerRpc()
-	{
-		SlowDownClientRpc();
-	}
+	void UpdateSlowDownServerRpc() { SlowDownClientRpc(); }
 
 	[ClientRpc]
 	public void SlowDownClientRpc()
@@ -173,25 +162,16 @@ public class Movement : NetworkBehaviour
 	/// Purify Slow down
 	/// </summary>
 	[ServerRpc]
-	void UpdatePurifySlowServerRpc()
-	{
-		PurifySlowClientRpc();
-	}
+	void UpdatePurifySlowServerRpc() { PurifySlowClientRpc(); }
 
 	[ClientRpc]
-	void PurifySlowClientRpc()
-	{
-		slow = false;
-	}
+	void PurifySlowClientRpc() { slow = false; }
 
 	/// <summary>
 	/// Chaos
 	/// </summary>
 	[ServerRpc]
-	void UpdateChaosStatusServerRpc()
-	{
-		ChaosStatusClientRpc();
-	}
+	void UpdateChaosStatusServerRpc() { ChaosStatusClientRpc(); }
 
 	[ClientRpc]
 	void ChaosStatusClientRpc()
@@ -205,40 +185,25 @@ public class Movement : NetworkBehaviour
 	/// Acceleration
 	/// </summary>
 	[ServerRpc]
-	void UpdateIsSprintingServerRpc()
-	{
-		IsSprintingClientRpc();
-	}
+	void UpdateIsSprintingServerRpc() { IsSprintingClientRpc(); }
 
 	[ClientRpc]
-	void IsSprintingClientRpc()
-	{
-		isSprinting = true;
-	}
+	void IsSprintingClientRpc() { isSprinting = true; }
 
 	/// <summary>
 	/// Blind
 	/// </summary>
 	[ServerRpc]
-	void UpdateBlindServerRpc()
-	{
-		BlindClientRpc();
-	}
+	void UpdateBlindServerRpc() { BlindClientRpc(); }
 
 	[ClientRpc]
-	void BlindClientRpc()
-	{
-		GameObject.Find("Host").transform.Find("Camera").transform.GetComponent<Camera>().fieldOfView = 10f;
-	}
+	void BlindClientRpc() { GameObject.Find("Host").transform.Find("Camera").transform.GetComponent<Camera>().fieldOfView = 10f; }
 
 	/// <summary>
-	///  Stun 
+	/// Stun 
 	/// </summary>
 	[ServerRpc]
-	void UpdateBeTrappedServerRpc(string str)
-	{
-		BeTrappedClientRpc(str);
-	}
+	void UpdateBeTrappedServerRpc(string str) { BeTrappedClientRpc(str); }
 
 	[ClientRpc]
 	void BeTrappedClientRpc(string str)
@@ -253,44 +218,61 @@ public class Movement : NetworkBehaviour
 	/// Stun over
 	/// </summary>
 	[ServerRpc]
-	void UpdateNotStunServerRpc()
-	{
-		NotStunClientRpc();
-	}
+	void UpdateNotStunServerRpc() { NotStunClientRpc(); }
 
 	[ClientRpc]
-	void NotStunClientRpc()
-	{
-		stun = false;
-	}
+	void NotStunClientRpc() { stun = false; }
 
-	[ServerRpc]
-	void UpdatePlaceTrapServerRpc(Vector3 point)
-	{
-		PlaceTrapClientRpc(point);
-	}
-
-	[ClientRpc]
-	void PlaceTrapClientRpc(Vector3 point)
-	{
-		GameManager.instance.CreateTrap(point);
-	}
-	
 	/// <summary>
-	/// Update movement status
+	/// Place trap
 	/// </summary>
+	/// <param name="point"></param>
+	[ServerRpc]
+	void UpdatePlaceTrapServerRpc(Vector3 point) { PlaceTrapClientRpc(point); }
+	
+
+	[ClientRpc]
+	void PlaceTrapClientRpc(Vector3 point) { GameManager.instance.CreateTrap(point); }
+
+	/// <summary>
+	/// Growing up
+	/// </summary>
+	[ServerRpc]
+	void UpdateGrowUpServerRpc()
+	{
+		GrowUpClientRpc();
+	}
+
+	[ClientRpc]
+	void GrowUpClientRpc()
+	{
+		GrowUp = true;
+	}
+
+	/// <summary>
+	/// Teleport
+	/// </summary>
+	/// <param name="pos"></param>
+	[ServerRpc] 
+	void UpdateTeleportServerRpc(Vector3 pos) { TeleportClientRpc(pos); }
+
+	[ClientRpc]
+	void TeleportClientRpc(Vector3 pos)
+	{
+		GameObject.Find("Host").transform.Find("Player").transform.localPosition = pos;
+	}
+
+
 	void SyncInput()
 	{
-		anim.SetFloat("Speed", syncSpeed.Value);
-		anim.SetFloat("Direction", syncDir.Value);
-		anim.SetBool("isSprinting", syncIsSp.Value);
-		transform.position = syncVec.Value;
-		transform.rotation = syncRot.Value;
+				anim.SetFloat("Speed", syncSpeed.Value);
+				anim.SetFloat("Direction", syncDir.Value);
+				anim.SetBool("isSprinting", syncIsSp.Value);
+				transform.position = syncVec.Value;
+				transform.rotation = syncRot.Value;
 	}
 
-	/// <summary>
-	/// Basic Movement/Abilities
-	/// </summary>
+
 	void LocalInput()
 	{
 		if (isC) // Challenger
@@ -299,9 +281,8 @@ public class Movement : NetworkBehaviour
 			input.y = Input.GetAxis("Vertical");
 
 			// set speed to both vertical and horizontal inputs
-			if (useCharacterForward)
-				speed = Mathf.Abs(input.x) + input.y;
-			else
+			if (useCharacterForward) speed = Mathf.Abs(input.x) + input.y;
+			else 
 				speed = Mathf.Abs(input.x) + Mathf.Abs(input.y);
 
 			speed = Mathf.Clamp(speed, 0f, 1f);
@@ -311,7 +292,7 @@ public class Movement : NetworkBehaviour
 			if (input.y < 0f && useCharacterForward)
 				direction = input.y;
 			else
-				direction = 0f;
+					direction = 0f;
 
 			anim.SetFloat("Direction", direction);
 
@@ -331,13 +312,15 @@ public class Movement : NetworkBehaviour
 				if (diferenceRotation < 0 || diferenceRotation > 0) eulerY = freeRotation.eulerAngles.y;
 				var euler = new Vector3(0, eulerY, 0);
 
-				transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(euler), turnSpeed * turnSpeedMultiplier * Time.deltaTime);
+				transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(euler),
+					turnSpeed * turnSpeedMultiplier * Time.deltaTime);
 			}
-			
+
 			// Game start
 			if (IsHost && Input.GetKeyDown(KeyCode.Alpha1))
 			{
 				UpdateBeginServerRpc();
+				UpdateTurnServerRpc();
 			}
 
 			// Change turn
@@ -351,13 +334,31 @@ public class Movement : NetworkBehaviour
 				}
 			}
 
+			// Be trapped
 			if (stun)
 			{
-				timer += Time.deltaTime;
-				if (timer > 4f)
+				stunTimer += Time.deltaTime;
+				if (stunTimer > 4f)
 				{
 					UpdateNotStunServerRpc();
+					stunTimer = 0;
 				}
+			}
+
+			// Grow up
+			if (GrowUp)
+			{
+				transform.parent.Find("PlayerCameraControl").GetComponent<CinemachineVirtualCamera>().m_Lens.FieldOfView = 80f;
+				transform.parent.Find("PlayerCameraControl").GetComponentInChildren<CinemachineFramingTransposer>().m_TrackedObjectOffset.y = 5;
+				transform.parent.Find("PlayerCameraControl").GetComponent<CinemachineVirtualCamera>()
+					.GetCinemachineComponent<CinemachineFramingTransposer>().m_CameraDistance = 6;
+			}
+			else
+			{
+				transform.parent.Find("PlayerCameraControl").GetComponent<CinemachineVirtualCamera>().m_Lens.FieldOfView = 40f;
+				transform.parent.Find("PlayerCameraControl").GetComponentInChildren<CinemachineFramingTransposer>().m_TrackedObjectOffset.y = 1.6f;
+				transform.parent.Find("PlayerCameraControl").GetComponent<CinemachineVirtualCamera>()
+					.GetCinemachineComponent<CinemachineFramingTransposer>().m_CameraDistance = 2.22f;
 			}
 
 			if (!hostCanMove)
@@ -373,7 +374,7 @@ public class Movement : NetworkBehaviour
 			{
 				transform.position += transform.forward * speed * Time.deltaTime * -3.5f;
 			}
-			
+
 			else if (hostCanMove && stun)
 			{
 				transform.position += transform.forward * 0f;
@@ -387,20 +388,26 @@ public class Movement : NetworkBehaviour
 			if (hostCanMove) // Abilites
 			{
 				// Purify slow down
-				if (Input.GetKeyDown(KeyCode.R)&&slow)
+				if (Input.GetKeyDown(KeyCode.R) && slow)
 				{
 					UpdatePurifySlowServerRpc();
 					Debug.Log("Purify slow");
 				}
-				
+
 				// Accelerate
 				if (Input.GetKeyDown(KeyCode.Space))
 				{
 					UpdateIsSprintingServerRpc();
 					Debug.Log("Sprinting");
 				}
+				
+				// Growing up
+				if (Input.GetKeyDown(KeyCode.G))
+				{
+					UpdateGrowUpServerRpc();
+					Debug.Log("Grow up");
+				}
 			}
-
 		}
 
 		if (!isC) // Obstructionists
@@ -452,7 +459,8 @@ public class Movement : NetworkBehaviour
 					Debug.Log("Blind pressed");
 				}
 
-				if (Input.GetMouseButtonUp(0)) 
+				// Trap
+				if (Input.GetMouseButtonUp(0))
 				{
 					Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 					RaycastHit hit;
@@ -462,53 +470,61 @@ public class Movement : NetworkBehaviour
 						Vector3 point = hit.point;
 						UpdatePlaceTrapServerRpc(point);
 					}
-					
+
 					Debug.Log("Placed trap");
+				}
+
+				// Teleport
+				if (Input.GetKeyDown(KeyCode.E))
+				{
+					UpdateTeleportServerRpc(lastPos);
+					Debug.Log("Teleport pressed");
 				}
 			}
 		}
-		
+
 		UpdateInputServerRpc(speed, direction, isSprinting, transform.position, transform.rotation);
 	}
 	
-    public virtual void UpdateTargetDirection()
-    {
-        if (!useCharacterForward)
-        {
-            turnSpeedMultiplier = 1f;
-            var forward = mainCamera.transform.TransformDirection(Vector3.forward);
-            forward.y = 0;
 
-            //get the right-facing direction of the referenceTransform
-            var right = mainCamera.transform.TransformDirection(Vector3.right);
+	public virtual void UpdateTargetDirection()
+	{
+		if (!useCharacterForward)
+		{
+			turnSpeedMultiplier = 1f;
+			var forward = mainCamera.transform.TransformDirection(Vector3.forward);
+			forward.y = 0;
 
-            // determine the direction the player will face based on input and the referenceTransform's right and forward directions
-            targetDirection = input.x * right + input.y * forward;
-        }
-        else
-        {
-            turnSpeedMultiplier = 0.2f;
-            var forward = transform.TransformDirection(Vector3.forward);
-            forward.y = 0;
+			//get the right-facing direction of the referenceTransform
+			var right = mainCamera.transform.TransformDirection(Vector3.right);
 
-            //get the right-facing direction of the referenceTransform
-            var right = transform.TransformDirection(Vector3.right);
-            targetDirection = input.x * right + Mathf.Abs(input.y) * forward;
-        }
-    }
+			// determine the direction the player will face based on input and the referenceTransform's right and forward directions
+			targetDirection = input.x * right + input.y * forward;
+		}
+		else
+		{
+			turnSpeedMultiplier = 0.2f;
+			var forward = transform.TransformDirection(Vector3.forward);
+			forward.y = 0;
 
-    private void OnTriggerEnter(Collider other)
-    {
-	    if (other.tag == "Finish")
-	    {
-		    UpdateGameStatusServerRpc();
-	    }
+			//get the right-facing direction of the referenceTransform
+			var right = transform.TransformDirection(Vector3.right);
+			targetDirection = input.x * right + Mathf.Abs(input.y) * forward;
+		}
+	}
 
-	    if (other.tag == "Trap")
-	    {
-		    UpdateBeTrappedServerRpc(other.name);
-		    Debug.Log("Stun");
-	    }
-    }
-    
+	private void OnTriggerEnter(Collider other)
+	{
+		if (other.tag == "Finish")
+		{
+			UpdateGameStatusServerRpc();
+		}
+
+		if (other.tag == "Trap")
+		{
+			UpdateBeTrappedServerRpc(other.name);
+			Debug.Log("Stun");
+		}
+	}
+	
 }
