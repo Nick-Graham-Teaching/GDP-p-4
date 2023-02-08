@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     private Transform notCspawnTransform;
     private Transform mazePos;
     public GameObject maze;
+    public GameObject trap;
 
     private float timer = 0;
     private float delayTime = 5.0f;
@@ -31,6 +32,11 @@ public class GameManager : MonoBehaviour
     public GameObject CreateMaze()
     {
         return Instantiate(maze, mazePos.position, default);
+    }
+
+    public void CreateTrap(Vector3 pos)
+    {
+        Instantiate(trap,pos, default);
     }
     
     // Start is called before the first frame update

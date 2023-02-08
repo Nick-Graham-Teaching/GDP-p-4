@@ -18,7 +18,7 @@ public class Movement : NetworkBehaviour
     public float turnSpeed = 10f;
     public KeyCode sprintJoystick = KeyCode.JoystickButton2;
     public KeyCode sprintKeyboard = KeyCode.Space;
-    
+
     private bool isC;
     private bool hostCanMove = true;
     private bool begin = false;
@@ -36,6 +36,7 @@ public class Movement : NetworkBehaviour
     private bool slow = false;
     private bool chaos = false;
     private bool blind = false;
+    private bool stun = false;
     
     private float timer = 0;
     private float delayTime = 10f;
@@ -229,6 +230,51 @@ public class Movement : NetworkBehaviour
 	{
 		GameObject.Find("Host").transform.Find("Camera").transform.GetComponent<Camera>().fieldOfView = 10f;
 	}
+
+	/// <summary>
+	///  Stun 
+	/// </summary>
+	[ServerRpc]
+	void UpdateBeTrappedServerRpc()
+	{
+		BeTrappedClientRpc();
+	}
+
+	[ClientRpc]
+	void BeTrappedClientRpc()
+	{
+		stun = true;
+		speed = 0f;
+		isSprinting = false;
+		Destroy(GameObject.Find("Trap").gameObject);
+	}
+
+	/// <summary>
+	/// Stun over
+	/// </summary>
+	[ServerRpc]
+	void UpdateNotStunServerRpc()
+	{
+		NotStunClientRpc();
+	}
+
+	[ClientRpc]
+	void NotStunClientRpc()
+	{
+		stun = false;
+	}
+
+	[ServerRpc]
+	void UpdatePlaceTrapServerRpc(Vector3 point)
+	{
+		PlaceTrapClientRpc(point);
+	}
+
+	[ClientRpc]
+	void PlaceTrapClientRpc(Vector3 point)
+	{
+		GameManager.instance.CreateTrap(point);
+	}
 	
 	/// <summary>
 	/// Update movement status
@@ -305,18 +351,32 @@ public class Movement : NetworkBehaviour
 				}
 			}
 
+			if (stun)
+			{
+				timer += Time.deltaTime;
+				if (timer > 4f)
+				{
+					UpdateNotStunServerRpc();
+				}
+			}
+
 			if (!hostCanMove)
 			{
 				transform.position += transform.forward * 0f;
 			}
 			else if (hostCanMove && slow)
 			{
-				transform.position += transform.forward * speed * Time.deltaTime * 0.5f;
+				transform.position += transform.forward * speed * Time.deltaTime * 2.5f;
 			}
 
 			else if (hostCanMove && chaos)
 			{
-				transform.position += transform.forward * speed * Time.deltaTime * -5;
+				transform.position += transform.forward * speed * Time.deltaTime * -3.5f;
+			}
+			
+			else if (hostCanMove && stun)
+			{
+				transform.position += transform.forward * 0f;
 			}
 
 			else
@@ -373,7 +433,7 @@ public class Movement : NetworkBehaviour
 			if (!hostCanMove) // Abilities
 			{
 				// slow ability
-				if (Input.GetKeyDown(KeyCode.R)) 
+				if (Input.GetKeyDown(KeyCode.R))
 				{
 					Debug.Log("slow pressed!");
 					UpdateSlowDownServerRpc();
@@ -385,11 +445,24 @@ public class Movement : NetworkBehaviour
 					Debug.Log("Chaos pressed");
 					UpdateChaosStatusServerRpc();
 				}
-				
+
 				// blind
 				if (Input.GetKeyDown(KeyCode.Y))
 				{
 					Debug.Log("Blind pressed");
+				}
+
+				if (Input.GetMouseButtonUp(0)) 
+				{
+					Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+					RaycastHit hit;
+					if (Physics.Raycast(ray, out hit))
+					{
+						Vector3 point = hit.point;
+						UpdatePlaceTrapServerRpc(point);
+					}
+					
+					Debug.Log("Placed trap");
 				}
 			}
 		}
@@ -429,5 +502,12 @@ public class Movement : NetworkBehaviour
 	    {
 		    UpdateGameStatusServerRpc();
 	    }
+
+	    if (other.tag == "Trap")
+	    {
+		    UpdateBeTrappedServerRpc();
+		    Debug.Log("Stun");
+	    }
     }
+    
 }

@@ -7,6 +7,7 @@ ScriptsOnlyBuild:
     - Movement
     - Player
     - TimeCounter
+    - Trap
     Cinemachine.dll:
     - Cinemachine.CinemachineBasicMultiChannelPerlin
     - Cinemachine.CinemachineBrain
@@ -161,23 +162,25 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 6842}
     - Class: 114
-      Script: {instanceID: 7144}
+      Script: {instanceID: 7146}
     - Class: 114
-      Script: {instanceID: 7194}
+      Script: {instanceID: 7196}
     - Class: 114
-      Script: {instanceID: 7838}
+      Script: {instanceID: 7840}
     - Class: 114
-      Script: {instanceID: 7954}
+      Script: {instanceID: 7956}
     - Class: 114
-      Script: {instanceID: 8598}
+      Script: {instanceID: 8600}
     - Class: 114
-      Script: {instanceID: 8742}
+      Script: {instanceID: 8744}
     - Class: 114
-      Script: {instanceID: 9848}
+      Script: {instanceID: 9850}
     - Class: 114
-      Script: {instanceID: 9984}
+      Script: {instanceID: 9986}
     - Class: 114
-      Script: {instanceID: 10066}
+      Script: {instanceID: 10068}
+    - Class: 114
+      Script: {instanceID: 28342}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1687,7 +1690,7 @@ ScriptsOnlyBuild:
     className: CinemachineBasicMultiChannelPerlin
   - hash:
       serializedVersion: 2
-      Hash: ce6213edaba60ff72ccf89a3ecbe05d5
+      Hash: 7e5feefb5a7919d5a9d86e5951b03d48
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameManager
@@ -1750,7 +1753,7 @@ ScriptsOnlyBuild:
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: CameraMove
+    className: Trap
   platform: 19
   scenePathNames:
   - Assets/Scenes/Main.unity

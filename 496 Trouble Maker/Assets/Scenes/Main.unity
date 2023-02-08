@@ -655,6 +655,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   begin: 0
   maze: {fileID: 2084405755742983989, guid: ab97d4363982b7b4c842079532bb25f0, type: 3}
+  trap: {fileID: 4539516752407736043, guid: ca80a75ef1d53a8478effea89c7b7e1b, type: 3}
 --- !u!114 &357715869
 MonoBehaviour:
   m_ObjectHideFlags: 0
