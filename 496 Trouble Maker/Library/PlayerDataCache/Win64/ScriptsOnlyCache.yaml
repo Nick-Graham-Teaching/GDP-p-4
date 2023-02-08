@@ -1342,7 +1342,7 @@ ScriptsOnlyBuild:
     className: BeforeAfterTestCommandState
   - hash:
       serializedVersion: 2
-      Hash: a95c0423ab6a9c60da5d4416a9bade24
+      Hash: dea3c7ab99e92694afa55a5f49a5216b
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Movement

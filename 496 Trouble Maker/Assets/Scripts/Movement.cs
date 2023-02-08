@@ -5,6 +5,7 @@ using Cinemachine;
 using UnityEngine;
 using Unity.Netcode;
 using UnityEngine.PlayerLoop;
+using Random = UnityEngine.Random;
 
 public class Movement : NetworkBehaviour
 {
@@ -38,12 +39,16 @@ public class Movement : NetworkBehaviour
 	private bool chaos = false;
 	private bool blind = false;
 	private bool stun = false;
-	private bool GrowUp = false;
+	private bool growUp = false;
+	private bool invisiable = false;
 	private Vector3 lastPos = new Vector3();
 	
 	private float timer = 0;
 	private float stunTimer = 0;
-	private float delayTime = 10f;
+	public float delayTime = 10f;
+	private float stunSpeed = 1f;
+	private float chaosSpeed = 1f;
+	private float slowSpeed = 1f;
 	
 	// Use this for initialization
 	void Start ()
@@ -132,9 +137,9 @@ public class Movement : NetworkBehaviour
 			if (slow) slow = false;
 			if (chaos) chaos = false;
 			if (blind) blind = false;
-			if (GrowUp) GrowUp = false;
+			if (growUp) growUp = false;
 		}
-		if (hostCanMove)
+		else if (hostCanMove)
 		{
 			lastPos = GameObject.Find("Host").transform.Find("Player").transform.localPosition;
 			GameObject.Find("Client").transform.Find("Player").GetComponent<Movement>().lastPos = GameObject.Find("Host").
@@ -162,10 +167,32 @@ public class Movement : NetworkBehaviour
 	/// Purify Slow down
 	/// </summary>
 	[ServerRpc]
-	void UpdatePurifySlowServerRpc() { PurifySlowClientRpc(); }
+	void UpdatePurifyServerRpc() { PurifyClientRpc(); }
 
 	[ClientRpc]
-	void PurifySlowClientRpc() { slow = false; }
+	void PurifyClientRpc()
+	{
+		if (IsOwner)
+		{ 
+			List<string> l = new List<string>();
+			if (stun) l.Add("stun");
+			if (slow) l.Add("slow");
+			if (blind) l.Add("blind");
+			if (chaos) l.Add("chaos");
+			if (l.Count == 0)
+			{
+				Debug.Log("No debuff found");
+				return;
+			}
+			int i = Random.Range(0, l.Count);
+			string debuff = l[i];
+			if (debuff == "stun") stun = false;
+			else if (debuff == "slow") slow = false;
+			else if (debuff == "blind") blind = false;
+			else if (debuff == "chaos")  chaos = false;
+			Debug.Log("Purify " + debuff);
+		}
+	}
 
 	/// <summary>
 	/// Chaos
@@ -246,9 +273,33 @@ public class Movement : NetworkBehaviour
 	[ClientRpc]
 	void GrowUpClientRpc()
 	{
-		GrowUp = true;
+		growUp = true;
 	}
 
+	/// Invisible
+	[ServerRpc]
+	void UpdateInvisibleServerRpc() { InvisibleClientRpc(); }
+
+	[ClientRpc]
+	void InvisibleClientRpc() 
+	{ 
+		transform.Find("Body").gameObject.SetActive(false);
+		invisiable = true;
+		GameObject.Find("Host").transform.Find("Player").GetComponent<Movement>().invisiable = true;
+	}
+	
+	/// Cancel Invisible
+	[ServerRpc]
+	void UpdateCancelInvisibleServerRpc(){ CancleInvisibleClientRpc(); }
+
+	[ClientRpc]
+	void CancleInvisibleClientRpc()
+	{
+		invisiable = false;
+		transform.Find("Body").gameObject.SetActive(true);
+	}
+	
+	
 	/// <summary>
 	/// Teleport
 	/// </summary>
@@ -262,14 +313,30 @@ public class Movement : NetworkBehaviour
 		GameObject.Find("Host").transform.Find("Player").transform.localPosition = pos;
 	}
 
+	/// <summary>
+	/// Increase time left this turn
+	/// </summary>
+	[ServerRpc]
+	void UpdateTimeServerRpc()
+	{
+		TimeClientRpc();
+	}
+
+	[ClientRpc]
+	void TimeClientRpc()
+	{
+		timer -= 5;
+		GameObject.Find("Client").transform.Find("Player").GetComponent<Movement>().timer -= 5;
+		GameObject.Find("Canvas").transform.Find("Timer").GetComponent<TimeCounter>().TimeIncreased();
+	}
 
 	void SyncInput()
 	{
-				anim.SetFloat("Speed", syncSpeed.Value);
-				anim.SetFloat("Direction", syncDir.Value);
-				anim.SetBool("isSprinting", syncIsSp.Value);
-				transform.position = syncVec.Value;
-				transform.rotation = syncRot.Value;
+		anim.SetFloat("Speed", syncSpeed.Value);
+		anim.SetFloat("Direction", syncDir.Value);
+		anim.SetBool("isSprinting", syncIsSp.Value);
+		transform.position = syncVec.Value;
+		transform.rotation = syncRot.Value;
 	}
 
 
@@ -297,7 +364,6 @@ public class Movement : NetworkBehaviour
 			anim.SetFloat("Direction", direction);
 
 			// set sprinting
-			//isSprinting = ((Input.GetKey(sprintJoystick) || Input.GetKey(sprintKeyboard)) && input != Vector2.zero && direction >= 0f);
 			anim.SetBool("isSprinting", isSprinting);
 
 			// Update target direction relative to the camera view (or not if the Keep Direction option is checked)
@@ -330,6 +396,8 @@ public class Movement : NetworkBehaviour
 				if (timer > delayTime)
 				{
 					UpdateTurnServerRpc();
+					Debug.Log(invisiable);
+					if(invisiable) UpdateCancelInvisibleServerRpc();
 					timer = 0;
 				}
 			}
@@ -343,10 +411,17 @@ public class Movement : NetworkBehaviour
 					UpdateNotStunServerRpc();
 					stunTimer = 0;
 				}
+				stunSpeed = 0f;
 			}
 
+			else if (!stun) stunSpeed = 1f;
+			if (slow) slowSpeed = 0.5f;
+			else if (!slow) slowSpeed = 1f;
+			if (chaos) chaosSpeed = -1f;
+			else if (!chaos) chaosSpeed = 1f;
+			
 			// Grow up
-			if (GrowUp)
+			if (growUp)
 			{
 				transform.parent.Find("PlayerCameraControl").GetComponent<CinemachineVirtualCamera>().m_Lens.FieldOfView = 80f;
 				transform.parent.Find("PlayerCameraControl").GetComponentInChildren<CinemachineFramingTransposer>().m_TrackedObjectOffset.y = 5;
@@ -365,33 +440,18 @@ public class Movement : NetworkBehaviour
 			{
 				transform.position += transform.forward * 0f;
 			}
-			else if (hostCanMove && slow)
-			{
-				transform.position += transform.forward * speed * Time.deltaTime * 2.5f;
-			}
-
-			else if (hostCanMove && chaos)
-			{
-				transform.position += transform.forward * speed * Time.deltaTime * -3.5f;
-			}
-
-			else if (hostCanMove && stun)
-			{
-				transform.position += transform.forward * 0f;
-			}
 
 			else
 			{
-				transform.position += transform.forward * speed * Time.deltaTime * 5;
+				transform.position += transform.forward * speed * Time.deltaTime * 5 * slowSpeed * chaosSpeed * stunSpeed;
 			}
 
 			if (hostCanMove) // Abilites
 			{
-				// Purify slow down
-				if (Input.GetKeyDown(KeyCode.R) && slow)
+				// Purify
+				if (Input.GetKeyDown(KeyCode.R))
 				{
-					UpdatePurifySlowServerRpc();
-					Debug.Log("Purify slow");
+					UpdatePurifyServerRpc();
 				}
 
 				// Accelerate
@@ -406,6 +466,20 @@ public class Movement : NetworkBehaviour
 				{
 					UpdateGrowUpServerRpc();
 					Debug.Log("Grow up");
+				}
+				
+				// Increase time
+				if (Input.GetKeyDown(KeyCode.T))
+				{
+					UpdateTimeServerRpc();
+					Debug.Log("Time increaed");
+				}
+				
+				// Invisable
+				if (Input.GetKeyDown(KeyCode.I))
+				{
+					UpdateInvisibleServerRpc();
+					Debug.Log("Invisible");
 				}
 			}
 		}
@@ -436,6 +510,11 @@ public class Movement : NetworkBehaviour
 
 			Vector3 moveDirection = new Vector3(input.x, 0.0f, input.y);
 			transform.position += transform.forward * speed * Time.deltaTime * 5;
+	
+			// always false
+			slow = false;
+			stun = false;
+			chaos = false;
 
 			if (!hostCanMove) // Abilities
 			{

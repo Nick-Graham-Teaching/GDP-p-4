@@ -8,11 +8,12 @@ public class TimeCounter : MonoBehaviour
 
     private Text txtTimer;
 
-    private float timer = 10;
+    private float timer;
     // Start is called before the first frame update
     void Start()
     {
         txtTimer = GetComponent<Text>();
+        timer = GameObject.Find("Host").transform.Find("Player").GetComponent<Movement>().delayTime;
     }
 
     // Update is called once per frame
@@ -28,7 +29,12 @@ public class TimeCounter : MonoBehaviour
         txtTimer.text = string.Format(time.ToString());
         if (timer <= 0)
         {
-            timer = 10;
+            timer = GameObject.Find("Host").transform.Find("Player").GetComponent<Movement>().delayTime;;
         }
+    }
+
+    public void TimeIncreased()
+    {
+        timer += 5;
     }
 }
