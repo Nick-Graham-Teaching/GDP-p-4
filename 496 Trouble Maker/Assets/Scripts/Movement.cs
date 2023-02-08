@@ -235,18 +235,18 @@ public class Movement : NetworkBehaviour
 	///  Stun 
 	/// </summary>
 	[ServerRpc]
-	void UpdateBeTrappedServerRpc()
+	void UpdateBeTrappedServerRpc(string str)
 	{
-		BeTrappedClientRpc();
+		BeTrappedClientRpc(str);
 	}
 
 	[ClientRpc]
-	void BeTrappedClientRpc()
+	void BeTrappedClientRpc(string str)
 	{
 		stun = true;
 		speed = 0f;
 		isSprinting = false;
-		Destroy(GameObject.Find("Trap").gameObject);
+		Destroy(GameObject.Find(str).gameObject);
 	}
 
 	/// <summary>
@@ -458,6 +458,7 @@ public class Movement : NetworkBehaviour
 					RaycastHit hit;
 					if (Physics.Raycast(ray, out hit))
 					{
+						// Debug.Log(hit.transform.parent.name);
 						Vector3 point = hit.point;
 						UpdatePlaceTrapServerRpc(point);
 					}
@@ -505,7 +506,7 @@ public class Movement : NetworkBehaviour
 
 	    if (other.tag == "Trap")
 	    {
-		    UpdateBeTrappedServerRpc();
+		    UpdateBeTrappedServerRpc(other.name);
 		    Debug.Log("Stun");
 	    }
     }
