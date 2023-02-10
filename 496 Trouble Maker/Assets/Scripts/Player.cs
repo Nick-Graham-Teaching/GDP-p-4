@@ -1,5 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Data;
+using System.Linq;
 using UnityEngine;
 using Unity.Netcode;
 using Unity.VisualScripting;
@@ -7,8 +10,7 @@ using Unity.VisualScripting;
 public class Player : NetworkBehaviour
 {
     private Transform player;
-    private float timer = 0;
-    private float delayTime = 5.0f;
+    //private bool full = true;
     
     // Start is called before the first frame update
     void Start()
@@ -18,6 +20,7 @@ public class Player : NetworkBehaviour
 
     public override void OnNetworkSpawn()
     {
+
         GameManager.instance.CloseCamera();
         player = transform.Find("Player");
         if (IsLocalPlayer)
@@ -28,6 +31,7 @@ public class Player : NetworkBehaviour
 
         if (IsHost)
         {
+
             name = "Host";
             player.position = GameManager.instance.ChallengerSpawnPos;
             player.GetComponent<Movement>().SetIsCTrue();
@@ -55,23 +59,25 @@ public class Player : NetworkBehaviour
                 player.Find("Skeleton").gameObject.SetActive(true);
                 player.transform.GetComponent<CapsuleCollider>().enabled = true;
                 name = "Host";
+                
             }
-            
         }
-
-        
     }
+
+    public override void OnNetworkDespawn()
+    {
+        Application.Quit();
+    }
+
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.Alpha2)&&IsHost)
+        {
+            foreach (var id in NetworkManager.ConnectedClientsIds)
+            {
+                Debug.Log(id);
+            }
+        }
     }
-    
-    public void ChangeTurn()
-    {
-        
-    }
-
-    
-    
 }

@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
 
     public static GameManager instance;
     GameObject camera;
+    
 
     public Vector3 ChallengerSpawnPos
     {
@@ -26,7 +27,7 @@ public class GameManager : MonoBehaviour
 
     public Vector3 ObsSpawnPos
     {
-        get{return notCspawnTransform.position;}
+        get { return notCspawnTransform.position; }
     }
 
     public GameObject CreateMaze()
@@ -36,9 +37,9 @@ public class GameManager : MonoBehaviour
 
     public void CreateTrap(Vector3 pos)
     {
-        Instantiate(trap,pos, default);
+        Instantiate(trap, pos, default);
     }
-    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -47,35 +48,50 @@ public class GameManager : MonoBehaviour
         notCspawnTransform = transform.Find("Overview");
         mazePos = GameObject.Find("Ground").transform;
         camera = transform.Find("Main Camera").gameObject;
+        NetworkManager.Singleton.NetworkConfig.ConnectionApproval = true;
+        NetworkManager.Singleton.ConnectionApprovalCallback = ApprovalCheck;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (!NetworkManager.Singleton.IsHost&&!NetworkManager.Singleton.IsClient)
+        if (Input.GetKeyDown(KeyCode.O))
         {
-            if (Input.GetKeyDown(KeyCode.O))
-            {
-                if (NetworkManager.Singleton.IsHost)
-                {
-                    //Debug.Log("There is already a server running");
-                    return;
-                }
-
-                NetworkManager.Singleton.StartHost();
-            }
-
-            if (Input.GetKeyDown(KeyCode.P))
-            {
-                NetworkManager.Singleton.StartClient();
-            }
+            NetworkManager.Singleton.StartHost();
         }
-        
+
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+
+            NetworkManager.Singleton.StartClient();
+        }
     }
-    
+
     public void CloseCamera()
     {
         camera.SetActive(false);
     }
-    
+
+    void ApprovalCheck(NetworkManager.ConnectionApprovalRequest request,
+        NetworkManager.ConnectionApprovalResponse response)
+    {
+        Debug.Log(NetworkManager.Singleton.ConnectedClientsList.Count);
+        if (NetworkManager.Singleton.ConnectedClientsList.Count > 1)
+        {
+            Debug.Log("Too much players");
+            response.Approved = false;
+        }
+        else
+        {
+            var clientId = request.ClientNetworkId;
+
+            // Additional connection data defined by user code
+            var connectionData = request.Payload;
+            response.Approved = true;
+            response.CreatePlayerObject = true;
+            response.PlayerPrefabHash = null;
+            response.Pending = false;
+        }
+    }
 }
+

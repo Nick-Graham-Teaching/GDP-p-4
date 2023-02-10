@@ -481,6 +481,7 @@ public class Movement : NetworkBehaviour
 					UpdateInvisibleServerRpc();
 					Debug.Log("Invisible");
 				}
+				
 			}
 		}
 
@@ -588,7 +589,7 @@ public class Movement : NetworkBehaviour
 
 			//get the right-facing direction of the referenceTransform
 			var right = transform.TransformDirection(Vector3.right);
-			targetDirection = input.x * right + Mathf.Abs(input.y) * forward;
+			targetDirection = input.x * right + Mathf.Abs(input.y) * forward; 
 		}
 	}
 
