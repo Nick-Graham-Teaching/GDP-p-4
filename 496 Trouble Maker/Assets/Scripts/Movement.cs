@@ -49,6 +49,7 @@ public class Movement : NetworkBehaviour
 	private float stunSpeed = 1f;
 	private float chaosSpeed = 1f;
 	private float slowSpeed = 1f;
+	public int turnCount = 15;
 	
 	// Use this for initialization
 	void Start ()
@@ -97,7 +98,7 @@ public class Movement : NetworkBehaviour
 		GameObject.Find("Host").transform.Find("Player").transform.GetComponent<Movement>().begin = false;
 		GameObject.Find("Client").transform.Find("Player").transform.GetComponent<Movement>().begin = false;
 		GameObject.Find("Canvas").transform.Find("Timer").gameObject.SetActive(false);
-		Debug.Log("Game over, Challenger win!");
+		Debug.Log("Game over");
 	}
 	/// <summary>
 	///  Game Start
@@ -299,10 +300,10 @@ public class Movement : NetworkBehaviour
 	/// Cancel Invisible
 	/// </summary>
 	[ServerRpc]
-	void UpdateCancelInvisibleServerRpc(){ CancleInvisibleClientRpc(); }
+	void UpdateCancelInvisibleServerRpc(){ CancelInvisibleClientRpc(); }
 
 	[ClientRpc]
-	void CancleInvisibleClientRpc()
+	void CancelInvisibleClientRpc()
 	{
 		invisiable = false;
 		transform.Find("Body").gameObject.SetActive(true);
@@ -407,6 +408,14 @@ public class Movement : NetworkBehaviour
 				{
 					UpdateTurnServerRpc();
 					timer = 0;
+					turnCount -= 1;
+				}
+
+				// Obstructionist win condition
+				if (turnCount == 0)
+				{
+					UpdateGameStatusServerRpc();
+					Debug.Log("Obstructionist Win");
 				}
 			}
 
@@ -494,7 +503,7 @@ public class Movement : NetworkBehaviour
 			}
 		}
 
-		if (!isC) // Obstructionists
+		if (!isC) // Obstructionist
 		{
 			// Camera Movement
 			input.x = Input.GetAxis("Horizontal");
@@ -525,6 +534,8 @@ public class Movement : NetworkBehaviour
 			slow = false;
 			stun = false;
 			chaos = false;
+			blind = false;
+			invisiable = false;
 
 			if (!hostCanMove) // Abilities
 			{
@@ -576,7 +587,9 @@ public class Movement : NetworkBehaviour
 		UpdateInputServerRpc(speed, direction, isSprinting, transform.position, transform.rotation);
 	}
 	
-
+	/// <summary>
+	/// Update camera direction to the player mouse position
+	/// </summary>
 	public virtual void UpdateTargetDirection()
 	{
 		if (!useCharacterForward)
@@ -605,11 +618,14 @@ public class Movement : NetworkBehaviour
 
 	private void OnTriggerEnter(Collider other)
 	{
+		// Challenger win condition
 		if (other.tag == "Finish")
 		{
 			UpdateGameStatusServerRpc();
+			Debug.Log("Challenger win");
 		}
-
+	
+		// Be trapped
 		if (other.tag == "Trap")
 		{
 			UpdateBeTrappedServerRpc(other.name);
