@@ -50,6 +50,7 @@ public class Movement : NetworkBehaviour
 	private float chaosSpeed = 1f;
 	private float slowSpeed = 1f;
 	public int turnCount = 15;
+	private int obstacleActivateNum = 0;
 	
 	// Use this for initialization
 	void Start ()
@@ -266,6 +267,20 @@ public class Movement : NetworkBehaviour
 
 	[ClientRpc]
 	void PlaceTrapClientRpc(Vector3 point) { GameManager.instance.CreateTrap(point); }
+
+	/// <summary>
+	/// Activate obstacle
+	/// </summary>
+	/// <param name="hit"></param>
+	[ServerRpc]
+	void UpdateObstacleServerRpc(string n) { ObstacleClientRpc(n); }
+
+	[ClientRpc]
+	void ObstacleClientRpc(string n)
+	{
+		if (GameManager.instance.CreateObstacle(n)) obstacleActivateNum += 1;
+		else if (GameManager.instance.CreateObstacle(n)) obstacleActivateNum += 0;
+	}
 
 	/// <summary>
 	/// Growing up
@@ -565,14 +580,24 @@ public class Movement : NetworkBehaviour
 				{
 					Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 					RaycastHit hit;
-					if (Physics.Raycast(ray, out hit))
+					if (Physics.Raycast(ray, out hit) && hit.transform.name == "Ground")
 					{
-						// Debug.Log(hit.transform.parent.name);
+						// Debug.Log(hit.transform.name);
 						Vector3 point = hit.point;
 						UpdatePlaceTrapServerRpc(point);
 					}
+				}
 
-					Debug.Log("Placed trap");
+				// Obstacle
+				if (Input.GetMouseButtonUp(1) && obstacleActivateNum < 1)
+				{
+					Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+					RaycastHit hit;
+					if (Physics.Raycast(ray, out hit)&& hit.transform.tag == "Obstacle")
+					{
+						string n = hit.transform.name;
+						UpdateObstacleServerRpc(n);
+					}
 				}
 
 				// Teleport
@@ -606,7 +631,7 @@ public class Movement : NetworkBehaviour
 		}
 		else
 		{
-			turnSpeedMultiplier = 0.2f;
+			turnSpeedMultiplier = 1f;
 			var forward = transform.TransformDirection(Vector3.forward);
 			forward.y = 0;
 

@@ -1345,7 +1345,7 @@ ScriptsOnlyBuild:
     className: BeforeAfterTestCommandState
   - hash:
       serializedVersion: 2
-      Hash: dea3c7ab99e92694afa55a5f49a5216b
+      Hash: eb73a6e9063375ba7a4818cf689a31a4
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Movement
@@ -1705,7 +1705,7 @@ ScriptsOnlyBuild:
     className: CinemachineBasicMultiChannelPerlin
   - hash:
       serializedVersion: 2
-      Hash: 7e5feefb5a7919d5a9d86e5951b03d48
+      Hash: bdb5c84d3b8c915ff8d2fc738493659d
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameManager

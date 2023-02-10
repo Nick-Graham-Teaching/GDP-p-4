@@ -942,6 +942,7 @@ MonoBehaviour:
   sprintJoystick: 332
   sprintKeyboard: 32
   delayTime: 10
+  turnCount: 15
 --- !u!1 &2524713471688813573
 GameObject:
   m_ObjectHideFlags: 0
@@ -2957,6 +2958,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blurShader: {fileID: 4800000, guid: 93c64840c49214c66ba1ecf06aa1604d, type: 3}
   blurMaterial: {fileID: 2100000, guid: cad782ddb7682124f9e38fa5d54d99ef, type: 2}
-  radius: 10
-  qualityIterations: 6
-  filter: 3
+  radius: 6.36
+  qualityIterations: 4
+  filter: 2
