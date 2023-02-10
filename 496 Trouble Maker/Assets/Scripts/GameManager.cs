@@ -75,7 +75,6 @@ public class GameManager : MonoBehaviour
     void ApprovalCheck(NetworkManager.ConnectionApprovalRequest request,
         NetworkManager.ConnectionApprovalResponse response)
     {
-        Debug.Log(NetworkManager.Singleton.ConnectedClientsList.Count);
         if (NetworkManager.Singleton.ConnectedClientsList.Count > 1)
         {
             Debug.Log("Too much players");

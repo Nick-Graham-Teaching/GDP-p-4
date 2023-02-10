@@ -136,14 +136,15 @@ public class Movement : NetworkBehaviour
 			if (isSprinting) isSprinting = false;
 			if (slow) slow = false;
 			if (chaos) chaos = false;
-			if (blind) blind = false;
 			if (growUp) growUp = false;
+			if (blind) blind = false;
 		}
 		else if (hostCanMove)
 		{
 			lastPos = GameObject.Find("Host").transform.Find("Player").transform.localPosition;
 			GameObject.Find("Client").transform.Find("Player").GetComponent<Movement>().lastPos = GameObject.Find("Host").
 				transform.Find("Player").transform.localPosition;
+			if (invisiable) invisiable = false;
 		}
 		
 	}
@@ -224,7 +225,11 @@ public class Movement : NetworkBehaviour
 	void UpdateBlindServerRpc() { BlindClientRpc(); }
 
 	[ClientRpc]
-	void BlindClientRpc() { GameObject.Find("Host").transform.Find("Camera").transform.GetComponent<Camera>().fieldOfView = 10f; }
+	void BlindClientRpc()
+	{
+		blind = true;
+		GameObject.Find("Host").transform.Find("Player").GetComponent<Movement>().blind = true;
+	}
 
 	/// <summary>
 	/// Stun 
@@ -276,7 +281,9 @@ public class Movement : NetworkBehaviour
 		growUp = true;
 	}
 
+	/// <summary>
 	/// Invisible
+	/// </summary>
 	[ServerRpc]
 	void UpdateInvisibleServerRpc() { InvisibleClientRpc(); }
 
@@ -288,7 +295,9 @@ public class Movement : NetworkBehaviour
 		GameObject.Find("Host").transform.Find("Player").GetComponent<Movement>().invisiable = true;
 	}
 	
+	/// <summary>
 	/// Cancel Invisible
+	/// </summary>
 	[ServerRpc]
 	void UpdateCancelInvisibleServerRpc(){ CancleInvisibleClientRpc(); }
 
@@ -297,6 +306,7 @@ public class Movement : NetworkBehaviour
 	{
 		invisiable = false;
 		transform.Find("Body").gameObject.SetActive(true);
+		GameObject.Find("Host").transform.Find("Player").GetComponent<Movement>().invisiable = false;
 	}
 	
 	
@@ -396,8 +406,6 @@ public class Movement : NetworkBehaviour
 				if (timer > delayTime)
 				{
 					UpdateTurnServerRpc();
-					Debug.Log(invisiable);
-					if(invisiable) UpdateCancelInvisibleServerRpc();
 					timer = 0;
 				}
 			}
@@ -428,6 +436,7 @@ public class Movement : NetworkBehaviour
 				transform.parent.Find("PlayerCameraControl").GetComponent<CinemachineVirtualCamera>()
 					.GetCinemachineComponent<CinemachineFramingTransposer>().m_CameraDistance = 6;
 			}
+			
 			else
 			{
 				transform.parent.Find("PlayerCameraControl").GetComponent<CinemachineVirtualCamera>().m_Lens.FieldOfView = 40f;
@@ -436,15 +445,15 @@ public class Movement : NetworkBehaviour
 					.GetCinemachineComponent<CinemachineFramingTransposer>().m_CameraDistance = 2.22f;
 			}
 
-			if (!hostCanMove)
-			{
-				transform.position += transform.forward * 0f;
-			}
+			// Blind
+			if (blind) GameObject.Find("Host").transform.Find("Camera").GetComponent<Blur>().enabled = true; 
+			else GameObject.Find("Host").transform.Find("Camera").GetComponent<Blur>().enabled = false;
+			
+			if(!invisiable) UpdateCancelInvisibleServerRpc();
 
-			else
-			{
-				transform.position += transform.forward * speed * Time.deltaTime * 5 * slowSpeed * chaosSpeed * stunSpeed;
-			}
+			if (!hostCanMove) transform.position += transform.forward * 0f;
+
+			else transform.position += transform.forward * speed * Time.deltaTime * 5 * slowSpeed * chaosSpeed * stunSpeed;
 
 			if (hostCanMove) // Abilites
 			{
@@ -536,6 +545,7 @@ public class Movement : NetworkBehaviour
 				// blind
 				if (Input.GetKeyDown(KeyCode.Y))
 				{
+					UpdateBlindServerRpc();
 					Debug.Log("Blind pressed");
 				}
 

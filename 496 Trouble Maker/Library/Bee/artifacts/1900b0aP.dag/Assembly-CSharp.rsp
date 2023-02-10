@@ -357,6 +357,7 @@
 "Assets/ScreenLogger/Example/Scripts/Rotator.cs"
 "Assets/ScreenLogger/Example/Scripts/Test.cs"
 "Assets/ScreenLogger/ScreenLogger.cs"
+"Assets/Scripts/Blur.cs"
 "Assets/Scripts/GameManager.cs"
 "Assets/Scripts/Maze.cs"
 "Assets/Scripts/Movement.cs"

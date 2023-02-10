@@ -2,6 +2,7 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - AClockworkBerry.ScreenLogger
+    - Blur
     - GameManager
     - Maze
     - Movement
@@ -126,61 +127,63 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 2256}
+      Script: {instanceID: 2264}
     - Class: 114
-      Script: {instanceID: 2462}
+      Script: {instanceID: 2470}
     - Class: 114
-      Script: {instanceID: 2520}
+      Script: {instanceID: 2528}
     - Class: 114
-      Script: {instanceID: 2926}
+      Script: {instanceID: 2934}
     - Class: 114
-      Script: {instanceID: 3016}
+      Script: {instanceID: 3024}
     - Class: 114
-      Script: {instanceID: 3110}
+      Script: {instanceID: 3118}
     - Class: 114
-      Script: {instanceID: 3286}
+      Script: {instanceID: 3294}
     - Class: 114
-      Script: {instanceID: 4234}
+      Script: {instanceID: 4242}
     - Class: 114
-      Script: {instanceID: 4380}
+      Script: {instanceID: 4388}
     - Class: 114
-      Script: {instanceID: 4904}
+      Script: {instanceID: 4912}
     - Class: 114
-      Script: {instanceID: 4918}
+      Script: {instanceID: 4926}
     - Class: 114
-      Script: {instanceID: 5066}
+      Script: {instanceID: 5074}
     - Class: 114
-      Script: {instanceID: 5370}
+      Script: {instanceID: 5378}
     - Class: 114
-      Script: {instanceID: 5428}
+      Script: {instanceID: 5436}
     - Class: 114
-      Script: {instanceID: 5554}
+      Script: {instanceID: 5562}
     - Class: 114
-      Script: {instanceID: 6424}
+      Script: {instanceID: 6432}
     - Class: 114
-      Script: {instanceID: 6462}
+      Script: {instanceID: 6470}
     - Class: 114
-      Script: {instanceID: 6766}
+      Script: {instanceID: 6774}
     - Class: 114
-      Script: {instanceID: 6844}
+      Script: {instanceID: 6852}
     - Class: 114
-      Script: {instanceID: 7146}
+      Script: {instanceID: 7154}
     - Class: 114
-      Script: {instanceID: 7196}
+      Script: {instanceID: 7204}
     - Class: 114
-      Script: {instanceID: 7840}
+      Script: {instanceID: 7848}
     - Class: 114
-      Script: {instanceID: 7956}
+      Script: {instanceID: 7964}
     - Class: 114
-      Script: {instanceID: 8600}
+      Script: {instanceID: 8608}
     - Class: 114
-      Script: {instanceID: 8744}
+      Script: {instanceID: 8752}
     - Class: 114
-      Script: {instanceID: 9850}
+      Script: {instanceID: 9612}
     - Class: 114
-      Script: {instanceID: 9986}
+      Script: {instanceID: 9860}
     - Class: 114
-      Script: {instanceID: 10068}
+      Script: {instanceID: 9996}
+    - Class: 114
+      Script: {instanceID: 10078}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1610,6 +1613,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Test
+  - hash:
+      serializedVersion: 2
+      Hash: f491cdb28b526e4f02c5fc2df16669cf
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Blur
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
