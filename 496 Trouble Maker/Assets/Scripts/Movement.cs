@@ -1,11 +1,17 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Net.WebSockets;
+using System.Numerics;
 using Cinemachine;
+using Unity.Mathematics;
 using UnityEngine;
 using Unity.Netcode;
 using UnityEngine.PlayerLoop;
+using Quaternion = UnityEngine.Quaternion;
 using Random = UnityEngine.Random;
+using Vector2 = UnityEngine.Vector2;
+using Vector3 = UnityEngine.Vector3;
 
 public class Movement : NetworkBehaviour
 {
@@ -40,7 +46,7 @@ public class Movement : NetworkBehaviour
 	private bool blind = false;
 	private bool stun = false;
 	private bool growUp = false;
-	private bool invisiable = false;
+	private bool invisible = false;
 	private Vector3 lastPos = new Vector3();
 	
 	private float timer = 0;
@@ -117,6 +123,7 @@ public class Movement : NetworkBehaviour
 		GameObject maze = GameManager.instance.CreateMaze();
 		transform.position = maze.transform.Find("StartPos").transform.position;
 		GameObject.Find("Client").transform.position = maze.transform.Find("Overview").transform.position;
+		
 	}
 	
 	/// <summary>
@@ -146,7 +153,7 @@ public class Movement : NetworkBehaviour
 			lastPos = GameObject.Find("Host").transform.Find("Player").transform.localPosition;
 			GameObject.Find("Client").transform.Find("Player").GetComponent<Movement>().lastPos = GameObject.Find("Host").
 				transform.Find("Player").transform.localPosition;
-			if (invisiable) invisiable = false;
+			if (invisible) invisible = false;
 		}
 		
 	}
@@ -269,6 +276,25 @@ public class Movement : NetworkBehaviour
 	void PlaceTrapClientRpc(Vector3 point) { GameManager.instance.CreateTrap(point); }
 
 	/// <summary>
+	/// Create Marks
+	/// </summary>
+	[ServerRpc]
+	void UpdateMarkServerRpc(Vector3 pos) { MarkClientRpc(pos); }
+
+	[ClientRpc]
+	void MarkClientRpc(Vector3 pos) { GameManager.instance.CreateMark(pos); }
+
+	
+	/// <summary>
+	/// Erase all Challenger's mark
+	/// </summary>
+	[ServerRpc]
+	void UpdateEraseMarkServerRpc() { EraseMarkClientRpc(); }
+
+	[ClientRpc]
+	void EraseMarkClientRpc() { GameManager.instance.EraseMarks(); }
+	
+	/// <summary>
 	/// Activate obstacle
 	/// </summary>
 	/// <param name="hit"></param>
@@ -307,8 +333,8 @@ public class Movement : NetworkBehaviour
 	void InvisibleClientRpc() 
 	{ 
 		transform.Find("Body").gameObject.SetActive(false);
-		invisiable = true;
-		GameObject.Find("Host").transform.Find("Player").GetComponent<Movement>().invisiable = true;
+		invisible = true;
+		GameObject.Find("Host").transform.Find("Player").GetComponent<Movement>().invisible = true;
 	}
 	
 	/// <summary>
@@ -320,9 +346,9 @@ public class Movement : NetworkBehaviour
 	[ClientRpc]
 	void CancelInvisibleClientRpc()
 	{
-		invisiable = false;
+		invisible = false;
 		transform.Find("Body").gameObject.SetActive(true);
-		GameObject.Find("Host").transform.Find("Player").GetComponent<Movement>().invisiable = false;
+		GameObject.Find("Host").transform.Find("Player").GetComponent<Movement>().invisible = false;
 	}
 	
 	
@@ -411,8 +437,17 @@ public class Movement : NetworkBehaviour
 			// Game start
 			if (IsHost && Input.GetKeyDown(KeyCode.Alpha1))
 			{
-				UpdateBeginServerRpc();
-				UpdateTurnServerRpc();
+				if (GameObject.Find("Client"))
+				{
+					UpdateBeginServerRpc();
+					UpdateTurnServerRpc();
+				}
+				else
+				{
+					//GameManager.instance.CreateMaze();
+					//hostCanMove = true;
+					Debug.Log("No Obstructionist enter the game, need one more player");
+				}
 			}
 
 			// Change turn
@@ -456,7 +491,7 @@ public class Movement : NetworkBehaviour
 			if (growUp)
 			{
 				transform.parent.Find("PlayerCameraControl").GetComponent<CinemachineVirtualCamera>().m_Lens.FieldOfView = 80f;
-				transform.parent.Find("PlayerCameraControl").GetComponentInChildren<CinemachineFramingTransposer>().m_TrackedObjectOffset.y = 5;
+				transform.parent.Find("PlayerCameraControl").GetComponentInChildren<CinemachineFramingTransposer>().m_TrackedObjectOffset.y = 6;
 				transform.parent.Find("PlayerCameraControl").GetComponent<CinemachineVirtualCamera>()
 					.GetCinemachineComponent<CinemachineFramingTransposer>().m_CameraDistance = 6;
 			}
@@ -473,7 +508,7 @@ public class Movement : NetworkBehaviour
 			if (blind) GameObject.Find("Host").transform.Find("Camera").GetComponent<Blur>().enabled = true; 
 			else GameObject.Find("Host").transform.Find("Camera").GetComponent<Blur>().enabled = false;
 			
-			if(!invisiable) UpdateCancelInvisibleServerRpc();
+			if(!invisible) UpdateCancelInvisibleServerRpc();
 
 			if (!hostCanMove) transform.position += transform.forward * 0f;
 
@@ -515,42 +550,32 @@ public class Movement : NetworkBehaviour
 					Debug.Log("Invisible");
 				}
 				
+				// Mark
+				if (Input.GetMouseButtonUp(0))
+				{
+					Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+					RaycastHit hit;
+					if (Physics.Raycast(ray, out hit) && hit.transform.name != "Host")
+					{
+						Vector3 point = hit.point;
+						UpdateMarkServerRpc(point);
+						Debug.Log("Mark on");
+					}
+				}
 			}
 		}
 
 		if (!isC) // Obstructionist
 		{
 			// Camera Movement
-			input.x = Input.GetAxis("Horizontal");
-			input.y = Input.GetAxis("Vertical");
-			if (useCharacterForward)
-				speed = Mathf.Abs(input.x) + input.y;
-			else
-				speed = Mathf.Abs(input.x) + Mathf.Abs(input.y);
-			UpdateTargetDirection();
-			if (input != Vector2.zero && targetDirection.magnitude > 0.1f)
-			{
-				Vector3 lookDirection = targetDirection.normalized;
-				freeRotation = Quaternion.LookRotation(lookDirection, transform.up);
-				var diferenceRotation = freeRotation.eulerAngles.y - transform.eulerAngles.y;
-				var eulerY = transform.eulerAngles.y;
-
-				if (diferenceRotation < 0 || diferenceRotation > 0) eulerY = freeRotation.eulerAngles.y;
-				var euler = new Vector3(0, eulerY, 0);
-
-				transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(euler),
-					turnSpeed * turnSpeedMultiplier * Time.deltaTime);
-			}
-
-			Vector3 moveDirection = new Vector3(input.x, 0.0f, input.y);
-			transform.position += transform.forward * speed * Time.deltaTime * 5;
+			UpdateDirection();
 	
 			// always false
 			slow = false;
 			stun = false;
 			chaos = false;
 			blind = false;
-			invisiable = false;
+			invisible = false;
 
 			if (!hostCanMove) // Abilities
 			{
@@ -606,6 +631,13 @@ public class Movement : NetworkBehaviour
 					UpdateTeleportServerRpc(lastPos);
 					Debug.Log("Teleport pressed");
 				}
+
+				// Erase marks
+				if (Input.GetKeyDown(KeyCode.F))
+				{
+					UpdateEraseMarkServerRpc();
+					Debug.Log("Erase challenger's mark");
+				}
 			}
 		}
 
@@ -655,6 +687,37 @@ public class Movement : NetworkBehaviour
 		{
 			UpdateBeTrappedServerRpc(other.name);
 			Debug.Log("Stun");
+		}
+	}
+
+	void UpdateDirection()
+	{
+		
+		float h = Input.GetAxis("Horizontal");
+		float v = Input.GetAxis("Vertical");
+		float X = Input.GetAxis("Mouse X") * 2;
+		float Y = Input.GetAxis("Mouse Y") * 2;
+		Vector3 camerSpeed = new Vector3(h, 0, v);
+		mainCamera.GetComponent<Rigidbody>().velocity = camerSpeed * 10;
+		mainCamera.transform.localRotation *= Quaternion.Euler(-Y, 0, 0);
+		//transform.parent.Find("Camera").transform.localRotation *= Quaternion.Euler(0, X, 0);
+
+			
+		
+		if (Input.GetAxis("Mouse ScrollWheel") < 0)
+		{
+			if (mainCamera.fieldOfView <= 100)
+				mainCamera.fieldOfView += 2;
+			if (mainCamera.orthographicSize <= 20)
+				mainCamera.orthographicSize += 0.5F;
+		}
+		//Zoom in
+		if (Input.GetAxis("Mouse ScrollWheel") > 0)
+		{
+			if (mainCamera.fieldOfView > 2)
+				mainCamera.fieldOfView -= 2;
+			if (mainCamera.orthographicSize >= 1)
+				mainCamera.orthographicSize -= 0.5F;
 		}
 	}
 	

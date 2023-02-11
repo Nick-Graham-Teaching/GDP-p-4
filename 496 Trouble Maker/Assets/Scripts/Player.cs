@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using Cinemachine;
 using UnityEngine;
 using Unity.Netcode;
 using Unity.VisualScripting;
@@ -53,6 +54,7 @@ public class Player : NetworkBehaviour
             player.position = GameManager.instance.ObsSpawnPos;
             player.GetComponent<Movement>().SetIsCFalse();
             Destroy(player.GetComponent<Rigidbody>());
+            transform.Find("Camera").GetComponent<CinemachineBrain>().enabled = false;
             if (!IsLocalPlayer)
             {
                 player.Find("Body").gameObject.SetActive(true);

@@ -6,20 +6,32 @@ using UnityEngine.UIElements;
 
 public class GameManager : MonoBehaviour
 {
-    public bool begin = false;
     private Transform cSpawnTransform;
     private Transform notCspawnTransform;
     private Transform mazePos;
-    public GameObject maze;
+    public GameObject mazeFirst;
+    public GameObject mazeMiddle;
     public GameObject trap;
+    public GameObject mark;
     public Material activate;
-
-    private float timer = 0;
-    private float delayTime = 5.0f;
+    
 
     public static GameManager instance;
     GameObject camera;
+   
     
+    // Start is called before the first frame update
+    void Start()
+    {
+        instance = this;
+        cSpawnTransform = transform.Find("Cube");
+        notCspawnTransform = transform.Find("Overview");
+        mazePos = GameObject.Find("MazePosition").transform;
+        camera = transform.Find("Main Camera").gameObject;
+        NetworkManager.Singleton.NetworkConfig.ConnectionApproval = true;
+        NetworkManager.Singleton.ConnectionApprovalCallback = ApprovalCheck;
+        // CreateMaze();
+    }
 
     /// <summary>
     /// Position Challenger Spawn
@@ -43,7 +55,9 @@ public class GameManager : MonoBehaviour
     /// <returns></returns>
     public GameObject CreateMaze()
     {
-        return Instantiate(maze, mazePos.position, default);
+        GameObject first = Instantiate(mazeFirst, mazePos.position, default);
+        GameObject middle = Instantiate(mazeMiddle, first.transform.Find("EndPoint").position, default);
+        return first;
     }
 
     /// <summary>
@@ -63,6 +77,19 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void CreateMark(Vector3 pos)
+    {
+        Instantiate(mark, pos, default);
+    }
+
+    public void EraseMarks()
+    {
+        GameObject[] marks = GameObject.FindGameObjectsWithTag("Mark");
+        foreach (GameObject m in marks)
+        {
+            Destroy(m);
+        }
+    }
     /// <summary>
     /// Activate specific obstacle
     /// </summary>
@@ -78,17 +105,6 @@ public class GameManager : MonoBehaviour
         else return false;
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        instance = this;
-        cSpawnTransform = transform.Find("Cube");
-        notCspawnTransform = transform.Find("Overview");
-        mazePos = GameObject.Find("Ground").transform;
-        camera = transform.Find("Main Camera").gameObject;
-        NetworkManager.Singleton.NetworkConfig.ConnectionApproval = true;
-        NetworkManager.Singleton.ConnectionApprovalCallback = ApprovalCheck;
-    }
 
     // Update is called once per frame
     void Update()

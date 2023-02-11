@@ -4,7 +4,6 @@ ScriptsOnlyBuild:
     - AClockworkBerry.ScreenLogger
     - Blur
     - GameManager
-    - Maze
     - Movement
     - Player
     - TimeCounter
@@ -127,66 +126,66 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 2264}
+      Script: {instanceID: 2268}
     - Class: 114
-      Script: {instanceID: 2470}
+      Script: {instanceID: 2474}
     - Class: 114
-      Script: {instanceID: 2528}
+      Script: {instanceID: 2532}
     - Class: 114
-      Script: {instanceID: 2934}
+      Script: {instanceID: 2938}
     - Class: 114
-      Script: {instanceID: 3024}
+      Script: {instanceID: 3028}
     - Class: 114
-      Script: {instanceID: 3118}
+      Script: {instanceID: 3122}
     - Class: 114
-      Script: {instanceID: 3294}
+      Script: {instanceID: 3298}
     - Class: 114
-      Script: {instanceID: 4242}
+      Script: {instanceID: 4246}
     - Class: 114
-      Script: {instanceID: 4388}
+      Script: {instanceID: 4392}
     - Class: 114
-      Script: {instanceID: 4912}
+      Script: {instanceID: 4916}
     - Class: 114
-      Script: {instanceID: 4926}
+      Script: {instanceID: 4930}
     - Class: 114
-      Script: {instanceID: 5074}
+      Script: {instanceID: 5078}
     - Class: 114
-      Script: {instanceID: 5378}
+      Script: {instanceID: 5382}
     - Class: 114
-      Script: {instanceID: 5436}
+      Script: {instanceID: 5440}
     - Class: 114
-      Script: {instanceID: 5562}
+      Script: {instanceID: 5566}
     - Class: 114
-      Script: {instanceID: 6432}
+      Script: {instanceID: 6436}
     - Class: 114
-      Script: {instanceID: 6470}
+      Script: {instanceID: 6778}
     - Class: 114
-      Script: {instanceID: 6774}
+      Script: {instanceID: 6856}
     - Class: 114
-      Script: {instanceID: 6852}
+      Script: {instanceID: 7158}
     - Class: 114
-      Script: {instanceID: 7154}
+      Script: {instanceID: 7208}
     - Class: 114
-      Script: {instanceID: 7204}
+      Script: {instanceID: 7852}
     - Class: 114
-      Script: {instanceID: 7848}
+      Script: {instanceID: 7968}
     - Class: 114
-      Script: {instanceID: 7964}
+      Script: {instanceID: 8612}
     - Class: 114
-      Script: {instanceID: 8608}
+      Script: {instanceID: 8756}
     - Class: 114
-      Script: {instanceID: 8752}
+      Script: {instanceID: 9616}
     - Class: 114
-      Script: {instanceID: 9612}
+      Script: {instanceID: 9864}
     - Class: 114
-      Script: {instanceID: 9860}
+      Script: {instanceID: 10000}
     - Class: 114
-      Script: {instanceID: 9996}
-    - Class: 114
-      Script: {instanceID: 10078}
+      Script: {instanceID: 10082}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
+      Script: {instanceID: 0}
+    - Class: 135
       Script: {instanceID: 0}
     - Class: 136
       Script: {instanceID: 0}
@@ -1705,7 +1704,7 @@ ScriptsOnlyBuild:
     className: CinemachineBasicMultiChannelPerlin
   - hash:
       serializedVersion: 2
-      Hash: bdb5c84d3b8c915ff8d2fc738493659d
+      Hash: 1e60a7148a1b6fbd35aaf975ac396f32
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameManager
