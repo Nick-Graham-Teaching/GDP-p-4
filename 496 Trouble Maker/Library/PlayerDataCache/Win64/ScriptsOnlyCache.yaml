@@ -27,9 +27,11 @@ ScriptsOnlyBuild:
     Unity.TextMeshPro.dll:
     - TMPro.TMP_ColorGradient
     - TMPro.TMP_FontAsset
+    - TMPro.TMP_InputField
     - TMPro.TMP_Settings
     - TMPro.TMP_SpriteAsset
     - TMPro.TMP_StyleSheet
+    - TMPro.TextMeshProUGUI
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -37,8 +39,12 @@ ScriptsOnlyBuild:
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
+    - UnityEngine.UI.Button
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
+    - UnityEngine.UI.Image
+    - UnityEngine.UI.LayoutElement
+    - UnityEngine.UI.RectMask2D
     - UnityEngine.UI.Text
   serializedClasses:
     Cinemachine:
@@ -66,21 +72,40 @@ ScriptsOnlyBuild:
     - TMPro.TMP_GlyphAdjustmentRecord
     - TMPro.TMP_GlyphPairAdjustmentRecord
     - TMPro.TMP_GlyphValueRecord
+    - TMPro.TMP_InputField/OnChangeEvent
+    - TMPro.TMP_InputField/SelectionEvent
+    - TMPro.TMP_InputField/SubmitEvent
+    - TMPro.TMP_InputField/TextSelectionEvent
+    - TMPro.TMP_InputField/TouchScreenKeyboardEvent
     - TMPro.TMP_Sprite
     - TMPro.TMP_SpriteCharacter
     - TMPro.TMP_SpriteGlyph
     - TMPro.TMP_Style
+    - TMPro.VertexGradient
     UnityEngine.CoreModule:
+    - UnityEngine.Events.ArgumentCache
     - UnityEngine.Events.PersistentCallGroup
+    - UnityEngine.Events.PersistentListenerMode
     UnityEngine.TextCoreFontEngineModule:
     - UnityEngine.TextCore.FaceInfo
     - UnityEngine.TextCore.Glyph
     - UnityEngine.TextCore.GlyphMetrics
     - UnityEngine.TextCore.GlyphRect
     UnityEngine.UI:
+    - UnityEngine.UI.AnimationTriggers
+    - UnityEngine.UI.Button/ButtonClickedEvent
+    - UnityEngine.UI.ColorBlock
     - UnityEngine.UI.FontData
     - UnityEngine.UI.MaskableGraphic/CullStateChangedEvent
-  methodsToPreserve: []
+    - UnityEngine.UI.Navigation
+    - UnityEngine.UI.SpriteState
+  methodsToPreserve:
+  - assembly: Assembly-CSharp
+    fullTypeName: GameManager
+    methodName: onHostButtonClick
+  - assembly: Assembly-CSharp
+    fullTypeName: GameManager
+    methodName: onClientButtonClick
   sceneClasses:
     Assets/Scenes/Main.unity:
     - Class: 1
@@ -126,35 +151,45 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 2268}
+      Script: {instanceID: 1630}
     - Class: 114
-      Script: {instanceID: 2474}
+      Script: {instanceID: 1852}
     - Class: 114
-      Script: {instanceID: 2532}
+      Script: {instanceID: 2266}
     - Class: 114
-      Script: {instanceID: 2938}
+      Script: {instanceID: 2472}
     - Class: 114
-      Script: {instanceID: 3028}
+      Script: {instanceID: 2530}
     - Class: 114
-      Script: {instanceID: 3122}
+      Script: {instanceID: 2936}
     - Class: 114
-      Script: {instanceID: 3298}
+      Script: {instanceID: 3020}
     - Class: 114
-      Script: {instanceID: 4246}
+      Script: {instanceID: 3120}
     - Class: 114
-      Script: {instanceID: 4392}
+      Script: {instanceID: 3296}
     - Class: 114
-      Script: {instanceID: 4916}
+      Script: {instanceID: 3688}
     - Class: 114
-      Script: {instanceID: 4930}
+      Script: {instanceID: 4244}
     - Class: 114
-      Script: {instanceID: 5078}
+      Script: {instanceID: 4390}
+    - Class: 114
+      Script: {instanceID: 4914}
+    - Class: 114
+      Script: {instanceID: 4928}
+    - Class: 114
+      Script: {instanceID: 5056}
+    - Class: 114
+      Script: {instanceID: 5076}
     - Class: 114
       Script: {instanceID: 5382}
     - Class: 114
       Script: {instanceID: 5440}
     - Class: 114
       Script: {instanceID: 5566}
+    - Class: 114
+      Script: {instanceID: 6154}
     - Class: 114
       Script: {instanceID: 6436}
     - Class: 114
@@ -166,21 +201,23 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 7208}
     - Class: 114
-      Script: {instanceID: 7852}
+      Script: {instanceID: 7418}
     - Class: 114
-      Script: {instanceID: 7968}
+      Script: {instanceID: 7854}
     - Class: 114
-      Script: {instanceID: 8612}
+      Script: {instanceID: 7970}
     - Class: 114
-      Script: {instanceID: 8756}
+      Script: {instanceID: 8614}
     - Class: 114
-      Script: {instanceID: 9616}
+      Script: {instanceID: 8758}
     - Class: 114
-      Script: {instanceID: 9864}
+      Script: {instanceID: 9618}
     - Class: 114
-      Script: {instanceID: 10000}
+      Script: {instanceID: 9866}
     - Class: 114
-      Script: {instanceID: 10082}
+      Script: {instanceID: 10004}
+    - Class: 114
+      Script: {instanceID: 10086}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -194,6 +231,8 @@ ScriptsOnlyBuild:
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
+      Script: {instanceID: 0}
+    - Class: 213
       Script: {instanceID: 0}
     - Class: 222
       Script: {instanceID: 0}
@@ -828,6 +867,12 @@ ScriptsOnlyBuild:
     className: SimpleElevator
   - hash:
       serializedVersion: 2
+      Hash: 774b36109e41461167ea789c05f62f31
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: RandomScript
+  - hash:
+      serializedVersion: 2
       Hash: dbfb4270852b0008a423a7418d9de4cf
     assemblyName: Cinemachine.dll
     namespaceName: Cinemachine
@@ -1258,6 +1303,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: Cinemachine.Examples
     className: LoseSightWhenTargetsFallsOffThePlatform
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MainMenu
   - hash:
       serializedVersion: 2
       Hash: 760787567e1b60d64a3e421ab83ee14a
@@ -1692,6 +1743,12 @@ ScriptsOnlyBuild:
     className: CinemachineRecomposer
   - hash:
       serializedVersion: 2
+      Hash: e80f7e6f4c6997448a000b95a2420577
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ARROW
+  - hash:
+      serializedVersion: 2
       Hash: e63944317d2f5958e31963668bb29158
     assemblyName: Assembly-CSharp.dll
     namespaceName: TMPro.Examples
@@ -1704,7 +1761,7 @@ ScriptsOnlyBuild:
     className: CinemachineBasicMultiChannelPerlin
   - hash:
       serializedVersion: 2
-      Hash: 1e60a7148a1b6fbd35aaf975ac396f32
+      Hash: 1c22b24fbc2385ee42e3fb973b8e9d7b
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameManager
@@ -1762,6 +1819,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Server
   platform: 19
   scenePathNames:
   - Assets/Scenes/Main.unity

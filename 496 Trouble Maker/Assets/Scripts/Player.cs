@@ -3,14 +3,17 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Net;
 using Cinemachine;
 using UnityEngine;
 using Unity.Netcode;
-using Unity.VisualScripting;
+using Unity.Netcode.Transports.UTP;
+
 
 public class Player : NetworkBehaviour
 {
     private Transform player;
+
     //private bool full = true;
     
     // Start is called before the first frame update
@@ -32,7 +35,6 @@ public class Player : NetworkBehaviour
 
         if (IsHost)
         {
-
             name = "Host";
             player.position = GameManager.instance.ChallengerSpawnPos;
             player.GetComponent<Movement>().SetIsCTrue();
@@ -46,7 +48,13 @@ public class Player : NetworkBehaviour
                 player.transform.GetComponent<CapsuleCollider>().enabled = false;
                 name = "Client";
             }
-            
+
+            /*
+            Debug.Log(Dns.GetHostEntry(Dns.GetHostName())
+                .AddressList.First(
+                    f => f.AddressFamily == System.Net.Sockets.AddressFamily.InterNetwork)
+                .ToString());
+                */
         }
         else
         {
@@ -74,12 +82,14 @@ public class Player : NetworkBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha2)&&IsHost)
+        
+    }
+    
+    public void GetLocalIPAddress() {
+        var host = Dns.GetHostEntry(Dns.GetHostName());
+        foreach (var ip in host.AddressList) 
         {
-            foreach (var id in NetworkManager.ConnectedClientsIds)
-            {
-                Debug.Log(id);
-            }
+            Debug.Log(ip.ToString()); 
         }
     }
 }

@@ -2,10 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Unity.Netcode;
+using Unity.Netcode.Transports.UTP;
 using UnityEngine.UIElements;
+using TMPro;
+using System.Net;
+using System.Net.Sockets;
+using UnityEngine.EventSystems;
 
 public class GameManager : MonoBehaviour
 {
+    UnityTransport transport;
     private Transform cSpawnTransform;
     private Transform notCspawnTransform;
     private Transform mazePos;
@@ -15,8 +21,12 @@ public class GameManager : MonoBehaviour
     public GameObject mark;
     public Material activate;
     
-
+    string ipAddress;
+    // [SerializeField] TextMeshProUGUI ipAddressText;
+    [SerializeField] TMP_InputField ip;
+    
     public static GameManager instance;
+    
     GameObject camera;
    
     
@@ -30,6 +40,8 @@ public class GameManager : MonoBehaviour
         camera = transform.Find("Main Camera").gameObject;
         NetworkManager.Singleton.NetworkConfig.ConnectionApproval = true;
         NetworkManager.Singleton.ConnectionApprovalCallback = ApprovalCheck;
+        ipAddress = "0.0.0.0";
+        // SetIpAddress();
         // CreateMaze();
     }
 
@@ -111,13 +123,13 @@ public class GameManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.O))
         {
-            NetworkManager.Singleton.StartHost();
+            
+            
         }
 
         if (Input.GetKeyDown(KeyCode.P))
         {
-
-            NetworkManager.Singleton.StartClient();
+            
         }
     }
 
@@ -145,6 +157,42 @@ public class GameManager : MonoBehaviour
             response.PlayerPrefabHash = null;
             response.Pending = false;
         }
+    }
+
+    
+    public void SetIpAddress()
+    {
+        transport = NetworkManager.Singleton.GetComponent<UnityTransport>();
+        transport.ConnectionData.Address = ipAddress;
+    }
+
+    public void GetLocalIPAddress()
+    {
+        var host = Dns.GetHostEntry(Dns.GetHostName());
+        foreach (var ip in host.AddressList)
+        {
+            if (ip.AddressFamily == AddressFamily.InterNetwork)
+            {
+                Debug.Log(ip);
+                ipAddress = ip.ToString();
+                NetworkManager.Singleton.GetComponent<UnityTransport>().SetConnectionData(ip.ToString(), default, ip.ToString());
+            }
+        }
+    }
+
+    public void onHostButtonClick()
+    {
+        NetworkManager.Singleton.StartHost();
+        GetLocalIPAddress();
+        GameObject.Find("ConnectMenuUI").gameObject.SetActive(false);
+    }
+
+    public void onClientButtonClick()
+    {
+        ipAddress = ip.text;
+        SetIpAddress();
+        NetworkManager.Singleton.StartClient();
+        GameObject.Find("ConnectMenuUI").gameObject.SetActive(false);
     }
 }
 
