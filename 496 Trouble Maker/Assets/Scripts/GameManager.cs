@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,6 +8,7 @@ using UnityEngine.UIElements;
 using TMPro;
 using System.Net;
 using System.Net.Sockets;
+using Random = UnityEngine.Random;
 using UnityEngine.EventSystems;
 
 public class GameManager : MonoBehaviour
@@ -15,8 +17,9 @@ public class GameManager : MonoBehaviour
     private Transform cSpawnTransform;
     private Transform notCspawnTransform;
     private Transform mazePos;
-    public GameObject mazeFirst;
+    public GameObject mazeStart;
     public GameObject mazeMiddle;
+    public GameObject mazeEnd;
     public GameObject trap;
     public GameObject mark;
     public Material activate;
@@ -28,8 +31,11 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     
     GameObject camera;
-   
-    
+    private List<GameObject> mazeStarts = new List<GameObject>();
+    private List<GameObject> mazeMiddles = new List<GameObject>();
+    private List<GameObject> mazeEnds = new List<GameObject>();
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -41,8 +47,12 @@ public class GameManager : MonoBehaviour
         NetworkManager.Singleton.NetworkConfig.ConnectionApproval = true;
         NetworkManager.Singleton.ConnectionApprovalCallback = ApprovalCheck;
         ipAddress = "0.0.0.0";
+        mazeStarts. Add(mazeStart);
+        mazeMiddles.Add(mazeMiddle);
+        mazeEnds.Add(mazeEnd);
+        
         // SetIpAddress();
-        // CreateMaze();
+         CreateMaze();
     }
 
     /// <summary>
@@ -67,8 +77,15 @@ public class GameManager : MonoBehaviour
     /// <returns></returns>
     public GameObject CreateMaze()
     {
-        GameObject first = Instantiate(mazeFirst, mazePos.position, default);
-        GameObject middle = Instantiate(mazeMiddle, first.transform.Find("EndPoint").position, default);
+        int i = Random.Range(0, mazeStarts.Count);
+        GameObject m = mazeStarts[i];
+        GameObject first = Instantiate(m, mazePos.position, default);
+        i = Random.Range(0, mazeMiddles.Count);
+        m = mazeMiddles[i];
+        GameObject middle = Instantiate(m, first.transform.Find("EndPoint").position, default);
+        i = Random.Range(0, mazeEnds.Count);
+        m = mazeEnds[i];
+        Instantiate(m, middle.transform.Find("EndPoint").position, default);
         return first;
     }
 
@@ -121,16 +138,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.O))
-        {
-            
-            
-        }
 
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            
-        }
     }
 
     public void CloseCamera()
@@ -180,19 +188,24 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void onHostButtonClick()
+    public void OnHostButtonClick()
     {
         NetworkManager.Singleton.StartHost();
         GetLocalIPAddress();
         GameObject.Find("ConnectMenuUI").gameObject.SetActive(false);
     }
 
-    public void onClientButtonClick()
+    public void OnClientButtonClick()
     {
+        
         ipAddress = ip.text;
         SetIpAddress();
-        NetworkManager.Singleton.StartClient();
-        GameObject.Find("ConnectMenuUI").gameObject.SetActive(false);
+        if (NetworkManager.Singleton.StartClient())
+        {
+            GameObject.Find("ConnectMenuUI").gameObject.SetActive(false);
+        }
+        else Debug.Log("Client connect failed");
     }
+    
 }
 

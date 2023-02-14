@@ -271,7 +271,6 @@ public class Movement : NetworkBehaviour
 	[ServerRpc]
 	void UpdatePlaceTrapServerRpc(Vector3 point) { PlaceTrapClientRpc(point); }
 	
-
 	[ClientRpc]
 	void PlaceTrapClientRpc(Vector3 point) { GameManager.instance.CreateTrap(point); }
 
@@ -494,6 +493,7 @@ public class Movement : NetworkBehaviour
 				transform.parent.Find("PlayerCameraControl").GetComponentInChildren<CinemachineFramingTransposer>().m_TrackedObjectOffset.y = 6;
 				transform.parent.Find("PlayerCameraControl").GetComponent<CinemachineVirtualCamera>()
 					.GetCinemachineComponent<CinemachineFramingTransposer>().m_CameraDistance = 6;
+				transform.parent.Find("PlayerCameraControl").GetComponent<CinemachineCollider>().enabled = false;
 			}
 			
 			else
@@ -502,6 +502,7 @@ public class Movement : NetworkBehaviour
 				transform.parent.Find("PlayerCameraControl").GetComponentInChildren<CinemachineFramingTransposer>().m_TrackedObjectOffset.y = 1.6f;
 				transform.parent.Find("PlayerCameraControl").GetComponent<CinemachineVirtualCamera>()
 					.GetCinemachineComponent<CinemachineFramingTransposer>().m_CameraDistance = 2.22f;
+				transform.parent.Find("PlayerCameraControl").GetComponent<CinemachineCollider>().enabled = true;
 			}
 
 			// Blind
