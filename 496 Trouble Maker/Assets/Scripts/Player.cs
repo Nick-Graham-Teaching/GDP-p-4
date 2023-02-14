@@ -48,13 +48,6 @@ public class Player : NetworkBehaviour
                 player.transform.GetComponent<CapsuleCollider>().enabled = false;
                 name = "Client";
             }
-
-            /*
-            Debug.Log(Dns.GetHostEntry(Dns.GetHostName())
-                .AddressList.First(
-                    f => f.AddressFamily == System.Net.Sockets.AddressFamily.InterNetwork)
-                .ToString());
-                */
         }
         else
         {
@@ -91,5 +84,14 @@ public class Player : NetworkBehaviour
         {
             Debug.Log(ip.ToString()); 
         }
+    }
+
+    public void OnStartButtonClick()
+    {
+        if (GameObject.Find("Host").transform.Find("Player").GetComponent<Movement>().StarGame())
+        {
+            GameObject.Find("GameStart").gameObject.SetActive(false);
+        }
+        else return;
     }
 }

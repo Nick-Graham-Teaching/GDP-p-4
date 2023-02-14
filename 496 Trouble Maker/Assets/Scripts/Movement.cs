@@ -434,6 +434,7 @@ public class Movement : NetworkBehaviour
 			}
 
 			// Game start
+			/*
 			if (IsHost && Input.GetKeyDown(KeyCode.Alpha1))
 			{
 				if (GameObject.Find("Client"))
@@ -447,7 +448,7 @@ public class Movement : NetworkBehaviour
 					//hostCanMove = true;
 					Debug.Log("No Obstructionist enter the game, need one more player");
 				}
-			}
+			}*/
 
 			// Change turn
 			if (begin)
@@ -560,7 +561,7 @@ public class Movement : NetworkBehaviour
 					{
 						Vector3 point = hit.point;
 						UpdateMarkServerRpc(point);
-						Debug.Log("Mark on");
+						// Debug.Log("Mark on");
 					}
 				}
 			}
@@ -721,5 +722,21 @@ public class Movement : NetworkBehaviour
 				mainCamera.orthographicSize -= 0.5F;
 		}
 	}
-	
+
+	public bool StarGame()
+	{
+		if (GameObject.Find("Client"))
+		{
+			UpdateBeginServerRpc();
+			UpdateTurnServerRpc();
+			return true;
+		}
+		else
+		{
+			//GameManager.instance.CreateMaze();
+			//hostCanMove = true;
+			Debug.Log("No Obstructionist enter the game, need one more player");
+			return false;
+		}
+	}
 }
