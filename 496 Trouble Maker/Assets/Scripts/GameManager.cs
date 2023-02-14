@@ -23,6 +23,7 @@ public class GameManager : MonoBehaviour
     public GameObject trap;
     public GameObject mark;
     public Material activate;
+    public GameObject GameStartUI;
     
     string ipAddress;
     // [SerializeField] TextMeshProUGUI ipAddressText;
@@ -193,6 +194,7 @@ public class GameManager : MonoBehaviour
         NetworkManager.Singleton.StartHost();
         GetLocalIPAddress();
         GameObject.Find("ConnectMenuUI").gameObject.SetActive(false);
+        GameStartUI.SetActive(true);
     }
 
     public void OnClientButtonClick()
