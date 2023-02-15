@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour
     private Transform mazePos;
     public GameObject mazeStart;
     public GameObject mazeMiddle;
+    public GameObject mazeMiddle1;
     public GameObject mazeEnd;
     public GameObject trap;
     public GameObject mark;
@@ -50,10 +51,11 @@ public class GameManager : MonoBehaviour
         ipAddress = "0.0.0.0";
         mazeStarts. Add(mazeStart);
         mazeMiddles.Add(mazeMiddle);
+        mazeMiddles.Add(mazeMiddle1);
         mazeEnds.Add(mazeEnd);
         
         // SetIpAddress();
-         CreateMaze();
+        // CreateMaze();
     }
 
     /// <summary>

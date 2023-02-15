@@ -987,6 +987,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mazeStart: {fileID: 8673453597166400863, guid: 1630934c2e671ae41add9a8ed57c4545, type: 3}
   mazeMiddle: {fileID: 1954705878526170918, guid: 1861da6ac0838a14cb35cd1a4fae81a3, type: 3}
+  mazeMiddle1: {fileID: 3250909252957416087, guid: 6681b41ff16e449428b00c38f0bd7a11, type: 3}
   mazeEnd: {fileID: 2999344568384356583, guid: caac1e0e2adfafc45abb10568b5fa886, type: 3}
   trap: {fileID: 4539516752407736043, guid: ca80a75ef1d53a8478effea89c7b7e1b, type: 3}
   mark: {fileID: 7469861445056596322, guid: e383558ecc53fe3458f142c6e5fb47be, type: 3}

@@ -1,0 +1,1928 @@
+Using pre-set license
+Built from '2021.3/staging' branch; Version is '2021.3.11f1 (0a5ca18544bf) revision 679073'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 10  (10.0.19044) 64bit Core' Language: 'zh' Physical Memory: 16227 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2021.3.11f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+C:/Users/19428/Documents/GitHub/GDP-p-4/496 Trouble Maker
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+60917
+Successfully changed project path to: C:/Users/19428/Documents/GitHub/GDP-p-4/496 Trouble Maker
+C:/Users/19428/Documents/GitHub/GDP-p-4/496 Trouble Maker
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Refreshing native plugins compatible for Editor in 100.42 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2021.3.11f1 (0a5ca18544bf)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.3.11f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/19428/Documents/GitHub/GDP-p-4/496 Trouble Maker/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce GTX 1660 Ti (ID=0x2191)
+    Vendor:   NVIDIA
+    VRAM:     5991 MB
+    Driver:   30.0.15.1295
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.3.11f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.3.11f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.3.11f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56332
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.11f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.034850 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 91.28 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.885 seconds
+Domain Reload Profiling:
+	ReloadAssembly (886ms)
+		BeginReloadAssembly (175ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (524ms)
+			LoadAssemblies (165ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (103ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (31ms)
+			SetupLoadedEditorAssemblies (310ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (15ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (91ms)
+				BeforeProcessingInitializeOnLoad (1ms)
+				ProcessInitializeOnLoadAttributes (140ms)
+				ProcessInitializeOnLoadMethodAttributes (63ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.033737 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\19428\Documents\GitHub\GDP-p-4\496 Trouble Maker\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\19428\Documents\GitHub\GDP-p-4\496 Trouble Maker\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.75 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.095 seconds
+Domain Reload Profiling:
+	ReloadAssembly (2096ms)
+		BeginReloadAssembly (208ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (8ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (19ms)
+		EndReloadAssembly (1696ms)
+			LoadAssemblies (219ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (661ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (84ms)
+			SetupLoadedEditorAssemblies (682ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (13ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (201ms)
+				ProcessInitializeOnLoadAttributes (369ms)
+				ProcessInitializeOnLoadMethodAttributes (45ms)
+				AfterProcessingInitializeOnLoad (51ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (26ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.07 seconds
+Refreshing native plugins compatible for Editor in 0.80 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4388 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 48 unused Assets / (103.0 KB). Loaded Objects now: 4859.
+Memory consumption went from 191.0 MB to 190.9 MB.
+Total: 3.856100 ms (FindLiveObjects: 0.404500 ms CreateObjectMapping: 0.354700 ms MarkObjects: 3.024200 ms  DeleteObjects: 0.071800 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 15.78 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 30 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 30 unused Assets / (93.6 KB). Loaded Objects now: 4859.
+Memory consumption went from 102.0 MB to 101.9 MB.
+Total: 3.493400 ms (FindLiveObjects: 0.398300 ms CreateObjectMapping: 0.416600 ms MarkObjects: 2.638900 ms  DeleteObjects: 0.038600 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 696101.218832 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b7becc64620062490b0b80a02ad8b485') in 0.074589 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 232.366777 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aaba86d9d0b516ee50bfc12996d778c3') in 0.075842 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 19.687310 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5183efa38d354e2914368196cb892eb7') in 0.017086 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.849806 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e2d9b284dc697a5b0f7eb253ac629b25') in 0.012694 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.801704 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7ac80b0bd8ba7521386589914036095d') in 0.014358 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 241.072621 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c183729df9e67d1418b682fe1df43fe0') in 0.013783 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.793197 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '32589cb8b984f6eb0813cc749a68bc63') in 0.013091 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.420438 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bd36ba901f5173997d9f55d9782aec3c') in 0.012861 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 10.863359 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '31aa90ebd2f339031bfd6a57c95fba29') in 0.016853 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.611963 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cf049f3bc79f0bcea9011d8604db360a') in 0.013838 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.623296 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd0bf56fbcab81b4a993938b1d76f6673') in 0.015025 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 8.264204 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1dadde00fb917596c0ffca2528874af1') in 0.013071 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.013652 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '47e5d2102e1afb2186bb21dceb5e433b') in 0.011864 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 87.482691 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3fd768a0635d2209ea4b66fab1852e03') in 0.015648 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.187528 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '48696b19f826bfccd0ec3db6f6fd7cce') in 0.012450 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 8.247244 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eaba62de2030ff5ca95a7fafecbd824e') in 0.013921 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 9.906085 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c50b6f89e140c559c3454ba9077785ae') in 0.012028 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.194641 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9da6bd6eb9925d0880f8f81c7de9d6ca') in 0.015638 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.986972 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '94857618c6346a90bf37600dc3484559') in 0.016160 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.829075 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c1e8d48f4e5d6933176fedc5f2ed6cf7') in 0.013995 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.388027 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a6d28240b7b0e79312495d6cab6c83fd') in 0.016087 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.395510 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '27c32e19ff12da77e48ecf08d3f4c20a') in 0.013051 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.795563 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6e8cb3406c1b4025f44994a1b31e4fcd') in 0.012504 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.797557 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '272a5a74e75b963300bb6f9666cd1f89') in 0.012986 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.207930 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7a8d382b5e1d4181237e77022e064945') in 0.013116 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 41.175911 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '03163d3daa2f867fb1dc998f6484d45c') in 0.013808 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.243737 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '93ec70a0b71ead8b7657c121f2eaf629') in 0.012686 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.597083 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '857b681975a8a1eab90ec7958c8ea2f9') in 0.016245 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.593198 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ede287c15ee71e0478d08d76aac9523e') in 0.012769 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.007401 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '17a25ee2fbf8f7ec89051bbb5915d915') in 0.013113 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 10.277771 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '82f3a2ac62ff8fd6325d50b01eb4ec82') in 0.013199 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.607430 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '11dd93c7e98b340742b34e60175817ca') in 0.011593 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 9.872445 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'da01be7ce1c6ae70cab5af7ff07e53ff') in 0.012782 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 8.844116 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f0e5ffb3180f4e227fd045c18209c0ac') in 0.016292 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.219445 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '15d0b1312fa1209fbe5ebadaac4ffc6d') in 0.017815 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 31.472666 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1ab753bf9411a758f1ba106849b581f9') in 0.019435 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.555060 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3e89556c614f293445596d932c18b0fe') in 0.015439 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.046659 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6cf4fb9f0e7ccc50243bb86f55d42c6c') in 0.014094 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.022111 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '63b676dd9f5609dc82ca650433760599') in 0.013182 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.601650 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0df2698289fd360f7725d707d5767b03') in 0.012259 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.249034 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ebd0cec510efdd5b4452d5995537c8ba') in 0.015370 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 9.241636 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a88fbdf188ffaee8983dedc278a72734') in 0.014919 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 12.471785 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '79943f8f25420397d98d95329626d491') in 0.012722 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.613908 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4332feedf722aad50284e4fda23d8e0a') in 0.015311 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.186458 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '00177b0f1afbae7c4e2456b5c323a7c7') in 0.014943 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.796237 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '25c8361e9f79cf24adfd3fec064025df') in 0.012833 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.805131 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '090a420e68a2e4dbb8737430d82d6a26') in 0.015293 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.191382 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5df806ee31d771b9921de80d8474e767') in 0.011920 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 11.478822 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1ee8a7340167f5e2ffd96bdc3aaf36f7') in 0.014793 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.763979 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '19fb67adfd6a1fa581b25bdcb5deadaa') in 0.013914 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.199683 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7f6f260b8988254e4071242a1dda8b37') in 0.016090 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.831169 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '272a350eb011ab1dcb543f8c44edd1df') in 0.016246 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.783015 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fe3ea5384b63d4cd5c237fcf9fae63c8') in 0.012039 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 11.679344 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4ab962975fe2998a53f8b859b6bc163a') in 0.016757 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.985166 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '96aeb1c859148e64bd6d515f0d5f308d') in 0.015879 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.596711 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f0bcfec68e2e01a0b28c4027b813d7e7') in 0.016636 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.979477 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '86ca83899b951426f5676192ec4714b1') in 0.015362 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.604517 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '12900c79a6e33c8629e1a24e0d321c49') in 0.012849 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.395791 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cdf2d45025cef87a7f3afb6d5f0ffcc0') in 0.012579 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.194892 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5ee3a8fbb22dfb9041fb67bd704b768d') in 0.014761 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.791991 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '45e6c7375cceed7a46cad8437b4b4409') in 0.015718 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 10.698362 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9b542270df0227736d72a60a0f941a95') in 0.016848 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.018701 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b3ff822ad1f920b4ed0e958c2d8f431f') in 0.014342 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.609370 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '37aad8d27b7d55348e5740a3fe7fc4ee') in 0.015472 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.193183 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f53c7924cd1dca4e639fda7c74db1e7b') in 0.017272 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.588747 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '62a879628d4f7a79d83478b4c41c978b') in 0.012888 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.046246 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '489c677b1297f9a4e85db9b91f8545a9') in 0.012745 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.221287 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ec162e2d7bfec266b5c11cbae2a1c46f') in 0.012617 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.413481 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7f8c797bfc3be4a8c27e3f95f6109415') in 0.013408 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.412014 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7ca464e06584ee7c45e57353581510cb') in 0.016464 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.414128 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3b223da7108e624478d12e5996fa6d4c') in 0.017194 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.398742 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2ee657c10437065b321f3186795bb0dd') in 0.013303 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.408515 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '339ea012ed8f83c6530305b11a042547') in 0.013058 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.409619 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8d5fe8f47669b253dcfb09550963d7c5') in 0.013640 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 21.165189 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '36dec133c8d8d5a90475ad7774a48b18') in 0.019314 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.983727 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a40c59e4c4d251040645251a6e380cd6') in 0.015334 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.611627 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '20e4cd5161738017e10751207d23ed60') in 0.013175 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.020292 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e0b56625871657462e25ff79b5a3bbfc') in 0.012647 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 31.036292 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd3d42e1bbbb058d36a5fce09cbf5e4b8') in 0.015794 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 9.886298 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'acfa39135f0e9f12e7770a7db2d6349d') in 0.012313 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.405142 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '539dad34bfc5cbf85454eaf315bc577a') in 0.013166 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.993648 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e42d1a5f156840153eaed03193e0aa9e') in 0.012644 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.420408 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6145d63628bf16a05a4d75b2b5ce9d79') in 0.015752 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 8.868157 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'af72b177486ed7ab3b8ca004bced1b3e') in 0.017059 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.791401 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1c3047a4f5dad676f663d2289961d3d0') in 0.013042 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.009879 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cf73f84a6f2d3e046f87448b3a3b0aa8') in 0.013019 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.392280 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '030853941fd1d8c48e1e5a7719a84b92') in 0.014497 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.395250 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2abc0727af156cdbfa0c9a383cbc2c75') in 0.014376 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.219410 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '043aceabbaf7423350eeb1b1cc22f93d') in 0.015452 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 11.676568 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b184438d2081d57a73e4d03ce57492bd') in 0.014103 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.179828 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3a0268ce08f3481baccb31615ad73036') in 0.012559 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.814378 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dffbc832885c85cceff649ebd230f0ab') in 0.013188 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.589752 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f0f241e63edee7e019c38e744e11681e') in 0.013858 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.411984 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e422897d8c0da7e048d92a90ac9924af') in 0.013383 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.843800 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd5fca205e1ee7f11ff0d75487c81aed2') in 0.012701 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.394428 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4e500547df8eebb743675be1854806ea') in 0.013331 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 9.441788 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '56950e730718c211c8b76223ea0fd5d4') in 0.013016 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.016314 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8e12d65c57c3e1d241d2f4786dead4d9') in 0.011533 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.266800 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '991bad2d80a5c998b55a7ecb7e799f02') in 0.016054 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.241431 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '34dd77780bc97c648f2211714487a669') in 0.012908 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 10.277595 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'afcfb4cdc9c0c45f4c3eab1e4cf9de63') in 0.015955 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.410719 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3eba7654a476315fe567e1539c30150a') in 0.015185 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.190973 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1be3af324623b5447ba9b70d8a4c247b') in 0.014317 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.210869 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1957185efcb4d4249b442aca27765750') in 0.014744 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 9.838008 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b60d441cdc0825c7de3c40c06ab269f5') in 0.014175 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.402160 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '615dfe49e82328ef83109901b94d0241') in 0.016607 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.648754 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a80041754a439d2f5c0993f77e06f7df') in 0.016036 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.829259 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c93a64d5b3e350b21d892ea1e8f3be68') in 0.015829 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.835947 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '51060a07adf7d25ae718394210a23151') in 0.015129 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.027903 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6543244754741bc989345974a2153d95') in 0.017181 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.199520 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5c655176a51a5b619a0fb242fe981f52') in 0.013362 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.015013 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '48965ad27b1d6dec35582ac14f07671c') in 0.013636 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.814289 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bed32c744a090404f01b9152a27c8180') in 0.013389 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 8.478415 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '667e3b18304936c1d35391595adb1e7c') in 0.015581 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.382983 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1f037980fb06897ff4fe8f7f22faa84d') in 0.016403 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.384434 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1c5b080c49c693b7587c979aad9f572d') in 0.016109 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.806179 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cb4ffb9bd0d94805600f5f3ed17270a2') in 0.013363 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.041773 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5bd6d5b3bd91fde83b7ed9e5a61b6514') in 0.014384 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.823315 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0d4d1b6681c3fab896085e013b95a8ad') in 0.015317 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.185130 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c6a84b60c660ebcf4edee2fb6acbce6d') in 0.012564 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 14.502601 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b0e04bb2834333f7f323a79120ced35e') in 0.014015 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.666484 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b1f808469ef9dc1b059a58bae7b41f39') in 0.013631 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.018285 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6e942e2601bec781c1d613555d0981fc') in 0.015372 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.183485 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1118a1b0a1e0b317ddd492c63ea25eb2') in 0.015556 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.832088 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '377d837a0127f3787fe442e0639f2d01') in 0.015748 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.607374 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0bc848b54e60b19029bb70181dde2655') in 0.011101 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.817437 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '287aa27d3f810b26743a180df6394ae7') in 0.016673 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.601540 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e40b5eb651f095c83daac120c857d616') in 0.013015 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.229004 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9cbaace9d4012ebe3d509ef8badf63e6') in 0.014812 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 9.252968 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a8d05322e6fe5a5611f2f83b92bef27a') in 0.010908 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.218268 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3a8ce1ac046a244fc5020866069ff61e') in 0.013077 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.842091 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3befcd7f6ee6b828a0c0ef29a661bb02') in 0.013825 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 13.761437 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f0d2c63ba53dfac105e16ef662708743') in 0.013864 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.602732 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5cc9b1b58bee8afb5072bf5fda614470') in 0.014088 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 8.063496 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2180374cb8f31ba9dc180873c092a682') in 0.012969 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.001958 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bee61ba8a546e4a732c6c1549423f30d') in 0.013711 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 21.127486 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4aba59c2bcf5f13ee03b5ba478922281') in 0.015838 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.999234 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd3493246135ff4bd7ccdedd237451d9e') in 0.016490 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.374445 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2587100aeed02d7f63d013f859e5d2fa') in 0.015370 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.811160 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'de1a55d02e638eb7e713f4a83f404e46') in 0.014539 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.198979 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd722b4f621d4695aa63234293c905f05') in 0.015040 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.389718 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c1830ff0ac64ce824cfbe61d67a2432a') in 0.013554 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.025259 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '194bf901efff2d8144e7f63c7cc4f7bb') in 0.013786 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.084363 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7562dec6284689b4c6ab6e97353ac568') in 0.012831 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 8.262123 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '12a86dd52d2bf07e13721ad5853b45e9') in 0.016241 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.596252 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '28a1ee7868df7930a94eba23478ad378') in 0.013768 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.993577 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f28a9e5f1dffed97d332556bb868fd8d') in 0.013439 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.413251 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9c730074b44e4355004d7276e152a905') in 0.015868 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.393221 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bdf503a7265f266fd56c301899d4492d') in 0.014958 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.801680 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4a01467d17b3b685bf73e1c5778921ac') in 0.016050 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.796092 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b1dce49c6c3803208c59ebea115ee4b0') in 0.012832 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.009649 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '739836c08f8d262807ba900761e41a83') in 0.014595 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 15.104871 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f3f4a1b185a1ef3f7bd0d3d46de4d05f') in 0.013494 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 16.554587 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b8651fc3d2a65515d49c3fd53d626bc0') in 0.012649 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.157410 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '30aaf552d6f457031125ca5bf3547824') in 0.015190 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.591833 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7ad310cf660fd76971a1ba803d3ec99b') in 0.016944 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.004587 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4a52dbc5cb539c16d56a44d2410559a5') in 0.015260 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.378242 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '49f2527498207da785952edddc364c75') in 0.016075 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.614599 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '41f1055cc65602a5ff967a3d891585b5') in 0.012890 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.988327 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd3c1e8fabf9a351a496292ef7c4230ef') in 0.013705 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.397749 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bd98eff20ba4f63087b1ffaf4896216f') in 0.014121 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.231693 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7de15b03b6d019ae9b472c7c2d3db4aa') in 0.016011 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.185797 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '91be109d0bbf8dca41a0c38f46d81ddc') in 0.015361 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.596135 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c4b639761c50443b527985e21b3cfcf3') in 0.014421 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.810537 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'de1e03f0eeaee3280432650807b15f04') in 0.016122 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.995404 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2da506c33e583ac8d42d8a1175e3709f') in 0.013963 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.783900 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3c28e6bb845d32bf045197deb85f96c3') in 0.015176 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.192475 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e00b5dc14d70385f31461913862c1c8b') in 0.014662 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.987586 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a0b942d9e18eea79bc3a8387508fc4b7') in 0.015510 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.592898 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '74cef91f30f3560e4050ac7d251ec702') in 0.011624 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.837967 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '82b7cf876d866a0121ecf8bef64e8666') in 0.016473 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 8.655549 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8c515907ed4a7c2f7ed9a2e5219a5b55') in 0.013693 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.225627 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '54b0c8704e07437d6b87e03e1ce0afb1') in 0.014043 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.643331 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '45b47ecadfee41a984e32d39df5c8e2c') in 0.016331 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 21.615054 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fac0bcc7852dad29a8c2c898e34f4351') in 0.018279 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 13.850934 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6c247fee8091ccacd31f8807874da9a8') in 0.015515 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.998524 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f3587a947b32fffa373bae233a46937c') in 0.018120 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.017065 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '37e7e8dc9b79fdb86443902fd5bf322e') in 0.014039 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.592072 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '51935e15a5ab9bbbd13e9f8495be2f09') in 0.014209 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.193594 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f6a5e1b6018e0c3fcfea0e9d971db6af') in 0.015084 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.581130 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3f5f2d5e4fd2694f3a35cc587735b286') in 0.015442 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 14.682903 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a807eef1eb8fe0aa1702611a7b5afa1b') in 0.018027 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.619310 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5d5e947260034f444e8e2fcae831c2f7') in 0.018778 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 15.352719 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6d607804f4e7745b712a8eef694ef487') in 0.016563 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 23.966607 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '22daef1e57eb111616ae902cfce3813b') in 0.014031 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 15.499800 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '33c4db5205e0b1bf8ca0138d0d970a59') in 0.013626 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.214561 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6908f88dbb3cc83e9f911ce0b34ff228') in 0.013907 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.987145 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2a4376f8229e82ccdd98ce1d99a3ec37') in 0.013525 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.606920 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f8a30c493e1ea3b669c8371948803b10') in 0.015140 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.233461 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '293d324a3a5921c5003457ef75671a99') in 0.014897 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.971967 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '15a28c2443e8f5f3cfca00383548851b') in 0.013899 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.060697 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1ba4fdc69020ac5463549060005594be') in 0.017747 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 12.059035 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4ff606a6c61b26790b0717c7a62b5a8d') in 0.017313 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.386544 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '206384682775b6327fc50703f5c51071') in 0.013469 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.618993 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '358d6d76f2c237eca8760078e112b733') in 0.011557 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 46.773937 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '19aeaaf3bb856e0cf6b6ac84fd95339c') in 0.016472 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.171107 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '25676a06c3354f5659946dfb6fd7ef9d') in 0.017309 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.194136 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b3d1497eb063c6fdd3b5ed2ebee90b1e') in 0.015639 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.796344 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2489ee20ec3d9b9651f935ff63ece4c7') in 0.016023 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 8.041436 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9aefb62b22e733e4801ceefc1b17de35') in 0.013936 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.402035 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6c7fafc6751b199946d278b8b70c5c91') in 0.013968 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 6.417135 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6d1a8d099b4e42a99b23c71d91ed3ae9') in 0.017136 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.193300 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5515bff46d1bbb94f6948f13409fd5c2') in 0.016473 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.192507 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '77efed670d5215db724d3c483a1e07f8') in 0.016597 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 12.068468 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0c79fdacb8688c541d4895ff8f981834') in 0.016234 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 33.686405 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a6aacc75658a4de86e40d31912a68fa4') in 0.012306 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 15.509652 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd489d568c7c4e5c03bb006644b94bd85') in 0.013409 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.984689 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7e90a1cc153dcd466aaa6823920c2e29') in 0.013594 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.206319 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4aa4da387303d3859c10c5a087a11d7b') in 0.013734 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 9.460277 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ed00ab151d77e0d7f69640d170d96581') in 0.014507 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 30.200188 seconds.
+  path: Assets/Scripts/GameManager.cs
+  artifactKey: Guid(40c3c03934b66bd40be7b1fc143cd455) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GameManager.cs using Guid(40c3c03934b66bd40be7b1fc143cd455) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'baf2fbbda92a1e4de5814c7da040974c') in 0.017318 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.058942 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\19428\Documents\GitHub\GDP-p-4\496 Trouble Maker\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\19428\Documents\GitHub\GDP-p-4\496 Trouble Maker\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.85 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.937 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1938ms)
+		BeginReloadAssembly (270ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (51ms)
+		EndReloadAssembly (1458ms)
+			LoadAssemblies (268ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (398ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (54ms)
+			SetupLoadedEditorAssemblies (694ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (27ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (192ms)
+				ProcessInitializeOnLoadAttributes (380ms)
+				ProcessInitializeOnLoadMethodAttributes (51ms)
+				AfterProcessingInitializeOnLoad (41ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (25ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 5.61 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4365 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 30 unused Assets / (95.3 KB). Loaded Objects now: 4884.
+Memory consumption went from 194.3 MB to 194.2 MB.
+Total: 4.429300 ms (FindLiveObjects: 0.386800 ms CreateObjectMapping: 0.332400 ms MarkObjects: 3.653500 ms  DeleteObjects: 0.055400 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.032662 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\19428\Documents\GitHub\GDP-p-4\496 Trouble Maker\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\19428\Documents\GitHub\GDP-p-4\496 Trouble Maker\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.85 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.666 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1667ms)
+		BeginReloadAssembly (276ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (48ms)
+		EndReloadAssembly (1223ms)
+			LoadAssemblies (237ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (362ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (56ms)
+			SetupLoadedEditorAssemblies (552ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (25ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (188ms)
+				ProcessInitializeOnLoadAttributes (262ms)
+				ProcessInitializeOnLoadMethodAttributes (39ms)
+				AfterProcessingInitializeOnLoad (37ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (22ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 4.12 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4365 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 30 unused Assets / (95.4 KB). Loaded Objects now: 4899.
+Memory consumption went from 194.3 MB to 194.2 MB.
+Total: 3.396800 ms (FindLiveObjects: 0.332500 ms CreateObjectMapping: 0.279400 ms MarkObjects: 2.738200 ms  DeleteObjects: 0.045400 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 87.041502 seconds.
+  path: Assets/Scripts/GameManager.cs
+  artifactKey: Guid(40c3c03934b66bd40be7b1fc143cd455) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/GameManager.cs using Guid(40c3c03934b66bd40be7b1fc143cd455) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd366416aafc087c105cd31f139ae1616') in 0.011390 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.041163 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\19428\Documents\GitHub\GDP-p-4\496 Trouble Maker\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\19428\Documents\GitHub\GDP-p-4\496 Trouble Maker\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.86 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.614 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1614ms)
+		BeginReloadAssembly (267ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (42ms)
+		EndReloadAssembly (1167ms)
+			LoadAssemblies (239ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (348ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (47ms)
+			SetupLoadedEditorAssemblies (524ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (19ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (160ms)
+				ProcessInitializeOnLoadAttributes (264ms)
+				ProcessInitializeOnLoadMethodAttributes (42ms)
+				AfterProcessingInitializeOnLoad (36ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (20ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 4.09 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4365 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 30 unused Assets / (95.4 KB). Loaded Objects now: 4914.
+Memory consumption went from 194.4 MB to 194.3 MB.
+Total: 3.327700 ms (FindLiveObjects: 0.380700 ms CreateObjectMapping: 0.399100 ms MarkObjects: 2.497000 ms  DeleteObjects: 0.049800 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.029030 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\19428\Documents\GitHub\GDP-p-4\496 Trouble Maker\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\19428\Documents\GitHub\GDP-p-4\496 Trouble Maker\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.20 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.822 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1823ms)
+		BeginReloadAssembly (281ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (50ms)
+		EndReloadAssembly (1325ms)
+			LoadAssemblies (263ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (397ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (53ms)
+			SetupLoadedEditorAssemblies (602ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (25ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (190ms)
+				ProcessInitializeOnLoadAttributes (306ms)
+				ProcessInitializeOnLoadMethodAttributes (40ms)
+				AfterProcessingInitializeOnLoad (39ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (25ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 4.58 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4365 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 30 unused Assets / (96.4 KB). Loaded Objects now: 4929.
+Memory consumption went from 194.4 MB to 194.3 MB.
+Total: 4.271600 ms (FindLiveObjects: 0.382300 ms CreateObjectMapping: 0.289300 ms MarkObjects: 3.556800 ms  DeleteObjects: 0.042100 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.037999 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\19428\Documents\GitHub\GDP-p-4\496 Trouble Maker\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\19428\Documents\GitHub\GDP-p-4\496 Trouble Maker\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.88 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.946 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1947ms)
+		BeginReloadAssembly (299ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (49ms)
+		EndReloadAssembly (1438ms)
+			LoadAssemblies (260ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (398ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (57ms)
+			SetupLoadedEditorAssemblies (709ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (24ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (222ms)
+				ProcessInitializeOnLoadAttributes (368ms)
+				ProcessInitializeOnLoadMethodAttributes (50ms)
+				AfterProcessingInitializeOnLoad (42ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (28ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 5.65 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4365 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 30 unused Assets / (95.5 KB). Loaded Objects now: 4944.
+Memory consumption went from 194.4 MB to 194.3 MB.
+Total: 3.647900 ms (FindLiveObjects: 0.387900 ms CreateObjectMapping: 0.324700 ms MarkObjects: 2.890300 ms  DeleteObjects: 0.043700 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 94.701447 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f010b6b02fade4f7defe89f9b70cf067') in 0.065761 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.950099 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cc97419082b5e6b1de02e12895503598') in 0.014061 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.016859 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6c2c499be04ee838cdb4fb713c7bbbe1') in 0.014401 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.194162 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e2fd76214c635a63659c73735401bd83') in 0.017071 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.826447 seconds.
+  path: Assets/Prefabs/MazeMiddle1.prefab
+  artifactKey: Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/MazeMiddle1.prefab using Guid(6681b41ff16e449428b00c38f0bd7a11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '11dd8874232947d3db83565f755077e6') in 0.019026 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.030032 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\19428\Documents\GitHub\GDP-p-4\496 Trouble Maker\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\19428\Documents\GitHub\GDP-p-4\496 Trouble Maker\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.87 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.840 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1841ms)
+		BeginReloadAssembly (299ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (54ms)
+		EndReloadAssembly (1352ms)
+			LoadAssemblies (261ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (382ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (64ms)
+			SetupLoadedEditorAssemblies (635ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (25ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (194ms)
+				ProcessInitializeOnLoadAttributes (321ms)
+				ProcessInitializeOnLoadMethodAttributes (46ms)
+				AfterProcessingInitializeOnLoad (47ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (24ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 4.55 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4365 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 30 unused Assets / (96.4 KB). Loaded Objects now: 4959.
+Memory consumption went from 194.4 MB to 194.3 MB.
+Total: 3.487700 ms (FindLiveObjects: 0.347900 ms CreateObjectMapping: 0.287700 ms MarkObjects: 2.807200 ms  DeleteObjects: 0.043400 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.031537 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\19428\Documents\GitHub\GDP-p-4\496 Trouble Maker\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\19428\Documents\GitHub\GDP-p-4\496 Trouble Maker\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.83 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.875 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1876ms)
+		BeginReloadAssembly (271ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (6ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (44ms)
+		EndReloadAssembly (1402ms)
+			LoadAssemblies (258ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (405ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (58ms)
+			SetupLoadedEditorAssemblies (636ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (23ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (196ms)
+				ProcessInitializeOnLoadAttributes (325ms)
+				ProcessInitializeOnLoadMethodAttributes (47ms)
+				AfterProcessingInitializeOnLoad (43ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (30ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 4.54 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4365 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 30 unused Assets / (95.4 KB). Loaded Objects now: 4974.
+Memory consumption went from 194.4 MB to 194.3 MB.
+Total: 3.425400 ms (FindLiveObjects: 0.354100 ms CreateObjectMapping: 0.275000 ms MarkObjects: 2.750400 ms  DeleteObjects: 0.044800 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.032163 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image C:\Users\19428\Documents\GitHub\GDP-p-4\496 Trouble Maker\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\19428\Documents\GitHub\GDP-p-4\496 Trouble Maker\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.19 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.959 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1960ms)
+		BeginReloadAssembly (310ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (6ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (51ms)
+		EndReloadAssembly (1443ms)
+			LoadAssemblies (286ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (411ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (61ms)
+			SetupLoadedEditorAssemblies (653ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (26ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (197ms)
+				ProcessInitializeOnLoadAttributes (326ms)
+				ProcessInitializeOnLoadMethodAttributes (51ms)
+				AfterProcessingInitializeOnLoad (52ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (34ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 4.84 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4365 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 30 unused Assets / (95.4 KB). Loaded Objects now: 4989.
+Memory consumption went from 194.4 MB to 194.4 MB.
+Total: 4.283900 ms (FindLiveObjects: 0.360200 ms CreateObjectMapping: 0.379500 ms MarkObjects: 3.484200 ms  DeleteObjects: 0.058900 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
