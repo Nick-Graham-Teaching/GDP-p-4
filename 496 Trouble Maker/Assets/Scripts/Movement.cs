@@ -433,23 +433,6 @@ public class Movement : NetworkBehaviour
 					turnSpeed * turnSpeedMultiplier * Time.deltaTime);
 			}
 
-			// Game start
-			/*
-			if (IsHost && Input.GetKeyDown(KeyCode.Alpha1))
-			{
-				if (GameObject.Find("Client"))
-				{
-					UpdateBeginServerRpc();
-					UpdateTurnServerRpc();
-				}
-				else
-				{
-					//GameManager.instance.CreateMaze();
-					//hostCanMove = true;
-					Debug.Log("No Obstructionist enter the game, need one more player");
-				}
-			}*/
-
 			// Change turn
 			if (begin)
 			{
