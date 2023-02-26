@@ -19,10 +19,10 @@ public class TimeCounter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Timer1();
+        CountTime();
     }
 
-    void Timer1()
+    void CountTime()
     {
         timer -= Time.deltaTime;
         int time = (int)timer;

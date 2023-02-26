@@ -43,6 +43,7 @@
   <ItemGroup>
      <Compile Include="Assets\Samples\Cinemachine\2.8.9\Cinemachine Example Scenes\Scenes\AimingRig\AimReticle.cs" />
      <None Include="Assets\Samples\Cinemachine\2.8.9\Cinemachine Example Scenes\Scenes\AimingRig\AimingRig.asmdef" />
+     <Folder Include="Assets\Samples\Cinemachine\2.8.9\Cinemachine Example Scenes\Scenes\AimingRig" />
      <Reference Include="UnityEngine">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.11f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
      </Reference>

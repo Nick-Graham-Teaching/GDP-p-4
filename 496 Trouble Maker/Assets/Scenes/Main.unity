@@ -993,6 +993,7 @@ MonoBehaviour:
   mark: {fileID: 7469861445056596322, guid: e383558ecc53fe3458f142c6e5fb47be, type: 3}
   activate: {fileID: 2100000, guid: 23b2d31b555781b44901f21c2b0687d3, type: 2}
   GameStartUI: {fileID: 1846906052}
+  ipAddressText: {fileID: 0}
   ip: {fileID: 1031515426}
 --- !u!114 &357715869
 MonoBehaviour:

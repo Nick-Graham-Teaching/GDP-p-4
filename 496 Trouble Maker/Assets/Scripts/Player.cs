@@ -13,15 +13,7 @@ using Unity.Netcode.Transports.UTP;
 public class Player : NetworkBehaviour
 {
     private Transform player;
-
-    //private bool full = true;
     
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
     public override void OnNetworkSpawn()
     {
 
@@ -71,21 +63,7 @@ public class Player : NetworkBehaviour
     {
         Application.Quit();
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     
-    public void GetLocalIPAddress() {
-        var host = Dns.GetHostEntry(Dns.GetHostName());
-        foreach (var ip in host.AddressList) 
-        {
-            Debug.Log(ip.ToString()); 
-        }
-    }
-
     public void OnStartButtonClick()
     {
         if (GameObject.Find("Host").transform.Find("Player").GetComponent<Movement>().StarGame())

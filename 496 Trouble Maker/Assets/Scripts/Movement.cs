@@ -22,11 +22,8 @@ public class Movement : NetworkBehaviour
 	private NetworkVariable<Quaternion> syncRot = new NetworkVariable<Quaternion>();
 
 	public bool useCharacterForward = false;
-	public bool lockToCameraForward = false;
 	public float turnSpeed = 10f;
-	public KeyCode sprintJoystick = KeyCode.JoystickButton2;
-	public KeyCode sprintKeyboard = KeyCode.Space;
-
+	
 	private bool isC;
 	private bool hostCanMove = false;
 	private bool begin = false;
@@ -304,7 +301,6 @@ public class Movement : NetworkBehaviour
 	void ObstacleClientRpc(string n)
 	{
 		if (GameManager.instance.CreateObstacle(n)) obstacleActivateNum += 1;
-		else if (GameManager.instance.CreateObstacle(n)) obstacleActivateNum += 0;
 	}
 
 	/// <summary>
@@ -432,7 +428,7 @@ public class Movement : NetworkBehaviour
 				transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(euler),
 					turnSpeed * turnSpeedMultiplier * Time.deltaTime);
 			}
-
+			
 			// Change turn
 			if (begin)
 			{
@@ -540,11 +536,11 @@ public class Movement : NetworkBehaviour
 				{
 					Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 					RaycastHit hit;
-					if (Physics.Raycast(ray, out hit) && hit.transform.name != "Host")
+					if (Physics.Raycast(ray, out hit) && hit.transform.name != "Player")
 					{
 						Vector3 point = hit.point;
 						UpdateMarkServerRpc(point);
-						// Debug.Log("Mark on");
+						// Debug.Log(hit.transform.name);
 					}
 				}
 			}
@@ -632,7 +628,7 @@ public class Movement : NetworkBehaviour
 	/// <summary>
 	/// Update camera direction to the player mouse position
 	/// </summary>
-	public virtual void UpdateTargetDirection()
+	protected virtual void UpdateTargetDirection()
 	{
 		if (!useCharacterForward)
 		{

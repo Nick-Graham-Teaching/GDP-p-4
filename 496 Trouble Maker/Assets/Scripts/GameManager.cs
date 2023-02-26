@@ -27,7 +27,7 @@ public class GameManager : MonoBehaviour
     public GameObject GameStartUI;
     
     string ipAddress;
-    // [SerializeField] TextMeshProUGUI ipAddressText;
+    [SerializeField] TextMeshProUGUI ipAddressText;
     [SerializeField] TMP_InputField ip;
     
     public static GameManager instance;
@@ -171,13 +171,13 @@ public class GameManager : MonoBehaviour
     }
 
     
-    public void SetIpAddress()
+    void SetIpAddress()
     {
         transport = NetworkManager.Singleton.GetComponent<UnityTransport>();
         transport.ConnectionData.Address = ipAddress;
     }
 
-    public void GetLocalIPAddress()
+    void GetLocalIPAddress()
     {
         var host = Dns.GetHostEntry(Dns.GetHostName());
         foreach (var ip in host.AddressList)
