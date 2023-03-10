@@ -37,6 +37,10 @@ public class GameManager : MonoBehaviour
     private List<GameObject> mazeMiddles = new List<GameObject>();
     private List<GameObject> mazeEnds = new List<GameObject>();
 
+    public GameObject challengerCards;
+    public GameObject controllerCards;
+    public bool server;
+
 
     // Start is called before the first frame update
     void Start()
@@ -209,6 +213,19 @@ public class GameManager : MonoBehaviour
             GameObject.Find("ConnectMenuUI").gameObject.SetActive(false);
         }
         else Debug.Log("Client connect failed");
+    }
+
+    public void Draw()
+    {
+        // Debug.Log(server);
+        if (server)
+        {
+            challengerCards.GetComponent<cardControl>().draw();
+        }
+        else
+        {
+            controllerCards.GetComponent<cardControl>().draw();
+        }
     }
     
 }

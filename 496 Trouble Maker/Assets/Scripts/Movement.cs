@@ -123,7 +123,16 @@ public class Movement : NetworkBehaviour
 		GameObject maze = GameManager.instance.CreateMaze();
 		transform.position = maze.transform.Find("StartPos").transform.position;
 		GameObject.Find("Client").transform.position = maze.transform.Find("Overview").transform.position;
-		
+		if (IsHost)
+		{
+			GameManager.instance.server = true;
+			GameManager.instance.challengerCards.SetActive(true);
+		}
+		else
+		{
+			GameManager.instance.server = false;
+			GameManager.instance.controllerCards.SetActive(true);
+		}
 	}
 	
 	/// <summary>
@@ -155,7 +164,28 @@ public class Movement : NetworkBehaviour
 				transform.Find("Player").transform.localPosition;
 			if (invisible) invisible = false;
 		}
+<<<<<<< Updated upstream
 		
+=======
+		GameManager.instance.Draw();
+	}
+
+
+	[ServerRpc]
+	void UpdateDestroyObstacleServerRpc(string n)
+	{
+		DestroyObstacleClientRpc(n);
+	}
+
+	[ClientRpc]
+	void DestroyObstacleClientRpc(string n)
+	{
+		GameManager.instance.DestroyObstacle(n);
+		GameObject.Find("Host").transform.Find("Player").GetComponent<Movement>().obstacleActivateNum = 0;
+		GameObject.Find("Client").transform.Find("Player").GetComponent<Movement>().obstacleActivateNum = 0;
+		GameObject.Find("Host").transform.Find("Player").GetComponent<Movement>().obstacleDestroy = false;
+		GameObject.Find("Client").transform.Find("Player").GetComponent<Movement>().obstacleDestroy = false;
+>>>>>>> Stashed changes
 	}
 	
 	
@@ -469,7 +499,27 @@ public class Movement : NetworkBehaviour
 			else if (!slow) slowSpeed = 1f;
 			if (chaos) chaosSpeed = -1f;
 			else if (!chaos) chaosSpeed = 1f;
+<<<<<<< Updated upstream
 			
+=======
+			if (isSprinting) sprintingSpeed = 1.5f;
+			else if (!isSprinting) sprintingSpeed = 1f;
+
+			if (hostCanMove) // Mark
+			{
+				if (Input.GetMouseButtonUp(0))
+				{
+					Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+					RaycastHit hit;
+					if (Physics.Raycast(ray, out hit,Mathf.Infinity,1 << 0,QueryTriggerInteraction.Ignore) && hit.transform.name != "Player")
+					{
+						Vector3 point = hit.point;
+						UpdateMarkServerRpc(point);
+						// Debug.Log(hit.transform.name);
+					}
+				}
+			}
+>>>>>>> Stashed changes
 			// Grow up
 			if (growUp)
 			{
@@ -497,6 +547,7 @@ public class Movement : NetworkBehaviour
 
 			if (!hostCanMove) transform.position += transform.forward * 0f;
 
+<<<<<<< Updated upstream
 			else transform.position += transform.forward * speed * Time.deltaTime * 5 * slowSpeed * chaosSpeed * stunSpeed;
 
 			if (hostCanMove) // Abilites
@@ -548,9 +599,13 @@ public class Movement : NetworkBehaviour
 					}
 				}
 			}
+=======
+			else transform.position += transform.forward * speed * Time.deltaTime * 5 * slowSpeed * chaosSpeed * stunSpeed * sprintingSpeed;
+			
+>>>>>>> Stashed changes
 		}
 
-		if (!isC) // Obstructionist
+		if (!isC) // Controller
 		{
 			// Camera Movement
 			UpdateDirection();
@@ -564,27 +619,6 @@ public class Movement : NetworkBehaviour
 
 			if (!hostCanMove) // Abilities
 			{
-				// slow ability
-				if (Input.GetKeyDown(KeyCode.R))
-				{
-					Debug.Log("slow pressed!");
-					UpdateSlowDownServerRpc();
-				}
-
-				// chaos ability
-				if (Input.GetKeyDown(KeyCode.T))
-				{
-					Debug.Log("Chaos pressed");
-					UpdateChaosStatusServerRpc();
-				}
-
-				// blind
-				if (Input.GetKeyDown(KeyCode.Y))
-				{
-					UpdateBlindServerRpc();
-					Debug.Log("Blind pressed");
-				}
-
 				// Trap
 				if (Input.GetMouseButtonUp(0))
 				{
@@ -608,20 +642,6 @@ public class Movement : NetworkBehaviour
 						string n = hit.transform.name;
 						UpdateObstacleServerRpc(n);
 					}
-				}
-
-				// Teleport
-				if (Input.GetKeyDown(KeyCode.E))
-				{
-					UpdateTeleportServerRpc(lastPos);
-					Debug.Log("Teleport pressed");
-				}
-
-				// Erase marks
-				if (Input.GetKeyDown(KeyCode.F))
-				{
-					UpdateEraseMarkServerRpc();
-					Debug.Log("Erase challenger's mark");
 				}
 			}
 		}
@@ -706,7 +726,7 @@ public class Movement : NetworkBehaviour
 		}
 	}
 
-	public bool StarGame()
+	public bool StartGame()
 	{
 		if (GameObject.Find("Client"))
 		{
@@ -718,8 +738,59 @@ public class Movement : NetworkBehaviour
 		{
 			//GameManager.instance.CreateMaze();
 			//hostCanMove = true;
-			Debug.Log("No Obstructionist enter the game, need one more player");
+			Debug.Log("No Controller connect to server, need one more player");
 			return false;
 		}
 	}
+
+	public void Purify()
+	{
+		if (hostCanMove) UpdatePurifyServerRpc();
+	}
+
+	public void Accelerate()
+	{
+		if (hostCanMove) UpdateIsSprintingServerRpc();
+	}
+	
+	public void GrowUp()
+	{
+		if (hostCanMove) UpdateGrowUpServerRpc();
+	}
+
+	public void IncreaseTime()
+	{
+		if (hostCanMove) UpdateTimeServerRpc();
+	}
+
+	public void Invisible()
+	{
+		if (hostCanMove) UpdateInvisibleServerRpc();
+	}
+	
+	public void Slow()
+	{
+		if (!hostCanMove) UpdateSlowDownServerRpc();
+	}
+
+	public void Chaos()
+	{
+		if (!hostCanMove) UpdateChaosStatusServerRpc();
+	}
+	
+	public void Blind()
+	{
+		if (!hostCanMove) UpdateBlindServerRpc();
+	}
+
+	public void Teleport()
+	{
+		if (!hostCanMove) UpdateTeleportServerRpc(lastPos);
+	}
+
+	public void Erase()
+	{
+		if (!hostCanMove) UpdateEraseMarkServerRpc();
+	}
+
 }

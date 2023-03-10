@@ -88,7 +88,7 @@ public class Player : NetworkBehaviour
 
     public void OnStartButtonClick()
     {
-        if (GameObject.Find("Host").transform.Find("Player").GetComponent<Movement>().StarGame())
+        if (GameObject.Find("Host").transform.Find("Player").GetComponent<Movement>().StartGame())
         {
             GameObject.Find("GameStart").gameObject.SetActive(false);
         }

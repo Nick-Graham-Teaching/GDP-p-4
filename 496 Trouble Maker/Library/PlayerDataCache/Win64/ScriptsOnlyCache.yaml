@@ -35,8 +35,10 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -162,6 +164,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1630}
     - Class: 114
+<<<<<<< Updated upstream
       Script: {instanceID: 1850}
     - Class: 114
       Script: {instanceID: 2264}
@@ -227,6 +230,73 @@ ScriptsOnlyBuild:
       Script: {instanceID: 10004}
     - Class: 114
       Script: {instanceID: 10086}
+=======
+      Script: {instanceID: 1848}
+    - Class: 114
+      Script: {instanceID: 2262}
+    - Class: 114
+      Script: {instanceID: 2528}
+    - Class: 114
+      Script: {instanceID: 2934}
+    - Class: 114
+      Script: {instanceID: 3018}
+    - Class: 114
+      Script: {instanceID: 3118}
+    - Class: 114
+      Script: {instanceID: 3218}
+    - Class: 114
+      Script: {instanceID: 3296}
+    - Class: 114
+      Script: {instanceID: 3688}
+    - Class: 114
+      Script: {instanceID: 4246}
+    - Class: 114
+      Script: {instanceID: 4392}
+    - Class: 114
+      Script: {instanceID: 4916}
+    - Class: 114
+      Script: {instanceID: 5058}
+    - Class: 114
+      Script: {instanceID: 5382}
+    - Class: 114
+      Script: {instanceID: 5566}
+    - Class: 114
+      Script: {instanceID: 6154}
+    - Class: 114
+      Script: {instanceID: 6436}
+    - Class: 114
+      Script: {instanceID: 6778}
+    - Class: 114
+      Script: {instanceID: 6856}
+    - Class: 114
+      Script: {instanceID: 7150}
+    - Class: 114
+      Script: {instanceID: 7160}
+    - Class: 114
+      Script: {instanceID: 7210}
+    - Class: 114
+      Script: {instanceID: 7262}
+    - Class: 114
+      Script: {instanceID: 7422}
+    - Class: 114
+      Script: {instanceID: 7858}
+    - Class: 114
+      Script: {instanceID: 7974}
+    - Class: 114
+      Script: {instanceID: 8618}
+    - Class: 114
+      Script: {instanceID: 8762}
+    - Class: 114
+      Script: {instanceID: 9330}
+    - Class: 114
+      Script: {instanceID: 9624}
+    - Class: 114
+      Script: {instanceID: 9872}
+    - Class: 114
+      Script: {instanceID: 10010}
+    - Class: 114
+      Script: {instanceID: 10092}
+>>>>>>> Stashed changes
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -249,6 +319,78 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 224
       Script: {instanceID: 0}
+<<<<<<< Updated upstream
+=======
+    Assets/Scenes/SamplScene.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 49
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 89
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 108
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 1630}
+    - Class: 114
+      Script: {instanceID: 2470}
+    - Class: 114
+      Script: {instanceID: 2632}
+    - Class: 114
+      Script: {instanceID: 3018}
+    - Class: 114
+      Script: {instanceID: 3296}
+    - Class: 114
+      Script: {instanceID: 3688}
+    - Class: 114
+      Script: {instanceID: 4930}
+    - Class: 114
+      Script: {instanceID: 5078}
+    - Class: 114
+      Script: {instanceID: 5440}
+    - Class: 114
+      Script: {instanceID: 6436}
+    - Class: 114
+      Script: {instanceID: 6856}
+    - Class: 114
+      Script: {instanceID: 7210}
+    - Class: 114
+      Script: {instanceID: 7354}
+    - Class: 114
+      Script: {instanceID: 7422}
+    - Class: 114
+      Script: {instanceID: 7858}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+>>>>>>> Stashed changes
   scriptHashData:
   - hash:
       serializedVersion: 2
@@ -1776,7 +1918,11 @@ ScriptsOnlyBuild:
     className: CinemachineBasicMultiChannelPerlin
   - hash:
       serializedVersion: 2
+<<<<<<< Updated upstream
       Hash: 9255cd63631f0f1f004ceed2d09ae110
+=======
+      Hash: 19be12eb189ecb04ad6db91e0bb715bd
+>>>>>>> Stashed changes
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameManager
