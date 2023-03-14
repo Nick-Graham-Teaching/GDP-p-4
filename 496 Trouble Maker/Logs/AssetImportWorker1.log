@@ -229,3 +229,37 @@ Received Import Request.
   path: Assets/Map/03 uvw.fbx
   artifactKey: Guid(2d9da834610d24a439eed9a26f1cf593) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Start importing Assets/Map/03 uvw.fbx using Guid(2d9da834610d24a439eed9a26f1cf593) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dccc9dcfe95aae4327ad0aeb9d2f84c5') in 0.189782 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 129.462585 seconds.
+  path: Assets/ScreenLogger/Resources/Blind.PNG
+  artifactKey: Guid(c94f289497ae05d4a9562103d575f412) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScreenLogger/Resources/Blind.PNG using Guid(c94f289497ae05d4a9562103d575f412) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a6663d3793977f9a80c33abb3fb634a8') in 0.270071 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/ScreenLogger/Resources/Erase.png
+  artifactKey: Guid(36f2d46cc7c00854facf170df8691152) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScreenLogger/Resources/Erase.png using Guid(36f2d46cc7c00854facf170df8691152) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1f8832f055b579b19d9894a399b983a3') in 0.218668 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/ScreenLogger/Resources/RaiseUp.PNG
+  artifactKey: Guid(7ec873dbee73ef54aa24d7514e8b04c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScreenLogger/Resources/RaiseUp.PNG using Guid(7ec873dbee73ef54aa24d7514e8b04c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dc813cb5f0f50ced188ad244adc9628f') in 0.167242 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/ScreenLogger/Resources/Obstacle.png
+  artifactKey: Guid(6a2a2f5940f8cd7409b2582931148329) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScreenLogger/Resources/Obstacle.png using Guid(6a2a2f5940f8cd7409b2582931148329) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd665e701b1f65ee3bed888f94f9d708a') in 0.177211 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/ScreenLogger/Resources/Confusion.PNG
+  artifactKey: Guid(167ef2495a680ab4293d6ebde0dba078) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ScreenLogger/Resources/Confusion.PNG using Guid(167ef2495a680ab4293d6ebde0dba078) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '310e742b8082218d59d0c408b3540884') in 0.173594 seconds 
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0

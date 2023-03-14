@@ -300,6 +300,10 @@ public class cardControl : MonoBehaviour
         {
             host.GetComponent<Movement>().Invisible();
         }
+        if (name == "Cleanse")
+        {
+            //host.GetComponent<Movement>().Cleanse();
+        }
     }
 
 

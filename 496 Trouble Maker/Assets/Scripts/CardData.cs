@@ -12,11 +12,16 @@ public class CardData : MonoBehaviour
         cardList.Add(new Card("Speed", Resources.Load<Sprite>("Speed")));
         cardList.Add(new Card("RaiseUp", Resources.Load<Sprite>("RaiseUp")));
         cardList.Add(new Card("Invisible", Resources.Load<Sprite>("Invisible")));
+        cardList.Add(new Card("Cleanse", Resources.Load<Sprite>("Cleanse")));
+
+
         cardList.Add(new Card("Blind", Resources.Load<Sprite>("Blind")));
         cardList.Add(new Card("Confusion", Resources.Load<Sprite>("Confusion")));
         cardList.Add(new Card("Obstacle", Resources.Load<Sprite>("Obstacle")));
         cardList.Add(new Card("Slow", Resources.Load<Sprite>("Slow")));
         cardList.Add(new Card("Erase", Resources.Load<Sprite>("Erase")));
+        cardList.Add(new Card("Teleport", Resources.Load<Sprite>("Teleport")));
+
     }
 
 }

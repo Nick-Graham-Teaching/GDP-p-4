@@ -193,3 +193,7 @@ Received Import Request.
   path: Assets/Map/21.prefab
   artifactKey: Guid(e1f3a3cdc79b3d34b8db5e3e6002d985) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Start importing Assets/Map/21.prefab using Guid(e1f3a3cdc79b3d34b8db5e3e6002d985) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5ae3ec833874c7d9b201ee17924e0b97') in 0.035469 seconds 
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0

@@ -25,7 +25,7 @@ public class thisCardClient : MonoBehaviour
         index = 0;
         for (int i = 0; i < 15; i++)
         {
-            int randomInt = Random.Range(4, 9);
+            int randomInt = Random.Range(5, 11);
             this_Card.Add(CardData.cardList[randomInt]);
         }
 
