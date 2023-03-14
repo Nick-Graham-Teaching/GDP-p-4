@@ -941,7 +941,7 @@ MonoBehaviour:
   useCharacterForward: 0
   turnSpeed: 10
   delayTime: 10
-  turnCount: 15
+  turnCount: 10
 --- !u!1 &2524713471688813573
 GameObject:
   m_ObjectHideFlags: 0

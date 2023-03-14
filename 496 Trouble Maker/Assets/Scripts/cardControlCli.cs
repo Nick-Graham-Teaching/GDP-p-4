@@ -277,6 +277,11 @@ public class cardControlCli : MonoBehaviour
         {
             client.GetComponent<Movement>().Erase();
         }
+
+        if (name == "Teleport")
+        {
+            client.GetComponent<Movement>().Teleport();
+        }
     }
 
 }

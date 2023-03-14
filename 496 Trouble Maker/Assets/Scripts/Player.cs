@@ -57,17 +57,18 @@ public class Player : NetworkBehaviour
             }
         }
     }
-
+    /*
     public override void OnNetworkDespawn()
     {
         Application.Quit();
-    }
+    }*/
     
     public void OnStartButtonClick()
     {
         if (GameObject.Find("Host").transform.Find("Player").GetComponent<Movement>().StarGame())
         {
             GameObject.Find("GameStart").gameObject.SetActive(false);
+            GameObject.Find("IP Address").gameObject.SetActive(false);
         }
         else return;
     }

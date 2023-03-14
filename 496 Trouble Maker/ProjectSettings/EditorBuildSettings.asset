@@ -11,4 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Main.unity
     guid: ade2ed92b1a27814297704f3d1de74fa
+  - enabled: 1
+    path: Assets/Scenes/ChallengerWin.unity
+    guid: 906f3aaf94fc07b4f8d582e71fe2bbac
+  - enabled: 1
+    path: Assets/Scenes/ControllerWin.unity
+    guid: a60b2bf9f4e3ebc4a816ec7f757a16bd
   m_configObjects: {}

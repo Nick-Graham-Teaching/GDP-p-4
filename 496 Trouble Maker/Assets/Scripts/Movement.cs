@@ -8,6 +8,7 @@ using Unity.Mathematics;
 using UnityEngine;
 using Unity.Netcode;
 using UnityEngine.PlayerLoop;
+using UnityEngine.SceneManagement;
 using Quaternion = UnityEngine.Quaternion;
 using Random = UnityEngine.Random;
 using Vector2 = UnityEngine.Vector2;
@@ -104,16 +105,13 @@ public class Movement : NetworkBehaviour
 	/// Game end
 	/// </summary>
 	[ServerRpc]
-	void UpdateGameStatusServerRpc() { GameStatusClientRpc(); }
+	void UpdateGameStatusServerRpc(bool b) { GameStatusClientRpc(b); }
 
 	[ClientRpc]
-	void GameStatusClientRpc()
+	void GameStatusClientRpc(bool challenger)
 	{
-		hostCanMove = false;
-		GameObject.Find("Host").transform.Find("Player").transform.GetComponent<Movement>().begin = false;
-		GameObject.Find("Client").transform.Find("Player").transform.GetComponent<Movement>().begin = false;
-		GameObject.Find("Canvas").transform.Find("Timer").gameObject.SetActive(false);
-		Debug.Log("Game over");
+		if (challenger) ChallengerWin();
+		else ControllerWin();
 	}
 	/// <summary>
 	///  Game Start
@@ -495,8 +493,7 @@ public class Movement : NetworkBehaviour
 				// Obstructionist win condition
 				if (turnCount == 0)
 				{
-					UpdateGameStatusServerRpc();
-					Debug.Log("Controller Win");
+					UpdateGameStatusServerRpc(false);
 				}
 			}
 
@@ -646,8 +643,7 @@ public class Movement : NetworkBehaviour
 		// Challenger win condition
 		if (other.tag == "Finish")
 		{
-			UpdateGameStatusServerRpc();
-			Debug.Log("Challenger win");
+			UpdateGameStatusServerRpc(true);
 		}
 	
 		// Be trapped
@@ -779,5 +775,15 @@ public class Movement : NetworkBehaviour
 	public void Trap()
 	{
 		if (!hostCanMove) trapCanUse = true;
+	}
+
+	void ChallengerWin()
+	{
+		SceneManager.LoadScene("ChallengerWin");
+	}
+
+	void ControllerWin()
+	{
+		SceneManager.LoadScene("ControllerWin");
 	}
 }

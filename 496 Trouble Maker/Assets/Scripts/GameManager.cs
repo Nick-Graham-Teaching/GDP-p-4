@@ -27,7 +27,7 @@ public class GameManager : MonoBehaviour
     public GameObject GameStartUI;
     
     string ipAddress;
-    // [SerializeField] TextMeshProUGUI ipAddressText;
+    [SerializeField] TextMeshProUGUI ipAddressText;
     [SerializeField] TMP_InputField ip;
     
     public static GameManager instance;
@@ -212,6 +212,8 @@ public class GameManager : MonoBehaviour
         NetworkManager.Singleton.StartHost();
         GetLocalIPAddress();
         GameObject.Find("ConnectMenuUI").gameObject.SetActive(false);
+        ipAddressText.gameObject.SetActive(true);
+        ipAddressText.text = ipAddress;
         GameStartUI.SetActive(true);
         CloseCamera();
     }

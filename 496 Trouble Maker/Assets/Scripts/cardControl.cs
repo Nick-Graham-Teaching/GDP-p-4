@@ -302,7 +302,7 @@ public class cardControl : MonoBehaviour
         }
         if (name == "Cleanse")
         {
-            //host.GetComponent<Movement>().Cleanse();
+            host.GetComponent<Movement>().Purify();
         }
     }
 
