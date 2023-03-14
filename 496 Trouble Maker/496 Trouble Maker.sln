@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{e3c34705-08fa-b495-1078-c1f3ae68b439}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AimingRig", "AimingRig.csproj", "{4c7ec864-148b-48a4-0ed7-d0437c9ad553}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-Editor", "Assembly-CSharp-Editor.csproj", "{82e2acc8-b2df-f271-72d5-b2f06d00e80b}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{e3c34705-08fa-b495-1078-c1f3ae68b439}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{e3c34705-08fa-b495-1078-c1f3ae68b439}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4c7ec864-148b-48a4-0ed7-d0437c9ad553}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4c7ec864-148b-48a4-0ed7-d0437c9ad553}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82e2acc8-b2df-f271-72d5-b2f06d00e80b}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82e2acc8-b2df-f271-72d5-b2f06d00e80b}.Debug|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
