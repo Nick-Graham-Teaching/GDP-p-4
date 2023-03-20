@@ -659,7 +659,6 @@ public class Movement : NetworkBehaviour
 	/// </summary>
 	void UpdateDirection()
 	{
-		
 
 		mainCamera.transform.localRotation = Quaternion.Euler(90, 0, 0);
 		if (Input.GetAxis("Mouse ScrollWheel") < 0)
@@ -785,5 +784,9 @@ public class Movement : NetworkBehaviour
 	void ControllerWin()
 	{
 		SceneManager.LoadScene("ControllerWin");
+	}
+
+	public bool GetIsSprinting(){
+		return isSprinting;
 	}
 }

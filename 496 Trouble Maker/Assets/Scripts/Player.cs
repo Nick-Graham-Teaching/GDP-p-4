@@ -31,7 +31,7 @@ public class Player : NetworkBehaviour
             player.position = GameManager.instance.ChallengerSpawnPos;
             player.GetComponent<Movement>().SetIsCTrue();
             player.Find("Body").gameObject.SetActive(true);
-            player.Find("Skeleton").gameObject.SetActive(true);
+            //player.Find("Skeleton").gameObject.SetActive(true);
             player.transform.GetComponent<Collider>().enabled = true;
             if (!IsLocalPlayer)
             {

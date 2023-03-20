@@ -415,4 +415,3 @@ public class cardControl : MonoBehaviour
    
 
 }
-

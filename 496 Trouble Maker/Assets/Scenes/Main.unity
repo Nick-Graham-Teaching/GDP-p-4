@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.02495846, g: 0.02274444, b: 0.07047759, a: 1}
+  m_IndirectSpecularColor: {r: 0.024901927, g: 0.022690432, b: 0.07040433, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1974,10 +1974,10 @@ MonoBehaviour:
   NetworkConfig:
     ProtocolVersion: 0
     NetworkTransport: {fileID: 357715865}
-    PlayerPrefab: {fileID: 2524713471737529122, guid: cc7b34d8d34ed09488532c85108b1692, type: 3}
+    PlayerPrefab: {fileID: 8205545266108639305, guid: f163cc732df266744a778bcd58c605a5, type: 3}
     NetworkPrefabs:
     - Override: 0
-      Prefab: {fileID: 2524713471737529122, guid: cc7b34d8d34ed09488532c85108b1692, type: 3}
+      Prefab: {fileID: 8205545266108639305, guid: f163cc732df266744a778bcd58c605a5, type: 3}
       SourcePrefabToOverride: {fileID: 0}
       SourceHashToOverride: 0
       OverridingTargetPrefab: {fileID: 0}
