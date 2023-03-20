@@ -34,6 +34,7 @@ public class cardControl : MonoBehaviour
 
     public  List<Card> cardList = new List<Card>();
     private List<int> activeList = new List<int>();
+    private List<int> magnifiedList = new List<int>();
 
     // Start is called before the first frame update
     void Awake()
@@ -44,7 +45,6 @@ public class cardControl : MonoBehaviour
         activeList.Add(0);
         activeList.Add(0);
         host = GameObject.Find("Host").transform.Find("Player").gameObject;
-
 
 
         isMagnifiedC1 = false;
@@ -80,6 +80,30 @@ public class cardControl : MonoBehaviour
             {
                 card1Comp.transform.localScale *= 1.5f;
                 isMagnifiedC1 = true;
+
+                //recover other cards
+                if (isMagnifiedC2 == true)
+                {
+                    card2Comp.transform.localScale /= 1.5f;
+                    isMagnifiedC2 = false;
+                }
+                if (isMagnifiedC3 == true)
+                {
+                    card3Comp.transform.localScale /= 1.5f;
+                    isMagnifiedC3 = false;
+                }
+                if (isMagnifiedC4 == true)
+                {
+                    card4Comp.transform.localScale /= 1.5f;
+                    isMagnifiedC4 = false;
+                }
+                if (isMagnifiedC5 == true)
+                {
+                    card5Comp.transform.localScale /= 1.5f;
+                    isMagnifiedC5 = false;
+                }
+
+
                 //Debug.Log(isMagnifiedC1);
             }
         }
@@ -108,7 +132,28 @@ public class cardControl : MonoBehaviour
                 card2Comp.transform.localScale *= 1.5f;
                 isMagnifiedC2 = true;
                 //Debug.Log(isMagnifiedC2);
+                if (isMagnifiedC1 == true)
+                {
+                    card1Comp.transform.localScale /= 1.5f;
+                    isMagnifiedC1 = false;
+                }
+                if (isMagnifiedC3 == true)
+                {
+                    card3Comp.transform.localScale /= 1.5f;
+                    isMagnifiedC3 = false;
+                }
+                if (isMagnifiedC4 == true)
+                {
+                    card4Comp.transform.localScale /= 1.5f;
+                    isMagnifiedC4 = false;
+                }
+                if (isMagnifiedC5 == true)
+                {
+                    card5Comp.transform.localScale /= 1.5f;
+                    isMagnifiedC5 = false;
+                }
             }
+
         }
 
         if (Input.GetKeyDown(KeyCode.Return) && isMagnifiedC2 == true && canUse)
@@ -134,7 +179,27 @@ public class cardControl : MonoBehaviour
             {
                 card3Comp.transform.localScale *= 1.5f;
                 isMagnifiedC3 = true;
-               //Debug.Log(isMagnifiedC3);
+                //Debug.Log(isMagnifiedC3);
+                if (isMagnifiedC2 == true)
+                {
+                    card2Comp.transform.localScale /= 1.5f;
+                    isMagnifiedC2 = false;
+                }
+                if (isMagnifiedC1 == true)
+                {
+                    card1Comp.transform.localScale /= 1.5f;
+                    isMagnifiedC1 = false;
+                }
+                if (isMagnifiedC4 == true)
+                {
+                    card4Comp.transform.localScale /= 1.5f;
+                    isMagnifiedC4 = false;
+                }
+                if (isMagnifiedC5 == true)
+                {
+                    card5Comp.transform.localScale /= 1.5f;
+                    isMagnifiedC5 = false;
+                }
             }
         }
 
@@ -161,6 +226,26 @@ public class cardControl : MonoBehaviour
                 card4Comp.transform.localScale *= 1.5f;
                 isMagnifiedC4 = true;
                 //Debug.Log(isMagnifiedC4);
+                if (isMagnifiedC2 == true)
+                {
+                    card2Comp.transform.localScale /= 1.5f;
+                    isMagnifiedC2 = false;
+                }
+                if (isMagnifiedC3 == true)
+                {
+                    card3Comp.transform.localScale /= 1.5f;
+                    isMagnifiedC3 = false;
+                }
+                if (isMagnifiedC1 == true)
+                {
+                    card1Comp.transform.localScale /= 1.5f;
+                    isMagnifiedC1 = false;
+                }
+                if (isMagnifiedC5 == true)
+                {
+                    card5Comp.transform.localScale /= 1.5f;
+                    isMagnifiedC5 = false;
+                }
             }
         }
 
@@ -187,6 +272,26 @@ public class cardControl : MonoBehaviour
                 card5Comp.transform.localScale *= 1.5f;
                 isMagnifiedC5 = true;
                 //Debug.Log(isMagnifiedC5);
+                if (isMagnifiedC2 == true)
+                {
+                    card2Comp.transform.localScale /= 1.5f;
+                    isMagnifiedC2 = false;
+                }
+                if (isMagnifiedC3 == true)
+                {
+                    card3Comp.transform.localScale /= 1.5f;
+                    isMagnifiedC3 = false;
+                }
+                if (isMagnifiedC4 == true)
+                {
+                    card4Comp.transform.localScale /= 1.5f;
+                    isMagnifiedC4 = false;
+                }
+                if (isMagnifiedC1 == true)
+                {
+                    card1Comp.transform.localScale /= 1.5f;
+                    isMagnifiedC1 = false;
+                }
             }
         }
 
