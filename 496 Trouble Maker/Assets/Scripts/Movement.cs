@@ -7,6 +7,7 @@ using Cinemachine;
 using Unity.Mathematics;
 using UnityEngine;
 using Unity.Netcode;
+using UnityEditor;
 using UnityEngine.PlayerLoop;
 using UnityEngine.SceneManagement;
 using Quaternion = UnityEngine.Quaternion;
@@ -18,14 +19,14 @@ public class Movement : NetworkBehaviour
 {
 	public float ChallengerTime;
 	public float ControllerTime;
-	private NetworkVariable<float> syncSpeed = new NetworkVariable<float>();
-	private NetworkVariable<float> syncDir = new NetworkVariable<float>();
+	private NetworkVariable<bool> syncIdle = new NetworkVariable<bool>();
+	private NetworkVariable<bool> syncWalk = new NetworkVariable<bool>();
 	private NetworkVariable<bool> syncIsSp = new NetworkVariable<bool>();
 	private NetworkVariable<Vector3> syncVec = new NetworkVariable<Vector3>();
 	private NetworkVariable<Quaternion> syncRot = new NetworkVariable<Quaternion>();
 
-	public bool useCharacterForward = false;
-	public float turnSpeed = 10f;
+	private bool useCharacterForward = false;
+	private float turnSpeed = 10f;
 	
 	private bool isC;
 	private bool hostCanMove = false;
@@ -34,6 +35,8 @@ public class Movement : NetworkBehaviour
 	private float turnSpeedMultiplier;
 	private float speed = 0f;
 	private float direction = 0f;
+	private bool walk;
+	private bool idle;
 	private bool isSprinting = false;
 	private Animator anim;
 	private Vector3 targetDirection;
@@ -92,10 +95,10 @@ public class Movement : NetworkBehaviour
 	}
 
 	[ServerRpc]
-	void UpdateInputServerRpc(float speed, float dir, bool isSp, Vector3 vec, Quaternion rot)
+	void UpdateInputServerRpc(bool idle, bool walk, bool isSp, Vector3 vec, Quaternion rot)
 	{
-		syncDir.Value = dir;
-		syncSpeed.Value = speed;
+		syncIdle.Value = idle;
+		syncWalk.Value = walk;
 		syncIsSp.Value = isSp;
 		syncVec.Value = vec;
 		syncRot.Value = rot;
@@ -129,7 +132,8 @@ public class Movement : NetworkBehaviour
 		Debug.Log("Game Start");
 		GameObject maze = GameManager.instance.CreateMaze();
 		transform.position = maze.transform.Find("StartPos").transform.position;
-		GameObject.Find("Client").transform.position = maze.transform.Find("Overview").transform.position;
+		GameObject.Find("Client").transform.Find("Camera").position = maze.transform.Find("Overview").transform.position;
+		lastPos = transform.position;
 		if (IsHost)
 		{
 			GameManager.instance.server = true;
@@ -428,8 +432,8 @@ public class Movement : NetworkBehaviour
 
 	void SyncInput()
 	{
-		anim.SetFloat("Speed", syncSpeed.Value);
-		anim.SetFloat("Direction", syncDir.Value);
+		anim.SetBool("IsIdle", syncIdle.Value);
+		anim.SetBool("IsWalk", syncWalk.Value);
 		anim.SetBool("isSprinting", syncIsSp.Value);
 		transform.position = syncVec.Value;
 		transform.rotation = syncRot.Value;
@@ -442,22 +446,33 @@ public class Movement : NetworkBehaviour
 		{
 			input.x = Input.GetAxis("Horizontal");
 			input.y = Input.GetAxis("Vertical");
-
+			if (input.x != 0 || input.y != 0)
+			{
+				walk = true;
+				idle = false;
+				anim.SetBool("IsWalk", walk);
+			}
+			else if (input.x == 0 && input.y == 0)
+			{
+				idle = true;
+				walk = false;
+				anim.SetBool("IsIdle", idle);
+			}
 			// set speed to both vertical and horizontal inputs
 			if (useCharacterForward) speed = Mathf.Abs(input.x) + input.y;
 			else 
 				speed = Mathf.Abs(input.x) + Mathf.Abs(input.y);
 
 			speed = Mathf.Clamp(speed, 0f, 1f);
-			speed = Mathf.SmoothDamp(anim.GetFloat("Speed"), speed, ref velocity, 0.1f);
-			anim.SetFloat("Speed", speed);
+			//speed = Mathf.SmoothDamp(anim.GetFloat("Speed"), speed, ref velocity, 0.1f);
+			//anim.SetFloat("Speed", speed);
 
 			if (input.y < 0f && useCharacterForward)
 				direction = input.y;
 			else
 					direction = 0f;
 
-			anim.SetFloat("Direction", direction);
+			//anim.SetFloat("Direction", direction);
 
 			// set sprinting
 			anim.SetBool("isSprinting", isSprinting);
@@ -606,7 +621,7 @@ public class Movement : NetworkBehaviour
 			}
 		}
 
-		UpdateInputServerRpc(speed, direction, isSprinting, transform.position, transform.rotation);
+		UpdateInputServerRpc(idle, walk, isSprinting, transform.position, transform.rotation);
 	}
 	
 	/// <summary>

@@ -18,8 +18,8 @@ public class GameManager : MonoBehaviour
     private Transform notCspawnTransform;
     private Transform mazePos;
     public GameObject mazeStart;
-    public GameObject mazeMiddle;
-    public GameObject mazeMiddle1;
+    public GameObject mazeMiddle11;
+    public GameObject mazeMiddle21;
     public GameObject mazeEnd;
     public GameObject trap;
     public GameObject mark;
@@ -34,7 +34,8 @@ public class GameManager : MonoBehaviour
     
     GameObject camera;
     private List<GameObject> mazeStarts = new List<GameObject>();
-    private List<GameObject> mazeMiddles = new List<GameObject>();
+    private List<GameObject> mazeMiddleList1 = new List<GameObject>();
+    private List<GameObject> mazeMiddleList2 = new List<GameObject>();
     private List<GameObject> mazeEnds = new List<GameObject>();
 
     public GameObject challengerCards;
@@ -54,8 +55,8 @@ public class GameManager : MonoBehaviour
         NetworkManager.Singleton.ConnectionApprovalCallback = ApprovalCheck;
         ipAddress = "0.0.0.0";
         mazeStarts. Add(mazeStart);
-        mazeMiddles.Add(mazeMiddle);
-        // mazeMiddles.Add(mazeMiddle1);
+        mazeMiddleList1.Add(mazeMiddle11);
+        mazeMiddleList2.Add(mazeMiddle21);
         mazeEnds.Add(mazeEnd);
         
         // SetIpAddress();
@@ -88,13 +89,17 @@ public class GameManager : MonoBehaviour
         GameObject m = mazeStarts[i];
         GameObject first = Instantiate(m, mazePos.position, default);
         
-        i = Random.Range(0, mazeMiddles.Count);
-        m = mazeMiddles[i];
-        GameObject middle = Instantiate(m, first.transform.Find("EndPoint").position, default);
-        /*
+        i = Random.Range(0, mazeMiddleList1.Count);
+        m = mazeMiddleList1[i];
+        GameObject middle1 = Instantiate(m, first.transform.Find("EndPoint").position, default);
+        
+        i = Random.Range(0, mazeMiddleList2.Count);
+        m = mazeMiddleList2[i];
+        GameObject middle2 = Instantiate(m, middle1.transform.Find("EndPoint").position, default);
+        
         i = Random.Range(0, mazeEnds.Count);
         m = mazeEnds[i];
-        Instantiate(m, middle.transform.Find("EndPoint").position, default);*/
+        Instantiate(m, middle2.transform.Find("EndPoint").position, default);
         return first;
     }
 

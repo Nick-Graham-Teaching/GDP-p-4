@@ -36,7 +36,7 @@ public class Player : NetworkBehaviour
             if (!IsLocalPlayer)
             {
                 player.Find("Body").gameObject.SetActive(false);
-                player.Find("Skeleton").gameObject.SetActive(false);
+                // player.Find("Skeleton").gameObject.SetActive(false);
                 player.transform.GetComponent<CapsuleCollider>().enabled = false;
                 name = "Client";
             }
@@ -51,7 +51,7 @@ public class Player : NetworkBehaviour
             if (!IsLocalPlayer)
             {
                 player.Find("Body").gameObject.SetActive(true);
-                player.Find("Skeleton").gameObject.SetActive(true);
+                // player.Find("Skeleton").gameObject.SetActive(true);
                 player.transform.GetComponent<CapsuleCollider>().enabled = true;
                 name = "Host";
             }
