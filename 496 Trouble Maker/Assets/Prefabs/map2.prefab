@@ -198,8 +198,8 @@ MeshRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6905584141062565604}
   m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
   m_DynamicOccludee: 1
   m_StaticShadowCaster: 0
   m_MotionVectors: 1
@@ -352,6 +352,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6901692558873631747}
     m_Modifications:
+    - target: {fileID: 1636927882685255595, guid: a07ce74fdd38e1a42991ffbae8c5131c, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1636927882685255595, guid: a07ce74fdd38e1a42991ffbae8c5131c, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8287224878466070316, guid: a07ce74fdd38e1a42991ffbae8c5131c, type: 3}
       propertyPath: m_Name
       value: 8 (2)
@@ -512,6 +520,14 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Ground
       objectReference: {fileID: 0}
+    - target: {fileID: 8750499985135375416, guid: dca5cc6da3a51a44a9da2d4574639629, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8750499985135375416, guid: dca5cc6da3a51a44a9da2d4574639629, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dca5cc6da3a51a44a9da2d4574639629, type: 3}
 --- !u!4 &2268197262664769848 stripped
@@ -612,6 +628,14 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Ground
       objectReference: {fileID: 0}
+    - target: {fileID: 8750499985135375416, guid: dca5cc6da3a51a44a9da2d4574639629, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8750499985135375416, guid: dca5cc6da3a51a44a9da2d4574639629, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dca5cc6da3a51a44a9da2d4574639629, type: 3}
 --- !u!4 &2014728146910686603 stripped
@@ -644,6 +668,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6901692558873631747}
     m_Modifications:
+    - target: {fileID: 1636927882685255595, guid: a07ce74fdd38e1a42991ffbae8c5131c, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1636927882685255595, guid: a07ce74fdd38e1a42991ffbae8c5131c, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8287224878466070316, guid: a07ce74fdd38e1a42991ffbae8c5131c, type: 3}
       propertyPath: m_Name
       value: 8 (4)
@@ -804,6 +836,14 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Ground
       objectReference: {fileID: 0}
+    - target: {fileID: 8750499985135375416, guid: dca5cc6da3a51a44a9da2d4574639629, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8750499985135375416, guid: dca5cc6da3a51a44a9da2d4574639629, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dca5cc6da3a51a44a9da2d4574639629, type: 3}
 --- !u!4 &1931071068602791018 stripped
@@ -836,6 +876,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6901692558873631747}
     m_Modifications:
+    - target: {fileID: 1636927882685255595, guid: a07ce74fdd38e1a42991ffbae8c5131c, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1636927882685255595, guid: a07ce74fdd38e1a42991ffbae8c5131c, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8287224878466070316, guid: a07ce74fdd38e1a42991ffbae8c5131c, type: 3}
       propertyPath: m_Name
       value: 8 (6)
@@ -1128,6 +1176,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6901692558873631747}
     m_Modifications:
+    - target: {fileID: 3694592326386800876, guid: 3ce93c7eb62f62349b8d18c8751bda62, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3694592326386800876, guid: 3ce93c7eb62f62349b8d18c8751bda62, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6141774388479719188, guid: 3ce93c7eb62f62349b8d18c8751bda62, type: 3}
       propertyPath: m_Name
       value: 14 (17)
@@ -1388,6 +1444,14 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Ground
       objectReference: {fileID: 0}
+    - target: {fileID: 8750499985135375416, guid: dca5cc6da3a51a44a9da2d4574639629, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8750499985135375416, guid: dca5cc6da3a51a44a9da2d4574639629, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dca5cc6da3a51a44a9da2d4574639629, type: 3}
 --- !u!4 &1137207409781479695 stripped
@@ -1520,6 +1584,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6901692558873631747}
     m_Modifications:
+    - target: {fileID: 3694592326386800876, guid: 3ce93c7eb62f62349b8d18c8751bda62, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3694592326386800876, guid: 3ce93c7eb62f62349b8d18c8751bda62, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6141774388479719188, guid: 3ce93c7eb62f62349b8d18c8751bda62, type: 3}
       propertyPath: m_Name
       value: 14
@@ -1612,6 +1684,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6901692558873631747}
     m_Modifications:
+    - target: {fileID: 3694592326386800876, guid: 3ce93c7eb62f62349b8d18c8751bda62, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3694592326386800876, guid: 3ce93c7eb62f62349b8d18c8751bda62, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6141774388479719188, guid: 3ce93c7eb62f62349b8d18c8751bda62, type: 3}
       propertyPath: m_Name
       value: 14 (19)
@@ -1772,6 +1852,14 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Ground
       objectReference: {fileID: 0}
+    - target: {fileID: 8750499985135375416, guid: dca5cc6da3a51a44a9da2d4574639629, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8750499985135375416, guid: dca5cc6da3a51a44a9da2d4574639629, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dca5cc6da3a51a44a9da2d4574639629, type: 3}
 --- !u!4 &692898190026423335 stripped
@@ -1804,6 +1892,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6901692558873631747}
     m_Modifications:
+    - target: {fileID: 1636927882685255595, guid: a07ce74fdd38e1a42991ffbae8c5131c, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1636927882685255595, guid: a07ce74fdd38e1a42991ffbae8c5131c, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8287224878466070316, guid: a07ce74fdd38e1a42991ffbae8c5131c, type: 3}
       propertyPath: m_Name
       value: 8 (10)
@@ -1964,6 +2060,14 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Ground
       objectReference: {fileID: 0}
+    - target: {fileID: 8750499985135375416, guid: dca5cc6da3a51a44a9da2d4574639629, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8750499985135375416, guid: dca5cc6da3a51a44a9da2d4574639629, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dca5cc6da3a51a44a9da2d4574639629, type: 3}
 --- !u!4 &606082006682090526 stripped
@@ -2064,6 +2168,14 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Ground
       objectReference: {fileID: 0}
+    - target: {fileID: 8750499985135375416, guid: dca5cc6da3a51a44a9da2d4574639629, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8750499985135375416, guid: dca5cc6da3a51a44a9da2d4574639629, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dca5cc6da3a51a44a9da2d4574639629, type: 3}
 --- !u!4 &406751832582424857 stripped
@@ -2096,6 +2208,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6901692558873631747}
     m_Modifications:
+    - target: {fileID: 1636927882685255595, guid: a07ce74fdd38e1a42991ffbae8c5131c, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1636927882685255595, guid: a07ce74fdd38e1a42991ffbae8c5131c, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8287224878466070316, guid: a07ce74fdd38e1a42991ffbae8c5131c, type: 3}
       propertyPath: m_Name
       value: 8 (7)
@@ -2188,6 +2308,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6901692558873631747}
     m_Modifications:
+    - target: {fileID: 3694592326386800876, guid: 3ce93c7eb62f62349b8d18c8751bda62, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3694592326386800876, guid: 3ce93c7eb62f62349b8d18c8751bda62, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6141774388479719188, guid: 3ce93c7eb62f62349b8d18c8751bda62, type: 3}
       propertyPath: m_Name
       value: 14 (20)
@@ -2347,6 +2475,14 @@ PrefabInstance:
     - target: {fileID: 7317371135691875359, guid: dca5cc6da3a51a44a9da2d4574639629, type: 3}
       propertyPath: m_TagString
       value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 8750499985135375416, guid: dca5cc6da3a51a44a9da2d4574639629, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8750499985135375416, guid: dca5cc6da3a51a44a9da2d4574639629, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dca5cc6da3a51a44a9da2d4574639629, type: 3}
@@ -2548,6 +2684,14 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Ground
       objectReference: {fileID: 0}
+    - target: {fileID: 8750499985135375416, guid: dca5cc6da3a51a44a9da2d4574639629, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8750499985135375416, guid: dca5cc6da3a51a44a9da2d4574639629, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dca5cc6da3a51a44a9da2d4574639629, type: 3}
 --- !u!4 &4579848654685354781 stripped
@@ -2648,6 +2792,14 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Ground
       objectReference: {fileID: 0}
+    - target: {fileID: 8750499985135375416, guid: dca5cc6da3a51a44a9da2d4574639629, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8750499985135375416, guid: dca5cc6da3a51a44a9da2d4574639629, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dca5cc6da3a51a44a9da2d4574639629, type: 3}
 --- !u!4 &4116519438383316354 stripped
@@ -2680,6 +2832,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6901692558873631747}
     m_Modifications:
+    - target: {fileID: 3694592326386800876, guid: 3ce93c7eb62f62349b8d18c8751bda62, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3694592326386800876, guid: 3ce93c7eb62f62349b8d18c8751bda62, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6141774388479719188, guid: 3ce93c7eb62f62349b8d18c8751bda62, type: 3}
       propertyPath: m_Name
       value: 14 (3)
@@ -2772,6 +2932,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6901692558873631747}
     m_Modifications:
+    - target: {fileID: 1636927882685255595, guid: a07ce74fdd38e1a42991ffbae8c5131c, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1636927882685255595, guid: a07ce74fdd38e1a42991ffbae8c5131c, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8287224878466070316, guid: a07ce74fdd38e1a42991ffbae8c5131c, type: 3}
       propertyPath: m_Name
       value: 8 (17)
@@ -2864,6 +3032,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6901692558873631747}
     m_Modifications:
+    - target: {fileID: 1636927882685255595, guid: a07ce74fdd38e1a42991ffbae8c5131c, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1636927882685255595, guid: a07ce74fdd38e1a42991ffbae8c5131c, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8287224878466070316, guid: a07ce74fdd38e1a42991ffbae8c5131c, type: 3}
       propertyPath: m_Name
       value: 8 (9)
@@ -3124,6 +3300,14 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Ground
       objectReference: {fileID: 0}
+    - target: {fileID: 8750499985135375416, guid: dca5cc6da3a51a44a9da2d4574639629, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8750499985135375416, guid: dca5cc6da3a51a44a9da2d4574639629, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dca5cc6da3a51a44a9da2d4574639629, type: 3}
 --- !u!4 &3823504155917471881 stripped
@@ -3156,6 +3340,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6901692558873631747}
     m_Modifications:
+    - target: {fileID: 1636927882685255595, guid: a07ce74fdd38e1a42991ffbae8c5131c, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1636927882685255595, guid: a07ce74fdd38e1a42991ffbae8c5131c, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8287224878466070316, guid: a07ce74fdd38e1a42991ffbae8c5131c, type: 3}
       propertyPath: m_Name
       value: 8 (5)
@@ -3315,6 +3507,14 @@ PrefabInstance:
     - target: {fileID: 7317371135691875359, guid: dca5cc6da3a51a44a9da2d4574639629, type: 3}
       propertyPath: m_TagString
       value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 8750499985135375416, guid: dca5cc6da3a51a44a9da2d4574639629, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8750499985135375416, guid: dca5cc6da3a51a44a9da2d4574639629, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dca5cc6da3a51a44a9da2d4574639629, type: 3}
@@ -3748,6 +3948,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6901692558873631747}
     m_Modifications:
+    - target: {fileID: 3694592326386800876, guid: 3ce93c7eb62f62349b8d18c8751bda62, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3694592326386800876, guid: 3ce93c7eb62f62349b8d18c8751bda62, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6141774388479719188, guid: 3ce93c7eb62f62349b8d18c8751bda62, type: 3}
       propertyPath: m_Name
       value: 14 (13)
@@ -4008,6 +4216,14 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Ground
       objectReference: {fileID: 0}
+    - target: {fileID: 8750499985135375416, guid: dca5cc6da3a51a44a9da2d4574639629, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8750499985135375416, guid: dca5cc6da3a51a44a9da2d4574639629, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dca5cc6da3a51a44a9da2d4574639629, type: 3}
 --- !u!1 &2804554568170872122 stripped
@@ -4107,6 +4323,14 @@ PrefabInstance:
     - target: {fileID: 7317371135691875359, guid: dca5cc6da3a51a44a9da2d4574639629, type: 3}
       propertyPath: m_TagString
       value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 8750499985135375416, guid: dca5cc6da3a51a44a9da2d4574639629, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8750499985135375416, guid: dca5cc6da3a51a44a9da2d4574639629, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dca5cc6da3a51a44a9da2d4574639629, type: 3}
@@ -4308,6 +4532,14 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Ground
       objectReference: {fileID: 0}
+    - target: {fileID: 8750499985135375416, guid: dca5cc6da3a51a44a9da2d4574639629, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8750499985135375416, guid: dca5cc6da3a51a44a9da2d4574639629, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dca5cc6da3a51a44a9da2d4574639629, type: 3}
 --- !u!1 &2401659560295467571 stripped
@@ -4340,6 +4572,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6901692558873631747}
     m_Modifications:
+    - target: {fileID: 1636927882685255595, guid: a07ce74fdd38e1a42991ffbae8c5131c, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1636927882685255595, guid: a07ce74fdd38e1a42991ffbae8c5131c, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8287224878466070316, guid: a07ce74fdd38e1a42991ffbae8c5131c, type: 3}
       propertyPath: m_Name
       value: 8 (12)
@@ -4432,6 +4672,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6901692558873631747}
     m_Modifications:
+    - target: {fileID: 1636927882685255595, guid: a07ce74fdd38e1a42991ffbae8c5131c, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1636927882685255595, guid: a07ce74fdd38e1a42991ffbae8c5131c, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8287224878466070316, guid: a07ce74fdd38e1a42991ffbae8c5131c, type: 3}
       propertyPath: m_Name
       value: 8 (15)
@@ -4592,6 +4840,14 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Ground
       objectReference: {fileID: 0}
+    - target: {fileID: 8750499985135375416, guid: dca5cc6da3a51a44a9da2d4574639629, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8750499985135375416, guid: dca5cc6da3a51a44a9da2d4574639629, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dca5cc6da3a51a44a9da2d4574639629, type: 3}
 --- !u!1 &2516037007029477340 stripped
@@ -4692,6 +4948,14 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Ground
       objectReference: {fileID: 0}
+    - target: {fileID: 8750499985135375416, guid: dca5cc6da3a51a44a9da2d4574639629, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8750499985135375416, guid: dca5cc6da3a51a44a9da2d4574639629, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dca5cc6da3a51a44a9da2d4574639629, type: 3}
 --- !u!1 &2485063201043006278 stripped
@@ -4791,6 +5055,14 @@ PrefabInstance:
     - target: {fileID: 7317371135691875359, guid: dca5cc6da3a51a44a9da2d4574639629, type: 3}
       propertyPath: m_TagString
       value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 8750499985135375416, guid: dca5cc6da3a51a44a9da2d4574639629, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8750499985135375416, guid: dca5cc6da3a51a44a9da2d4574639629, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dca5cc6da3a51a44a9da2d4574639629, type: 3}
@@ -4992,6 +5264,14 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Ground
       objectReference: {fileID: 0}
+    - target: {fileID: 8750499985135375416, guid: dca5cc6da3a51a44a9da2d4574639629, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8750499985135375416, guid: dca5cc6da3a51a44a9da2d4574639629, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dca5cc6da3a51a44a9da2d4574639629, type: 3}
 --- !u!1 &4019008409113556561 stripped
@@ -5027,6 +5307,14 @@ PrefabInstance:
     - target: {fileID: 3613678310336276040, guid: 8c9910bddf1f86c4d9a1b14d7b4b01b2, type: 3}
       propertyPath: m_Name
       value: 18 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4820545484443545474, guid: 8c9910bddf1f86c4d9a1b14d7b4b01b2, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4820545484443545474, guid: 8c9910bddf1f86c4d9a1b14d7b4b01b2, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8986303277808908555, guid: 8c9910bddf1f86c4d9a1b14d7b4b01b2, type: 3}
       propertyPath: m_RootOrder
@@ -5166,6 +5454,14 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Ground
       objectReference: {fileID: 0}
+    - target: {fileID: 8750499985135375416, guid: dca5cc6da3a51a44a9da2d4574639629, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8750499985135375416, guid: dca5cc6da3a51a44a9da2d4574639629, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dca5cc6da3a51a44a9da2d4574639629, type: 3}
 --- !u!1 &3465678043898003313 stripped
@@ -5198,6 +5494,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6901692558873631747}
     m_Modifications:
+    - target: {fileID: 1636927882685255595, guid: a07ce74fdd38e1a42991ffbae8c5131c, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1636927882685255595, guid: a07ce74fdd38e1a42991ffbae8c5131c, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8287224878466070316, guid: a07ce74fdd38e1a42991ffbae8c5131c, type: 3}
       propertyPath: m_Name
       value: 8
@@ -5290,6 +5594,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6901692558873631747}
     m_Modifications:
+    - target: {fileID: 1636927882685255595, guid: a07ce74fdd38e1a42991ffbae8c5131c, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1636927882685255595, guid: a07ce74fdd38e1a42991ffbae8c5131c, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8287224878466070316, guid: a07ce74fdd38e1a42991ffbae8c5131c, type: 3}
       propertyPath: m_Name
       value: 8 (13)
@@ -5482,6 +5794,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6901692558873631747}
     m_Modifications:
+    - target: {fileID: 3694592326386800876, guid: 3ce93c7eb62f62349b8d18c8751bda62, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3694592326386800876, guid: 3ce93c7eb62f62349b8d18c8751bda62, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6141774388479719188, guid: 3ce93c7eb62f62349b8d18c8751bda62, type: 3}
       propertyPath: m_Name
       value: 14 (2)
@@ -5574,6 +5894,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6901692558873631747}
     m_Modifications:
+    - target: {fileID: 3694592326386800876, guid: 3ce93c7eb62f62349b8d18c8751bda62, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3694592326386800876, guid: 3ce93c7eb62f62349b8d18c8751bda62, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6141774388479719188, guid: 3ce93c7eb62f62349b8d18c8751bda62, type: 3}
       propertyPath: m_Name
       value: 14 (10)
@@ -5666,6 +5994,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6901692558873631747}
     m_Modifications:
+    - target: {fileID: 1636927882685255595, guid: a07ce74fdd38e1a42991ffbae8c5131c, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1636927882685255595, guid: a07ce74fdd38e1a42991ffbae8c5131c, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8287224878466070316, guid: a07ce74fdd38e1a42991ffbae8c5131c, type: 3}
       propertyPath: m_Name
       value: 8 (3)
@@ -5758,6 +6094,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6901692558873631747}
     m_Modifications:
+    - target: {fileID: 3694592326386800876, guid: 3ce93c7eb62f62349b8d18c8751bda62, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3694592326386800876, guid: 3ce93c7eb62f62349b8d18c8751bda62, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6141774388479719188, guid: 3ce93c7eb62f62349b8d18c8751bda62, type: 3}
       propertyPath: m_Name
       value: 14 (5)
@@ -5850,6 +6194,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6901692558873631747}
     m_Modifications:
+    - target: {fileID: 1636927882685255595, guid: a07ce74fdd38e1a42991ffbae8c5131c, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1636927882685255595, guid: a07ce74fdd38e1a42991ffbae8c5131c, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8287224878466070316, guid: a07ce74fdd38e1a42991ffbae8c5131c, type: 3}
       propertyPath: m_Name
       value: 8 (1)
@@ -6042,6 +6394,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6901692558873631747}
     m_Modifications:
+    - target: {fileID: 3694592326386800876, guid: 3ce93c7eb62f62349b8d18c8751bda62, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3694592326386800876, guid: 3ce93c7eb62f62349b8d18c8751bda62, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6141774388479719188, guid: 3ce93c7eb62f62349b8d18c8751bda62, type: 3}
       propertyPath: m_Name
       value: 14 (4)
@@ -6134,6 +6494,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6901692558873631747}
     m_Modifications:
+    - target: {fileID: 3694592326386800876, guid: 3ce93c7eb62f62349b8d18c8751bda62, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3694592326386800876, guid: 3ce93c7eb62f62349b8d18c8751bda62, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6141774388479719188, guid: 3ce93c7eb62f62349b8d18c8751bda62, type: 3}
       propertyPath: m_Name
       value: 14 (15)
@@ -6226,6 +6594,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6901692558873631747}
     m_Modifications:
+    - target: {fileID: 3694592326386800876, guid: 3ce93c7eb62f62349b8d18c8751bda62, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3694592326386800876, guid: 3ce93c7eb62f62349b8d18c8751bda62, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6141774388479719188, guid: 3ce93c7eb62f62349b8d18c8751bda62, type: 3}
       propertyPath: m_Name
       value: 14 (6)
@@ -6518,6 +6894,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6901692558873631747}
     m_Modifications:
+    - target: {fileID: 1636927882685255595, guid: a07ce74fdd38e1a42991ffbae8c5131c, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1636927882685255595, guid: a07ce74fdd38e1a42991ffbae8c5131c, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8287224878466070316, guid: a07ce74fdd38e1a42991ffbae8c5131c, type: 3}
       propertyPath: m_Name
       value: 8 (11)
@@ -6778,6 +7162,14 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Ground
       objectReference: {fileID: 0}
+    - target: {fileID: 8750499985135375416, guid: dca5cc6da3a51a44a9da2d4574639629, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8750499985135375416, guid: dca5cc6da3a51a44a9da2d4574639629, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dca5cc6da3a51a44a9da2d4574639629, type: 3}
 --- !u!1 &268373054652113432 stripped
@@ -6978,6 +7370,14 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Ground
       objectReference: {fileID: 0}
+    - target: {fileID: 8750499985135375416, guid: dca5cc6da3a51a44a9da2d4574639629, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8750499985135375416, guid: dca5cc6da3a51a44a9da2d4574639629, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dca5cc6da3a51a44a9da2d4574639629, type: 3}
 --- !u!1 &940350138505220745 stripped
@@ -7110,6 +7510,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6901692558873631747}
     m_Modifications:
+    - target: {fileID: 3694592326386800876, guid: 3ce93c7eb62f62349b8d18c8751bda62, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3694592326386800876, guid: 3ce93c7eb62f62349b8d18c8751bda62, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6141774388479719188, guid: 3ce93c7eb62f62349b8d18c8751bda62, type: 3}
       propertyPath: m_Name
       value: 14 (1)
@@ -7202,6 +7610,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6901692558873631747}
     m_Modifications:
+    - target: {fileID: 3694592326386800876, guid: 3ce93c7eb62f62349b8d18c8751bda62, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3694592326386800876, guid: 3ce93c7eb62f62349b8d18c8751bda62, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6141774388479719188, guid: 3ce93c7eb62f62349b8d18c8751bda62, type: 3}
       propertyPath: m_Name
       value: 14 (7)
@@ -7362,6 +7778,14 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Ground
       objectReference: {fileID: 0}
+    - target: {fileID: 8750499985135375416, guid: dca5cc6da3a51a44a9da2d4574639629, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8750499985135375416, guid: dca5cc6da3a51a44a9da2d4574639629, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dca5cc6da3a51a44a9da2d4574639629, type: 3}
 --- !u!1 &625399622282994529 stripped
@@ -7397,6 +7821,14 @@ PrefabInstance:
     - target: {fileID: 3613678310336276040, guid: 8c9910bddf1f86c4d9a1b14d7b4b01b2, type: 3}
       propertyPath: m_Name
       value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 4820545484443545474, guid: 8c9910bddf1f86c4d9a1b14d7b4b01b2, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4820545484443545474, guid: 8c9910bddf1f86c4d9a1b14d7b4b01b2, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8986303277808908555, guid: 8c9910bddf1f86c4d9a1b14d7b4b01b2, type: 3}
       propertyPath: m_RootOrder
@@ -7468,6 +7900,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6901692558873631747}
     m_Modifications:
+    - target: {fileID: 1636927882685255595, guid: a07ce74fdd38e1a42991ffbae8c5131c, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1636927882685255595, guid: a07ce74fdd38e1a42991ffbae8c5131c, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8287224878466070316, guid: a07ce74fdd38e1a42991ffbae8c5131c, type: 3}
       propertyPath: m_Name
       value: 8 (18)
@@ -7760,6 +8200,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6901692558873631747}
     m_Modifications:
+    - target: {fileID: 1636927882685255595, guid: a07ce74fdd38e1a42991ffbae8c5131c, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1636927882685255595, guid: a07ce74fdd38e1a42991ffbae8c5131c, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8287224878466070316, guid: a07ce74fdd38e1a42991ffbae8c5131c, type: 3}
       propertyPath: m_Name
       value: 8 (19)
@@ -7919,6 +8367,14 @@ PrefabInstance:
     - target: {fileID: 7317371135691875359, guid: dca5cc6da3a51a44a9da2d4574639629, type: 3}
       propertyPath: m_TagString
       value: Ground
+      objectReference: {fileID: 0}
+    - target: {fileID: 8750499985135375416, guid: dca5cc6da3a51a44a9da2d4574639629, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8750499985135375416, guid: dca5cc6da3a51a44a9da2d4574639629, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dca5cc6da3a51a44a9da2d4574639629, type: 3}
@@ -8120,6 +8576,14 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Ground
       objectReference: {fileID: 0}
+    - target: {fileID: 8750499985135375416, guid: dca5cc6da3a51a44a9da2d4574639629, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8750499985135375416, guid: dca5cc6da3a51a44a9da2d4574639629, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dca5cc6da3a51a44a9da2d4574639629, type: 3}
 --- !u!1 &1733176650255859263 stripped
@@ -8152,6 +8616,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6901692558873631747}
     m_Modifications:
+    - target: {fileID: 3694592326386800876, guid: 3ce93c7eb62f62349b8d18c8751bda62, type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3694592326386800876, guid: 3ce93c7eb62f62349b8d18c8751bda62, type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6141774388479719188, guid: 3ce93c7eb62f62349b8d18c8751bda62, type: 3}
       propertyPath: m_Name
       value: 14 (12)
