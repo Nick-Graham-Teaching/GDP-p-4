@@ -1,23 +1,23 @@
 Using pre-set license
 Built from '2021.3/staging' branch; Version is '2021.3.11f1 (0a5ca18544bf) revision 679073'; Using compiler version '192829333'; Build Type 'Release'
-OS: 'Windows 10  (10.0.19044) 64bit Professional' Language: 'zh' Physical Memory: 32699 MB
+OS: 'Windows 11  (10.0.22621) 64bit Professional' Language: 'zh' Physical Memory: 98045 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
 
 COMMAND LINE ARGUMENTS:
-E:\2021.3.11f1\Editor\Unity.exe
+D:\Unity\Editor\2021.3.11f1\Editor\Unity.exe
 -adb2
 -batchMode
 -noUpm
 -name
 AssetImportWorker0
 -projectPath
-C:/Users/123/Documents/GDP-p-4/496 Trouble Maker
+C:/Users/Kevin/Desktop/454 project/496 Trouble Maker
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-53542
-Successfully changed project path to: C:/Users/123/Documents/GDP-p-4/496 Trouble Maker
-C:/Users/123/Documents/GDP-p-4/496 Trouble Maker
+57898
+Successfully changed project path to: C:/Users/Kevin/Desktop/454 project/496 Trouble Maker
+C:/Users/Kevin/Desktop/454 project/496 Trouble Maker
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
     "memorysetup-bucket-allocator-granularity=16"
     "memorysetup-bucket-allocator-bucket-count=8"
@@ -47,105 +47,105 @@ C:/Users/123/Documents/GDP-p-4/496 Trouble Maker
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Refreshing native plugins compatible for Editor in 82.71 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 62.81 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.3.11f1 (0a5ca18544bf)
-[Subsystems] Discovering subsystems at path E:/2021.3.11f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path C:/Users/123/Documents/GDP-p-4/496 Trouble Maker/Assets
+[Subsystems] Discovering subsystems at path D:/Unity/Editor/2021.3.11f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/Kevin/Desktop/454 project/496 Trouble Maker/Assets
 GfxDevice: creating device client; threaded=0; jobified=0
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
-    Renderer: NVIDIA GeForce RTX 2080 SUPER (ID=0x1e81)
+    Renderer: NVIDIA GeForce RTX 4070 Ti (ID=0x2782)
     Vendor:   NVIDIA
-    VRAM:     8010 MB
-    Driver:   31.0.15.2225
+    VRAM:     12010 MB
+    Driver:   31.0.15.3129
 Initialize mono
-Mono path[0] = 'E:/2021.3.11f1/Editor/Data/Managed'
-Mono path[1] = 'E:/2021.3.11f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
-Mono config path = 'E:/2021.3.11f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56976
+Mono path[0] = 'D:/Unity/Editor/2021.3.11f1/Editor/Data/Managed'
+Mono path[1] = 'D:/Unity/Editor/2021.3.11f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'D:/Unity/Editor/2021.3.11f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56112
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
-Register platform support module: E:/2021.3.11f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.001916 seconds.
+Register platform support module: D:/Unity/Editor/2021.3.11f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.001302 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 93.59 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 53.26 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.708 seconds
+- Completed reload, in  0.445 seconds
 Domain Reload Profiling:
-	ReloadAssembly (709ms)
-		BeginReloadAssembly (90ms)
+	ReloadAssembly (446ms)
+		BeginReloadAssembly (54ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (503ms)
-			LoadAssemblies (89ms)
+		EndReloadAssembly (318ms)
+			LoadAssemblies (53ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (130ms)
+			SetupTypeCache (74ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (29ms)
-			SetupLoadedEditorAssemblies (293ms)
+			RebuildScriptCaches (17ms)
+			SetupLoadedEditorAssemblies (191ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (6ms)
+				InitializePlatformSupportModulesInManaged (4ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (94ms)
+				RefreshPlugins (53ms)
 				BeforeProcessingInitializeOnLoad (1ms)
-				ProcessInitializeOnLoadAttributes (146ms)
-				ProcessInitializeOnLoadMethodAttributes (45ms)
+				ProcessInitializeOnLoadAttributes (96ms)
+				ProcessInitializeOnLoadMethodAttributes (37ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.009561 seconds.
+Registered in 0.005272 seconds.
 Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\123\Documents\GDP-p-4\496 Trouble Maker\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\123\Documents\GDP-p-4\496 Trouble Maker\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\Kevin\Desktop\454 project\496 Trouble Maker\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image C:\Users\Kevin\Desktop\454 project\496 Trouble Maker\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.80 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 0.46 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.012 seconds
+- Completed reload, in  0.710 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1012ms)
-		BeginReloadAssembly (89ms)
+	ReloadAssembly (710ms)
+		BeginReloadAssembly (69ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (5ms)
+			DisableScriptedObjects (3ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (16ms)
-		EndReloadAssembly (824ms)
-			LoadAssemblies (74ms)
+			CreateAndSetChildDomain (11ms)
+		EndReloadAssembly (570ms)
+			LoadAssemblies (59ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (265ms)
+			SetupTypeCache (180ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (58ms)
-			SetupLoadedEditorAssemblies (382ms)
+			RebuildScriptCaches (42ms)
+			SetupLoadedEditorAssemblies (270ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (4ms)
+				InitializePlatformSupportModulesInManaged (2ms)
 				SetLoadedEditorAssemblies (0ms)
 				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (91ms)
-				ProcessInitializeOnLoadAttributes (247ms)
-				ProcessInitializeOnLoadMethodAttributes (36ms)
-				AfterProcessingInitializeOnLoad (2ms)
+				BeforeProcessingInitializeOnLoad (61ms)
+				ProcessInitializeOnLoadAttributes (179ms)
+				ProcessInitializeOnLoadMethodAttributes (25ms)
+				AfterProcessingInitializeOnLoad (1ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (5ms)
+			AwakeInstancesAfterBackupRestoration (4ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
-Refreshing native plugins compatible for Editor in 0.87 ms, found 3 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.11 seconds
+Refreshing native plugins compatible for Editor in 0.56 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 4394 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 49 unused Assets / (129.7 KB). Loaded Objects now: 4842.
-Memory consumption went from 171.2 MB to 171.0 MB.
-Total: 2.880900 ms (FindLiveObjects: 0.376900 ms CreateObjectMapping: 0.348300 ms MarkObjects: 2.060600 ms  DeleteObjects: 0.094400 ms)
+Unloading 49 unused Assets / (129.5 KB). Loaded Objects now: 4844.
+Memory consumption went from 171.5 MB to 171.4 MB.
+Total: 2.375200 ms (FindLiveObjects: 0.207000 ms CreateObjectMapping: 0.106200 ms MarkObjects: 1.950400 ms  DeleteObjects: 0.110400 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -159,19 +159,307 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 351244.133168 seconds.
-  path: Assets/MazeStartbeifen.prefab
-  artifactKey: Guid(7e6ac27d2a4fe7844a27b645cb97fe1e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/MazeStartbeifen.prefab using Guid(7e6ac27d2a4fe7844a27b645cb97fe1e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c8fa78daf28d885c3bb8ed08048f4939') in 0.478933 seconds 
+  Time since last request: 33897.732307 seconds.
+  path: Assets/Prefabs/map1.prefab
+  artifactKey: Guid(98778ec594fad534989565658b5d238b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/map1.prefab using Guid(98778ec594fad534989565658b5d238b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6339828a9169402483aa29b84159bc7b') in 0.116519 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.464780 seconds.
-  path: Assets/Scenes/ControllerWin.unity
-  artifactKey: Guid(a60b2bf9f4e3ebc4a816ec7f757a16bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/ControllerWin.unity using Guid(a60b2bf9f4e3ebc4a816ec7f757a16bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f95f75b37b41b07600c148a5f1488bf3') in 0.005443 seconds 
+  Time since last request: 8.895826 seconds.
+  path: Assets/Prefabs/map1.prefab
+  artifactKey: Guid(98778ec594fad534989565658b5d238b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/map1.prefab using Guid(98778ec594fad534989565658b5d238b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3ea654ad88bb9baf277f12185bc24ec5') in 0.032447 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 3.742657 seconds.
-  path: Assets/Scenes/Main.unity
-  artifactKey: Guid(ade2ed92b1a27814297704f3d1de74fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Main.unity using Guid(ade2ed92b1a27814297704f3d1de74fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9cba930c3fce9c3a8b48180426ea75c4') in 0.006236 seconds 
+  Time since last request: 223.628384 seconds.
+  path: Assets/Map/26scifiprops.mtl
+  artifactKey: Guid(efc8827354ce1dd468d718e12ed291cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Map/26scifiprops.mtl using Guid(efc8827354ce1dd468d718e12ed291cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '39bc0d15632a1bbb1af0d442f57e79f5') in 0.011572 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 21.259268 seconds.
+  path: Assets/Map/prop_2_001.fbx
+  artifactKey: Guid(e83fca93d4435ce49badb6a9e0a8c7f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Map/prop_2_001.fbx using Guid(e83fca93d4435ce49badb6a9e0a8c7f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a512f8d0d57deb4230ed66332e40751f') in 0.061152 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 95.559086 seconds.
+  path: Assets/26_SciFi_props/3D Models
+  artifactKey: Guid(7768a370449c5f94692e2bd2f686e04d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/26_SciFi_props/3D Models using Guid(7768a370449c5f94692e2bd2f686e04d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '87a852f4edacd51f176335b5373cb1ea') in 0.013300 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.007360 seconds.
+  path: Assets/26_SciFi_props/3D Models/_rop_1_001.fbx
+  artifactKey: Guid(577665b4bf8d9494983c1253523e3c65) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/26_SciFi_props/3D Models/_rop_1_001.fbx using Guid(577665b4bf8d9494983c1253523e3c65) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c01288bb258b400cca6cc73351fe1e6f') in 0.264896 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000043 seconds.
+  path: Assets/26_SciFi_props/3D Models/_rop_24_001.fbx
+  artifactKey: Guid(6bc1ed9c0c45ef74ba9f113856e07fcd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/26_SciFi_props/3D Models/_rop_24_001.fbx using Guid(6bc1ed9c0c45ef74ba9f113856e07fcd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '24e771d653493ac2b596a8edded5daad') in 0.028857 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000038 seconds.
+  path: Assets/26_SciFi_props/3D Models/_rop_16_002.fbx
+  artifactKey: Guid(498b9ac20ee0ffd47bf3da6d964e1278) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/26_SciFi_props/3D Models/_rop_16_002.fbx using Guid(498b9ac20ee0ffd47bf3da6d964e1278) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2118e5861ea834c4f047beb6d72222df') in 0.026491 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/26_SciFi_props/3D Models/_rop_7_001.fbx
+  artifactKey: Guid(731218182c01e094f833afe6aaf68335) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/26_SciFi_props/3D Models/_rop_7_001.fbx using Guid(731218182c01e094f833afe6aaf68335) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '66e0e3b25099d80b307f8714d67c0009') in 0.028685 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/26_SciFi_props/3D Models/_rop_13_002.fbx
+  artifactKey: Guid(40576c23ba2519d41a712e8fd75b775f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/26_SciFi_props/3D Models/_rop_13_002.fbx using Guid(40576c23ba2519d41a712e8fd75b775f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '211cdcb4ce8bd0a760116343bec545a1') in 0.026875 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/26_SciFi_props/3D Models/_rop_12_002.fbx
+  artifactKey: Guid(69c95b6a2a4b23f4da77b89de7f8f496) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/26_SciFi_props/3D Models/_rop_12_002.fbx using Guid(69c95b6a2a4b23f4da77b89de7f8f496) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd497a20c8776715c2c07e903e61be141') in 0.025250 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/26_SciFi_props/3D Models/_rop_11_002.fbx
+  artifactKey: Guid(6a4a227640948604e8453de85e6d3b59) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/26_SciFi_props/3D Models/_rop_11_002.fbx using Guid(6a4a227640948604e8453de85e6d3b59) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '58c7986fb06ef3b2f0f6444a30f7686d') in 0.101799 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/26_SciFi_props/3D Models/_rop_22_001.fbx
+  artifactKey: Guid(ac216ba78fee46144bb3ec83bfb3a22c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/26_SciFi_props/3D Models/_rop_22_001.fbx using Guid(ac216ba78fee46144bb3ec83bfb3a22c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '11e66f1f0292935f35ea388981432c59') in 0.031901 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000054 seconds.
+  path: Assets/26_SciFi_props/3D Models/_rop_25_001.fbx
+  artifactKey: Guid(602c3e2fd8fba8749bd674fa87ec21e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/26_SciFi_props/3D Models/_rop_25_001.fbx using Guid(602c3e2fd8fba8749bd674fa87ec21e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b4b6a985492b2a73dc1d425604956d95') in 0.025447 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/26_SciFi_props/3D Models/_rop_3_001.fbx
+  artifactKey: Guid(014378b6c31b560439a4f01df15c8aad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/26_SciFi_props/3D Models/_rop_3_001.fbx using Guid(014378b6c31b560439a4f01df15c8aad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0bc08b9069aaeb394e471cf177989a02') in 0.029500 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/26_SciFi_props/3D Models/_rop_19_002.fbx
+  artifactKey: Guid(7e361a757da75fa4a9fe848b9f82d73f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/26_SciFi_props/3D Models/_rop_19_002.fbx using Guid(7e361a757da75fa4a9fe848b9f82d73f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '03870c9156279dab3625400d048706ec') in 0.026624 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/26_SciFi_props/3D Models/_rop_20_002.fbx
+  artifactKey: Guid(0f690a7dcdfd8ef478b25bc4cbbd67e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/26_SciFi_props/3D Models/_rop_20_002.fbx using Guid(0f690a7dcdfd8ef478b25bc4cbbd67e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bdbda48f5a0bae76afdca8fb653ce4ba') in 0.048018 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/26_SciFi_props/3D Models/_rop_10_002.fbx
+  artifactKey: Guid(b5bbf50ecc16bd045b9f460b378735f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/26_SciFi_props/3D Models/_rop_10_002.fbx using Guid(b5bbf50ecc16bd045b9f460b378735f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0558b64f20cb23539ea7bfe169a89198') in 0.027186 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/26_SciFi_props/3D Models/_rop_21_002.fbx
+  artifactKey: Guid(bdc87497fe2144343b8d306eff65fa33) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/26_SciFi_props/3D Models/_rop_21_002.fbx using Guid(bdc87497fe2144343b8d306eff65fa33) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a387d1f0961fb4cad3d1dffb89b5465f') in 0.026871 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000042 seconds.
+  path: Assets/26_SciFi_props/3D Models/_rop_15_002.fbx
+  artifactKey: Guid(a1c8c1c1d467b59479220bad46137d3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/26_SciFi_props/3D Models/_rop_15_002.fbx using Guid(a1c8c1c1d467b59479220bad46137d3d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bb62dff4a29dbc45ad0efb897c60ea6e') in 0.031318 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 20.975655 seconds.
+  path: Assets/Map/26_SciFi_props/Materials/Prop 2.mat
+  artifactKey: Guid(747606e882cc3b04495e22821c08b654) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Map/26_SciFi_props/Materials/Prop 2.mat using Guid(747606e882cc3b04495e22821c08b654) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'da49107a9917b021d5a7b586e7f5c78d') in 0.022020 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Map/26_SciFi_props/Materials/Prop 22.mat
+  artifactKey: Guid(430695c867d66ff40b36b33139d62b7d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Map/26_SciFi_props/Materials/Prop 22.mat using Guid(430695c867d66ff40b36b33139d62b7d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3894e65392fa575aadebdc5d6b8d7863') in 0.019315 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Map/26_SciFi_props/Materials/Prop 23.mat
+  artifactKey: Guid(586894c41d920824e8cd36adf0b91a2a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Map/26_SciFi_props/Materials/Prop 23.mat using Guid(586894c41d920824e8cd36adf0b91a2a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '58c1986fdfd4b1073547c8ef873f5300') in 0.028365 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Map/26_SciFi_props/Materials/Prop 14.mat
+  artifactKey: Guid(bd12bfcee590dc5458acf405524bb75d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Map/26_SciFi_props/Materials/Prop 14.mat using Guid(bd12bfcee590dc5458acf405524bb75d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '32cf478c6910391ff2b3a28465c2cba6') in 0.020223 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000044 seconds.
+  path: Assets/Map/26_SciFi_props/Materials/Prop 20.mat
+  artifactKey: Guid(1d02661e9d40587429334cc0aaa89ebc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Map/26_SciFi_props/Materials/Prop 20.mat using Guid(1d02661e9d40587429334cc0aaa89ebc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ba9cbef9a5f4a0622c170263cef7c070') in 0.017767 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Map/26_SciFi_props/Materials/Prop 19.mat
+  artifactKey: Guid(8b883ca8dcbe38c4dbe36ad3d28ad2f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Map/26_SciFi_props/Materials/Prop 19.mat using Guid(8b883ca8dcbe38c4dbe36ad3d28ad2f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a281edf5a7bfc10ca6867d471b782628') in 0.022947 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/Map/26_SciFi_props/Materials/Prop 7.mat
+  artifactKey: Guid(361681de3cf099743823a588749a5f7f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Map/26_SciFi_props/Materials/Prop 7.mat using Guid(361681de3cf099743823a588749a5f7f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '053a455b15fc3013c4b5402932d64020') in 0.020976 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Map/26_SciFi_props/Materials/Prop 8.mat
+  artifactKey: Guid(00ab7110d7390ce42b2f19fdacf09e88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Map/26_SciFi_props/Materials/Prop 8.mat using Guid(00ab7110d7390ce42b2f19fdacf09e88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1f79578a264de061130a8c1f5c497182') in 0.022208 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000042 seconds.
+  path: Assets/Map/26_SciFi_props/Materials/Prop 11.mat
+  artifactKey: Guid(a7b2940dd3c9b6148ad3c659702c337e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Map/26_SciFi_props/Materials/Prop 11.mat using Guid(a7b2940dd3c9b6148ad3c659702c337e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd4a799aaacdef203bcaf9ce4d510fb38') in 0.028586 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Map/26_SciFi_props/Materials/Prop 10.mat
+  artifactKey: Guid(18d37bb9848836841b54c7f67f88eab3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Map/26_SciFi_props/Materials/Prop 10.mat using Guid(18d37bb9848836841b54c7f67f88eab3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b860ae4adf0a6261ebec25f7a65b7b67') in 0.021558 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.741321 seconds.
+  path: Assets/Map/26_SciFi_props/Textures/prop_1_001_lowpoly_AO.png
+  artifactKey: Guid(20b71f88793b0424690e278c41a462aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Map/26_SciFi_props/Textures/prop_1_001_lowpoly_AO.png using Guid(20b71f88793b0424690e278c41a462aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ee8d8692ea1eaa5dffa1241219d9b7b5') in 0.209908 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/Map/26_SciFi_props/Textures/prop_11_002_lowpoly_Normal.png
+  artifactKey: Guid(f2ec00b8b037d974abc131958e8ea72f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Map/26_SciFi_props/Textures/prop_11_002_lowpoly_Normal.png using Guid(f2ec00b8b037d974abc131958e8ea72f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7d3a3d33484a2d05b1628dc64e76d221') in 0.029657 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000051 seconds.
+  path: Assets/Map/26_SciFi_props/Textures/prop_9_001_lowpoly_AO.png
+  artifactKey: Guid(e1fca8720eb7b3843b61e4d5e2d884a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Map/26_SciFi_props/Textures/prop_9_001_lowpoly_AO.png using Guid(e1fca8720eb7b3843b61e4d5e2d884a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6e35720f7022835055492c31511dcc50') in 0.026119 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000041 seconds.
+  path: Assets/Map/26_SciFi_props/Textures/prop_4_001_lowpoly_AlbedoTransparency.png
+  artifactKey: Guid(7c3d35a33a91dd84baff9a9c8145c4be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Map/26_SciFi_props/Textures/prop_4_001_lowpoly_AlbedoTransparency.png using Guid(7c3d35a33a91dd84baff9a9c8145c4be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'be24414dd41fb4d559bc0fb9999d85a4') in 0.026462 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Map/26_SciFi_props/Textures/prop_6_001_lowpoly_MetallicSmoothness.png
+  artifactKey: Guid(2669d5d6a89fe9546a94c108164f2ca6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Map/26_SciFi_props/Textures/prop_6_001_lowpoly_MetallicSmoothness.png using Guid(2669d5d6a89fe9546a94c108164f2ca6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '39b8f35580ed3e0c09131325f375b5d6') in 0.046433 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Map/26_SciFi_props/Textures/prop_6_001_lowpoly_AlbedoTransparency.png
+  artifactKey: Guid(fb61d9151c09e8240aa9693fbc9798a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Map/26_SciFi_props/Textures/prop_6_001_lowpoly_AlbedoTransparency.png using Guid(fb61d9151c09e8240aa9693fbc9798a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a971224c50ced61cb0dca3629c18b59f') in 0.019291 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000040 seconds.
+  path: Assets/Map/26_SciFi_props/Textures/prop_8_001_lowpoly_AlbedoTransparency.png
+  artifactKey: Guid(f99cd87ca57fa184e8fb625ab4076e64) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Map/26_SciFi_props/Textures/prop_8_001_lowpoly_AlbedoTransparency.png using Guid(f99cd87ca57fa184e8fb625ab4076e64) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cc9606a76ed866dfd51eb9f29fe4270c') in 0.014093 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/Map/26_SciFi_props/Textures/prop_11_002_lowpoly_Emission.png
+  artifactKey: Guid(45092ccb39ad2e3418d7db603943474f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Map/26_SciFi_props/Textures/prop_11_002_lowpoly_Emission.png using Guid(45092ccb39ad2e3418d7db603943474f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '72703025f601807bf7dda719ccbe82a9') in 0.014149 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Map/26_SciFi_props/Textures/prop_9_001_lowpoly_AlbedoTransparency.png
+  artifactKey: Guid(47a49d934ac275542bf711e33dc8b5de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Map/26_SciFi_props/Textures/prop_9_001_lowpoly_AlbedoTransparency.png using Guid(47a49d934ac275542bf711e33dc8b5de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '03e549510d4b0bf02c21db25685debb3') in 0.015131 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Map/26_SciFi_props/Textures/prop_10_002_lowpoly_AO.png
+  artifactKey: Guid(01db4e99831333845a0260ca0087fae7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Map/26_SciFi_props/Textures/prop_10_002_lowpoly_AO.png using Guid(01db4e99831333845a0260ca0087fae7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '637b6465017f1f1f3802bdc9257ac985') in 0.014666 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/Map/26_SciFi_props/Textures/prop_3_001_lowpoly_Normal.png
+  artifactKey: Guid(0299d533e40fa6749b355dff5896bce7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Map/26_SciFi_props/Textures/prop_3_001_lowpoly_Normal.png using Guid(0299d533e40fa6749b355dff5896bce7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9d25116cf2351df98da0ce4c9bd4ebe9') in 0.016975 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Map/26_SciFi_props/Textures/prop_13_002_lowpoly_MetallicSmoothness.png
+  artifactKey: Guid(b57b5b3798dc5f247b2e4ce90d52b689) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Map/26_SciFi_props/Textures/prop_13_002_lowpoly_MetallicSmoothness.png using Guid(b57b5b3798dc5f247b2e4ce90d52b689) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd3a6cb5ee21d08d8a396f288fac20dc2') in 0.015801 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000102 seconds.
+  path: Assets/Map/26_SciFi_props/Textures/prop_3_001_lowpoly_AO.png
+  artifactKey: Guid(ca1f3b94d3208a64fa1e57e5cd5c5b78) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Map/26_SciFi_props/Textures/prop_3_001_lowpoly_AO.png using Guid(ca1f3b94d3208a64fa1e57e5cd5c5b78) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '35d683382f0670439b942ba240b2a3b3') in 0.016485 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/Map/26_SciFi_props/Textures/prop_14_002_lowpoly_AO.png
+  artifactKey: Guid(150195ddc32160b479c97597a3c0a847) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Map/26_SciFi_props/Textures/prop_14_002_lowpoly_AO.png using Guid(150195ddc32160b479c97597a3c0a847) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '25f5d8104df465cc68a67d35aa92f473') in 0.015199 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Map/26_SciFi_props/Textures/prop_13_002_lowpoly_Normal.png
+  artifactKey: Guid(f905a65c62771804b99551540963aa98) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Map/26_SciFi_props/Textures/prop_13_002_lowpoly_Normal.png using Guid(f905a65c62771804b99551540963aa98) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '322be64c655b728029d3e075ae64cbdb') in 0.016069 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Map/26_SciFi_props/Textures/prop_5_001_lowpoly_Normal.png
+  artifactKey: Guid(ec67ddc51004944459fe8ef15458c9ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Map/26_SciFi_props/Textures/prop_5_001_lowpoly_Normal.png using Guid(ec67ddc51004944459fe8ef15458c9ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd5bf52e9a66208a48d8f710421334abb') in 0.013907 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Map/26_SciFi_props/Textures/prop_2_001_lowpoly_AlbedoTransparency.png
+  artifactKey: Guid(67359e3269861634e975cf50436dcb08) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Map/26_SciFi_props/Textures/prop_2_001_lowpoly_AlbedoTransparency.png using Guid(67359e3269861634e975cf50436dcb08) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a752001a888c3e6962350aed4f1289bd') in 0.017686 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Map/26_SciFi_props/Textures/prop_7_001_lowpoly_Normal.png
+  artifactKey: Guid(4b88dcb9f4456a8449f876940c27c42f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Map/26_SciFi_props/Textures/prop_7_001_lowpoly_Normal.png using Guid(4b88dcb9f4456a8449f876940c27c42f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c8067d9735d865b89762dee9ab1bf0b7') in 0.018495 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/Map/26_SciFi_props/Textures/prop_6_001_lowpoly_Normal.png
+  artifactKey: Guid(f1137b2922e93ab4eb1187aa439a409a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Map/26_SciFi_props/Textures/prop_6_001_lowpoly_Normal.png using Guid(f1137b2922e93ab4eb1187aa439a409a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2b0d1ff32efd856eaf12d65fc35d7438') in 0.016638 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 443.613044 seconds.
+  path: Assets/Map/26_SciFi_props/3D Models/New Prefab.prefab
+  artifactKey: Guid(7b6e94fd75e634541b70268940c617f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Map/26_SciFi_props/3D Models/New Prefab.prefab using Guid(7b6e94fd75e634541b70268940c617f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'df962ebbc308e7a9fbd99b6de4780eb7') in 0.011806 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 914.553310 seconds.
+  path: Assets/Map/26_SciFi_props/3D Models/_rop_23_001 1.fbx
+  artifactKey: Guid(83be8c3a5a833cd45b0e141cf05237bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Map/26_SciFi_props/3D Models/_rop_23_001 1.fbx using Guid(83be8c3a5a833cd45b0e141cf05237bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1982dd3fd2ab0ebc8ad19e64ba76c493') in 0.028171 seconds 
