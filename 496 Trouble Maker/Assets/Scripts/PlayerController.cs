@@ -21,8 +21,6 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         var velocity = Vector3.forward  * Input.GetAxis("Vertical") * speed;
-        transform.Translate(velocity * Time.deltaTime);
-        transform.Rotate(Vector3.up, Input.GetAxis("Horizontal") * Time.deltaTime * turnSpeed);
         animator.SetFloat("Speed", velocity.z);
     }
 }
