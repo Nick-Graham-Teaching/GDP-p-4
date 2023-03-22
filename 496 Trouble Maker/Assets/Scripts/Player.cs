@@ -46,7 +46,7 @@ public class Player : NetworkBehaviour
             name = "Client";
             player.position = GameManager.instance.ObsSpawnPos;
             player.GetComponent<Movement>().SetIsCFalse();
-            Destroy(player.GetComponent<Rigidbody>());
+            // Destroy(player.GetComponent<Rigidbody>());
             transform.Find("Camera").GetComponent<CinemachineBrain>().enabled = false;
             if (!IsLocalPlayer)
             {
