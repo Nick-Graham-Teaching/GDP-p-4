@@ -463,10 +463,12 @@ public class Movement : NetworkBehaviour
 			else 
 				speed = Mathf.Abs(input.x) + Mathf.Abs(input.y);
 
-			speed = Mathf.Clamp(speed, 0f, 1f);
-			//speed = Mathf.SmoothDamp(anim.GetFloat("Speed"), speed, ref velocity, 0.1f);
-			//anim.SetFloat("Speed", speed);
+			//speed = Mathf.Clamp(speed, 0f, 1f);
 
+			speed = Mathf.SmoothDamp(anim.GetFloat("Speed"), speed, ref velocity, 0.1f);
+			anim.SetFloat("Speed", speed);
+
+			
 			if (input.y < 0f && useCharacterForward)
 				direction = input.y;
 			else
