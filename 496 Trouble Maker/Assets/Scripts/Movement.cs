@@ -695,22 +695,22 @@ public class Movement : NetworkBehaviour
 
 		if (Input.GetKey(KeyCode.W))
 		{
-			transform.parent.Find("Camera").Translate(Vector3.up * Time.deltaTime * 2f);
+			transform.parent.Find("Camera").Translate(Vector3.up * Time.deltaTime * 5f);
 		}
 
 		if (Input.GetKey(KeyCode.S))
 		{
-			transform.parent.Find("Camera").Translate(Vector3.down * Time.deltaTime * 2f);
+			transform.parent.Find("Camera").Translate(Vector3.down * Time.deltaTime * 5f);
 		}
 
 		if (Input.GetKey(KeyCode.A))
 		{
-			transform.parent.Find("Camera").Translate(Vector3.left * Time.deltaTime * 2f);
+			transform.parent.Find("Camera").Translate(Vector3.left * Time.deltaTime * 5f);
 		}
 
 		if (Input.GetKey(KeyCode.D))
 		{
-			transform.parent.Find("Camera").Translate(Vector3.right * Time.deltaTime * 2f);
+			transform.parent.Find("Camera").Translate(Vector3.right * Time.deltaTime * 5f);
 		}
 	}
 
