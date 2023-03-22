@@ -1946,8 +1946,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mazeStart: {fileID: 2407827198968117929, guid: 98778ec594fad534989565658b5d238b, type: 3}
   mazeMiddle11: {fileID: 2407827198968117929, guid: cded41a4aa74422479b5fea02d40b797, type: 3}
-  mazeMiddle21: {fileID: 1954705878526170918, guid: 1861da6ac0838a14cb35cd1a4fae81a3, type: 3}
-  mazeEnd: {fileID: 2999344568384356583, guid: caac1e0e2adfafc45abb10568b5fa886, type: 3}
+  mazeMiddle21: {fileID: 6201213900599659400, guid: 571cbdcf8e49d4848997fc7e921908c2, type: 3}
+  mazeEnd: {fileID: 6201213900599659400, guid: f8a38bac9155f2b41a4fd4cbd08e0857, type: 3}
   trap: {fileID: 4539516752407736043, guid: ca80a75ef1d53a8478effea89c7b7e1b, type: 3}
   mark: {fileID: 7469861445056596322, guid: e383558ecc53fe3458f142c6e5fb47be, type: 3}
   activate: {fileID: 2100000, guid: 23b2d31b555781b44901f21c2b0687d3, type: 2}
