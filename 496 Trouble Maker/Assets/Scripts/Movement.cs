@@ -432,9 +432,9 @@ public class Movement : NetworkBehaviour
 
 	void SyncInput()
 	{
-		anim.SetBool("IsIdle", syncIdle.Value);
-		anim.SetBool("IsWalk", syncWalk.Value);
-		anim.SetBool("isSprinting", syncIsSp.Value);
+		//anim.SetBool("IsIdle", syncIdle.Value);
+		//anim.SetBool("IsWalk", syncWalk.Value);
+		//anim.SetBool("isSprinting", syncIsSp.Value);
 		transform.position = syncVec.Value;
 		transform.rotation = syncRot.Value;
 	}
@@ -450,13 +450,13 @@ public class Movement : NetworkBehaviour
 			{
 				walk = true;
 				idle = false;
-				anim.SetBool("IsWalk", walk);
+				//anim.SetBool("IsWalk", walk);
 			}
 			else if (input.x == 0 && input.y == 0)
 			{
 				idle = true;
 				walk = false;
-				anim.SetBool("IsIdle", idle);
+				//anim.SetBool("IsIdle", idle);
 			}
 			// set speed to both vertical and horizontal inputs
 			if (useCharacterForward) speed = Mathf.Abs(input.x) + input.y;
@@ -475,7 +475,7 @@ public class Movement : NetworkBehaviour
 			//anim.SetFloat("Direction", direction);
 
 			// set sprinting
-			anim.SetBool("isSprinting", isSprinting);
+			//anim.SetBool("isSprinting", isSprinting);
 
 			// Update target direction relative to the camera view (or not if the Keep Direction option is checked)
 			UpdateTargetDirection();
@@ -724,8 +724,8 @@ public class Movement : NetworkBehaviour
 		}
 		else
 		{
-			//GameManager.instance.CreateMaze();
-			//hostCanMove = true;
+			GameManager.instance.CreateMaze();
+			hostCanMove = true;
 			Debug.Log("No Obstructionist enter the game, need one more player");
 			return false;
 		}

@@ -938,8 +938,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ChallengerTime: 30
   ControllerTime: 10
-  useCharacterForward: 0
-  turnSpeed: 10
   delayTime: 10
   turnCount: 10
 --- !u!1 &2524713471688813573
@@ -2187,7 +2185,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2524713472506869771
 Transform:
   m_ObjectHideFlags: 0
