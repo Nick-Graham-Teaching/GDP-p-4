@@ -936,8 +936,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c152ffd1877613f42aba0c0dc8c1bc6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 4
-  turnSpeed: 90
   ChallengerTime: 30
   ControllerTime: 10
   delayTime: 10
@@ -2187,7 +2185,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2524713472506869771
 Transform:
   m_ObjectHideFlags: 0

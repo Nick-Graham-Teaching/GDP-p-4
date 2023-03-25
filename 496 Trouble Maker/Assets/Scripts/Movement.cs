@@ -19,7 +19,7 @@ public class Movement : NetworkBehaviour
 {
 	public float ChallengerTime;
 	public float ControllerTime;
-	private NetworkVariable<bool> syncIdle = new NetworkVariable<bool>();
+	private NetworkVariable<float> syncSpeed = new NetworkVariable<float>();
 	private NetworkVariable<bool> syncWalk = new NetworkVariable<bool>();
 	private NetworkVariable<bool> syncIsSp = new NetworkVariable<bool>();
 	private NetworkVariable<Vector3> syncVec = new NetworkVariable<Vector3>();
@@ -95,9 +95,9 @@ public class Movement : NetworkBehaviour
 	}
 
 	[ServerRpc]
-	void UpdateInputServerRpc(bool idle, bool walk, bool isSp, Vector3 vec, Quaternion rot)
+	void UpdateInputServerRpc(float speed, bool walk, bool isSp, Vector3 vec, Quaternion rot)
 	{
-		syncIdle.Value = idle;
+		syncSpeed.Value = speed;
 		syncWalk.Value = walk;
 		syncIsSp.Value = isSp;
 		syncVec.Value = vec;
@@ -450,13 +450,11 @@ public class Movement : NetworkBehaviour
 			{
 				walk = true;
 				idle = false;
-				//anim.SetBool("IsWalk", walk);
 			}
 			else if (input.x == 0 && input.y == 0)
 			{
 				idle = true;
 				walk = false;
-				//anim.SetBool("IsIdle", idle);
 			}
 			// set speed to both vertical and horizontal inputs
 			if (useCharacterForward) speed = Mathf.Abs(input.x) + input.y;
@@ -623,7 +621,7 @@ public class Movement : NetworkBehaviour
 			}
 		}
 
-		UpdateInputServerRpc(idle, walk, isSprinting, transform.position, transform.rotation);
+		UpdateInputServerRpc(speed, walk, isSprinting, transform.position, transform.rotation);
 	}
 	
 	/// <summary>
