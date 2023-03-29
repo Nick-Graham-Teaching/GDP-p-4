@@ -551,8 +551,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1672379056257673505}
-  m_LocalRotation: {x: -0.031724885, y: 0.024847567, z: 0.08209377, w: 0.9958096}
-  m_LocalPosition: {x: 0.014677048, y: 8.889459, z: 0.170632}
+  m_LocalRotation: {x: -0.03195178, y: 0.026581835, z: 0.08853888, w: 0.99520516}
+  m_LocalPosition: {x: 0.014677048, y: 8.88946, z: 0.170632}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -561,7 +561,7 @@ Transform:
   - {fileID: 6305718007966401479}
   m_Father: {fileID: 8027231266414302818}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -3.917, y: 2.715, z: 10.075}
 --- !u!1 &1699334486959154793
 GameObject:
   m_ObjectHideFlags: 0
@@ -941,14 +941,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2679314799045336297}
-  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: 1.8298031, y: -0.41816702, z: -0.7602377}
+  m_LocalRotation: {x: -0.69941443, y: 0.055539813, z: -0.10322868, w: 0.7050381}
+  m_LocalPosition: {x: 1.8858807, y: -0.76744366, z: -0.65333986}
   m_LocalScale: {x: 3.8266418, y: 3.8266418, z: 3.8266418}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6275785109954543673}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -77.1, y: 86.027, z: -89.916}
 --- !u!137 &8606424389388004434
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
@@ -1714,11 +1714,11 @@ Rigidbody:
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!136 &5826192456271246791
 CapsuleCollider:
@@ -1730,8 +1730,8 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 0
-  m_Radius: 1.9996464
-  m_Height: 15.496812
+  m_Radius: 2.45
+  m_Height: 16.31
   m_Direction: 1
   m_Center: {x: -0.05419135, y: 8.121492, z: 0}
 --- !u!1 &5555961690671629216
@@ -1918,14 +1918,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6293877438126368160}
-  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: 1.3060712, y: -0.5601787, z: -0.7711494}
+  m_LocalRotation: {x: -0.7028728, y: 0.038173396, z: -0.070950724, w: 0.706738}
+  m_LocalPosition: {x: 1.3557959, y: -0.72271883, z: -0.72056735}
   m_LocalScale: {x: 12.864304, y: 13.040882, z: 5.302094}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6275785109954543673}
   m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -81.143, y: 86.639, z: -89.303}
 --- !u!137 &6697815453702690743
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
@@ -2177,7 +2177,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7092891414666576552}
   m_LocalRotation: {x: 0.51640856, y: 0.019100795, z: 0.076238796, w: 0.852728}
-  m_LocalPosition: {x: 3.6698325e-11, y: 0.8246317, z: 0.000000012474272}
+  m_LocalPosition: {x: 0, y: 0.8246317, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2485,14 +2485,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7977733076104863157}
-  m_LocalRotation: {x: -0.5700587, y: -0, z: -0, w: 0.82160395}
-  m_LocalPosition: {x: 1.3070717, y: -0.14971761, z: -0.777557}
+  m_LocalRotation: {x: -0.56912553, y: -0.038282134, z: 0.11757054, w: 0.8129009}
+  m_LocalPosition: {x: 1.2499366, y: 0.0863348, z: -0.8504831}
   m_LocalScale: {x: 11.642156, y: 11.642157, z: 11.642157}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6275785109954543673}
   m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -66.389, y: -29.308, z: 35.875}
 --- !u!137 &4943516468516312474
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
