@@ -1944,10 +1944,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40c3c03934b66bd40be7b1fc143cd455, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mazeStart: {fileID: 2407827198968117929, guid: 98778ec594fad534989565658b5d238b, type: 3}
+  mazeStart1: {fileID: 2407827198968117929, guid: 98778ec594fad534989565658b5d238b, type: 3}
+  mazeStart2: {fileID: 2407827198968117929, guid: a7717a182b43e8e46b74f94579e7a7b1, type: 3}
+  mazeStart3: {fileID: 2407827198968117929, guid: d26e2638d7e1fac48adc81935e5a9e46, type: 3}
   mazeMiddle11: {fileID: 2407827198968117929, guid: cded41a4aa74422479b5fea02d40b797, type: 3}
+  mazeMiddle12: {fileID: 2407827198968117929, guid: 9468ad7fc0436a44db12bd8fed84c06d, type: 3}
+  mazeMiddle13: {fileID: 2407827198968117929, guid: 4f445d541eb5ebd47afc4122b5a3d1a3, type: 3}
   mazeMiddle21: {fileID: 6201213900599659400, guid: 57bb99bf99665484db139b77c9ba2a30, type: 3}
-  mazeEnd: {fileID: 6201213900599659400, guid: f8a38bac9155f2b41a4fd4cbd08e0857, type: 3}
+  mazeMiddle22: {fileID: 6201213900599659400, guid: ea332bda79e505d469047ef076b18644, type: 3}
+  mazeMiddle23: {fileID: 6201213900599659400, guid: a6df97e397210d8498de01ece0b209bf, type: 3}
+  mazeEnd1: {fileID: 6201213900599659400, guid: f8a38bac9155f2b41a4fd4cbd08e0857, type: 3}
+  mazeEnd2: {fileID: 6201213900599659400, guid: afbdac7a1f94c5645b45096b1e0ce48f, type: 3}
+  mazeEnd3: {fileID: 6201213900599659400, guid: f0a6079db4a0d4445867ffb3bb07f5d5, type: 3}
   trap: {fileID: 4539516752407736043, guid: ca80a75ef1d53a8478effea89c7b7e1b, type: 3}
   mark: {fileID: 7469861445056596322, guid: e383558ecc53fe3458f142c6e5fb47be, type: 3}
   activate: {fileID: 2100000, guid: 23b2d31b555781b44901f21c2b0687d3, type: 2}

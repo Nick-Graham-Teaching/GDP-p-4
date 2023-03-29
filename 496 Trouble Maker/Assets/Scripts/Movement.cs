@@ -432,9 +432,8 @@ public class Movement : NetworkBehaviour
 
 	void SyncInput()
 	{
-		//anim.SetBool("IsIdle", syncIdle.Value);
-		//anim.SetBool("IsWalk", syncWalk.Value);
-		//anim.SetBool("isSprinting", syncIsSp.Value);
+		anim.SetFloat("Speed", syncSpeed.Value);
+		anim.SetBool("isSprinting", syncIsSp.Value);
 		transform.position = syncVec.Value;
 		transform.rotation = syncRot.Value;
 	}
@@ -475,7 +474,7 @@ public class Movement : NetworkBehaviour
 			//anim.SetFloat("Direction", direction);
 
 			// set sprinting
-			//anim.SetBool("isSprinting", isSprinting);
+			anim.SetBool("isSprinting", isSprinting);
 
 			// Update target direction relative to the camera view (or not if the Keep Direction option is checked)
 			UpdateTargetDirection();
