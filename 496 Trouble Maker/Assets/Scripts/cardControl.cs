@@ -36,6 +36,10 @@ public class cardControl : MonoBehaviour
     private List<int> activeList = new List<int>();
     private List<int> magnifiedList = new List<int>();
 
+
+    public AudioSource getCardSound;
+    public AudioSource usingCardSound;
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -110,6 +114,7 @@ public class cardControl : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Return) && isMagnifiedC1 == true && canUse)
         {
+            usingCardSound.Play();
             castCard(card1Comp);
             activeList[0] = 0;
             card1Comp.transform.localScale /= 1.5f;
@@ -158,6 +163,7 @@ public class cardControl : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Return) && isMagnifiedC2 == true && canUse)
         {
+            usingCardSound.Play();
             castCard(card2Comp);
             activeList[1] = 0;
             card2Comp.transform.localScale /= 1.5f;
@@ -205,6 +211,7 @@ public class cardControl : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Return) && isMagnifiedC3 == true && canUse)
         {
+            usingCardSound.Play();
             castCard(card3Comp);
             activeList[2] = 0;
             card3Comp.transform.localScale /= 1.5f;
@@ -251,6 +258,7 @@ public class cardControl : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Return) && isMagnifiedC4 == true && canUse)
         {
+            usingCardSound.Play();
             castCard(card4Comp);
             activeList[3] = 0;
             card4Comp.transform.localScale /= 1.5f;
@@ -297,6 +305,7 @@ public class cardControl : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Return) && isMagnifiedC5 == true && canUse)
         {
+            usingCardSound.Play();
             castCard(card5Comp);
             activeList[4] = 0;
             card5Comp.transform.localScale /= 1.5f;
@@ -380,6 +389,7 @@ public class cardControl : MonoBehaviour
                         card5Comp.GetComponent<thisCard>().index += 1;
                     }
                     activeList[i] = 1;
+                    getCardSound.Play();
 
                 }
             }
