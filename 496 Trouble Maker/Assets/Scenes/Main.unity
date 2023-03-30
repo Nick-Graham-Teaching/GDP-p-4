@@ -6105,7 +6105,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1966872944
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6113,7 +6113,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1966872943}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aa0afa61f775305429a6c5930482c488, type: 3}
   m_Name: 
@@ -6135,7 +6135,7 @@ MonoBehaviour:
   ErrorColor: {r: 1, g: 0.5, b: 0.5, a: 1}
   StackTraceMessages: 0
   StackTraceWarnings: 0
-  StackTraceErrors: 1
+  StackTraceErrors: 0
 --- !u!4 &1966872945
 Transform:
   m_ObjectHideFlags: 0
