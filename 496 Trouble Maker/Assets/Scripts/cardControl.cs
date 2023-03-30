@@ -36,6 +36,10 @@ public class cardControl : MonoBehaviour
     private List<int> activeList = new List<int>();
     private List<int> magnifiedList = new List<int>();
 
+
+    public AudioSource getCardSound;
+    public AudioSource usingCardSound;
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -110,11 +114,13 @@ public class cardControl : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Return) && isMagnifiedC1 == true && canUse)
         {
+          
             castCard(card1Comp);
             activeList[0] = 0;
             card1Comp.transform.localScale /= 1.5f;
             isMagnifiedC1 = false;
             card1Comp.SetActive(false);
+         
         }
 
 
@@ -158,11 +164,13 @@ public class cardControl : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Return) && isMagnifiedC2 == true && canUse)
         {
+            
             castCard(card2Comp);
             activeList[1] = 0;
             card2Comp.transform.localScale /= 1.5f;
             isMagnifiedC2 = false;
             card2Comp.SetActive(false);
+            
         }
 
 
@@ -205,11 +213,13 @@ public class cardControl : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Return) && isMagnifiedC3 == true && canUse)
         {
+            
             castCard(card3Comp);
             activeList[2] = 0;
             card3Comp.transform.localScale /= 1.5f;
             isMagnifiedC3 = false;
             card3Comp.SetActive(false);
+           
         }
 
         //CARD4
@@ -251,11 +261,13 @@ public class cardControl : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Return) && isMagnifiedC4 == true && canUse)
         {
+            
             castCard(card4Comp);
             activeList[3] = 0;
             card4Comp.transform.localScale /= 1.5f;
             isMagnifiedC4 = false;
             card4Comp.SetActive(false);
+            
         }
 
         //CARD5
@@ -297,11 +309,13 @@ public class cardControl : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Return) && isMagnifiedC5 == true && canUse)
         {
+            
             castCard(card5Comp);
             activeList[4] = 0;
             card5Comp.transform.localScale /= 1.5f;
             isMagnifiedC5 = false;
             card5Comp.SetActive(false);
+            
         }
         
 
@@ -380,6 +394,7 @@ public class cardControl : MonoBehaviour
                         card5Comp.GetComponent<thisCard>().index += 1;
                     }
                     activeList[i] = 1;
+                    getCardSound.Play();
 
                 }
             }
@@ -388,6 +403,7 @@ public class cardControl : MonoBehaviour
 
     public void castCard(GameObject card)
     {
+        usingCardSound.Play();
         string name = card.GetComponent<thisCard>().cardName;
         if (name == "Speed")
         {
