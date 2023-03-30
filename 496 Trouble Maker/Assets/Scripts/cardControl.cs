@@ -114,12 +114,13 @@ public class cardControl : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Return) && isMagnifiedC1 == true && canUse)
         {
-            usingCardSound.Play();
+          
             castCard(card1Comp);
             activeList[0] = 0;
             card1Comp.transform.localScale /= 1.5f;
             isMagnifiedC1 = false;
             card1Comp.SetActive(false);
+            usingCardSound.Play();
         }
 
 
@@ -163,12 +164,13 @@ public class cardControl : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Return) && isMagnifiedC2 == true && canUse)
         {
-            usingCardSound.Play();
+            
             castCard(card2Comp);
             activeList[1] = 0;
             card2Comp.transform.localScale /= 1.5f;
             isMagnifiedC2 = false;
             card2Comp.SetActive(false);
+            usingCardSound.Play();
         }
 
 
@@ -211,12 +213,13 @@ public class cardControl : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Return) && isMagnifiedC3 == true && canUse)
         {
-            usingCardSound.Play();
+            
             castCard(card3Comp);
             activeList[2] = 0;
             card3Comp.transform.localScale /= 1.5f;
             isMagnifiedC3 = false;
             card3Comp.SetActive(false);
+            usingCardSound.Play();
         }
 
         //CARD4
@@ -258,12 +261,13 @@ public class cardControl : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Return) && isMagnifiedC4 == true && canUse)
         {
-            usingCardSound.Play();
+            
             castCard(card4Comp);
             activeList[3] = 0;
             card4Comp.transform.localScale /= 1.5f;
             isMagnifiedC4 = false;
             card4Comp.SetActive(false);
+            usingCardSound.Play();
         }
 
         //CARD5
@@ -305,12 +309,13 @@ public class cardControl : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Return) && isMagnifiedC5 == true && canUse)
         {
-            usingCardSound.Play();
+            
             castCard(card5Comp);
             activeList[4] = 0;
             card5Comp.transform.localScale /= 1.5f;
             isMagnifiedC5 = false;
             card5Comp.SetActive(false);
+            usingCardSound.Play();
         }
         
 
