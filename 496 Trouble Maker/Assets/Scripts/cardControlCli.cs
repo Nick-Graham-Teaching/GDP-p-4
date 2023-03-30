@@ -94,7 +94,7 @@ public class cardControlCli : MonoBehaviour
             card1Comp.transform.localScale /= 1.5f;
             isMagnifiedC1 = false;
             card1Comp.SetActive(false);
-            usingCardSound.Play();
+        
         }
 
 
@@ -123,7 +123,7 @@ public class cardControlCli : MonoBehaviour
             card2Comp.transform.localScale /= 1.5f;
             isMagnifiedC2 = false;
             card2Comp.SetActive(false);
-            usingCardSound.Play();
+          
         }
 
 
@@ -152,7 +152,7 @@ public class cardControlCli : MonoBehaviour
             card3Comp.transform.localScale /= 1.5f;
             isMagnifiedC3 = false;
             card3Comp.SetActive(false);
-            usingCardSound.Play();
+        
         }
 
         //CARD4
@@ -180,7 +180,7 @@ public class cardControlCli : MonoBehaviour
             card4Comp.transform.localScale /= 1.5f;
             isMagnifiedC4 = false;
             card4Comp.SetActive(false);
-            usingCardSound.Play();
+          
         }
 
         //CARD5
@@ -208,7 +208,7 @@ public class cardControlCli : MonoBehaviour
             card5Comp.transform.localScale /= 1.5f;
             isMagnifiedC5 = false;
             card5Comp.SetActive(false);
-            usingCardSound.Play();
+           
         }
 
     }
@@ -270,6 +270,7 @@ public class cardControlCli : MonoBehaviour
 
     public void castCard(GameObject card)
     {
+        usingCardSound.Play();
         string name = card.GetComponent<thisCardClient>().cardName;
         if (name == "Slow")
         {
