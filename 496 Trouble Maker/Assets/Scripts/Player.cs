@@ -63,13 +63,20 @@ public class Player : NetworkBehaviour
         Application.Quit();
     }*/
     
-    public void OnStartButtonClick()
+    public void OnReadyButtonClick()
     {
         if (GameObject.Find("Host").transform.Find("Player").GetComponent<Movement>().StarGame())
         {
-            GameObject.Find("GameStart").gameObject.SetActive(false);
+            GameObject.Find("Ready").gameObject.SetActive(false);
+            GameObject.Find("Canvas").transform.Find("GameStart").gameObject.SetActive(true);
             GameObject.Find("IP Address").gameObject.SetActive(false);
         }
         else return;
+    }
+
+    public void onBeginButtonClick()
+    {
+        GameObject.Find("Host").transform.Find("Player").GetComponent<Movement>().Begin();
+        GameObject.Find("GameStart").gameObject.SetActive(false);
     }
 }

@@ -32,7 +32,7 @@ public class GameManager : MonoBehaviour
     public GameObject trap;
     public GameObject mark;
     public Material activate;
-    public GameObject GameStartUI;
+    public GameObject GameReadyUI;
     
     string ipAddress;
     [SerializeField] TextMeshProUGUI ipAddressText;
@@ -235,7 +235,7 @@ public class GameManager : MonoBehaviour
         GameObject.Find("ConnectMenuUI").gameObject.SetActive(false);
         ipAddressText.gameObject.SetActive(true);
         ipAddressText.text = ipAddress;
-        GameStartUI.SetActive(true);
+        GameReadyUI.SetActive(true);
         CloseCamera();
     }
 

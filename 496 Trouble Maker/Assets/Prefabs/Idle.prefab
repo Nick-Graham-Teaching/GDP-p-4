@@ -1703,7 +1703,7 @@ MonoBehaviour:
   ChallengerTime: 30
   ControllerTime: 10
   delayTime: 10
-  turnCount: 10
+  turnCount: 30
 --- !u!54 &3773526321731676171
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1719,7 +1719,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 112
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!136 &5826192456271246791
 CapsuleCollider:
   m_ObjectHideFlags: 0
