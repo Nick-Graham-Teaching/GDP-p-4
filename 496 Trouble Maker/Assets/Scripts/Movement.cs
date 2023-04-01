@@ -120,15 +120,11 @@ public class Movement : NetworkBehaviour
 	///  Game Start
 	/// </summary>
 	[ServerRpc]
-	void UpdateBeginServerRpc() { BeginClientRpc(); }
+	void UpdateSetupServerRpc() { SetupClientRpc(); }
 
 	[ClientRpc]
-	void BeginClientRpc()
+	void SetupClientRpc()
 	{
-		begin = true;
-		GameObject.Find("Canvas").transform.Find("Wait").gameObject.SetActive(false);
-		GameObject.Find("Canvas").transform.Find("Timer").gameObject.SetActive(true);
-		GameObject.Find("Client").transform.Find("Player").GetComponent<Movement>().begin = true;
 		Debug.Log("Game Start");
 		GameObject maze = GameManager.instance.CreateMaze();
 		transform.position = maze.transform.Find("StartPos").transform.position;
@@ -145,7 +141,19 @@ public class Movement : NetworkBehaviour
 			GameObject.Find("Canvas").transform.Find("ClientCards").gameObject.SetActive(true);
 		}
 	}
-	
+
+	[ServerRpc]
+	void UpdateBeginServerRpc() {BeingClientRpc();}
+
+	[ClientRpc]
+	void BeingClientRpc()
+	{
+		begin = true;
+		GameObject.Find("Client").transform.Find("Player").GetComponent<Movement>().begin = true;
+		GameObject.Find("Canvas").transform.Find("Wait").gameObject.SetActive(false);
+		GameObject.Find("Canvas").transform.Find("Timer").gameObject.SetActive(true);
+	}
+
 	/// <summary>
 	/// Change Turn
 	/// </summary>
@@ -443,55 +451,7 @@ public class Movement : NetworkBehaviour
 	{
 		if (isC) // Challenger
 		{
-			input.x = Input.GetAxis("Horizontal");
-			input.y = Input.GetAxis("Vertical");
-			if (input.x != 0 || input.y != 0)
-			{
-				walk = true;
-				idle = false;
-			}
-			else if (input.x == 0 && input.y == 0)
-			{
-				idle = true;
-				walk = false;
-			}
-			// set speed to both vertical and horizontal inputs
-			if (useCharacterForward) speed = Mathf.Abs(input.x) + input.y;
-			else 
-				speed = Mathf.Abs(input.x) + Mathf.Abs(input.y);
-
-			//speed = Mathf.Clamp(speed, 0f, 1f);
-
-			speed = Mathf.SmoothDamp(anim.GetFloat("Speed"), speed, ref velocity, 0.1f);
-			anim.SetFloat("Speed", speed);
-
-			
-			if (input.y < 0f && useCharacterForward)
-				direction = input.y;
-			else
-					direction = 0f;
-
-			//anim.SetFloat("Direction", direction);
-
-			// set sprinting
-			anim.SetBool("isSprinting", isSprinting);
-
-			// Update target direction relative to the camera view (or not if the Keep Direction option is checked)
-			UpdateTargetDirection();
-			if (input != Vector2.zero && targetDirection.magnitude > 0.1f)
-			{
-				Vector3 lookDirection = targetDirection.normalized;
-				freeRotation = Quaternion.LookRotation(lookDirection, transform.up);
-				var diferenceRotation = freeRotation.eulerAngles.y - transform.eulerAngles.y;
-				var eulerY = transform.eulerAngles.y;
-
-				if (diferenceRotation < 0 || diferenceRotation > 0) eulerY = freeRotation.eulerAngles.y;
-				var euler = new Vector3(0, eulerY, 0);
-
-				transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(euler),
-					turnSpeed * turnSpeedMultiplier * Time.deltaTime);
-			}
-			
+			ChallengerMovement();
 			// Change turn
 			if (begin)
 			{
@@ -523,13 +483,13 @@ public class Movement : NetworkBehaviour
 				stunSpeed = 0f;
 			}
 
-			else if (!stun) stunSpeed = 1f;
-			if (slow) slowSpeed = 0.3f;
-			else if (!slow) slowSpeed = 1f;
-			if (chaos) chaosSpeed = -1f;
-			else if (!chaos) chaosSpeed = 1f;
-			if (isSprinting) sprintingSpeed = 1.5f;
-			else if (!isSprinting) sprintingSpeed = 1f;
+			else if (!stun) stunSpeed = 0.9f;
+			if (slow) slowSpeed = 0.5f;
+			else if (!slow) slowSpeed = 0.9f;
+			if (chaos) chaosSpeed = -0.7f;
+			else if (!chaos) chaosSpeed = 0.9f;
+			if (isSprinting) sprintingSpeed = 1.3f;
+			else if (!isSprinting) sprintingSpeed = 0.9f;
 			
 			// Grow up
 			if (growUp)
@@ -668,6 +628,58 @@ public class Movement : NetworkBehaviour
 		}
 	}
 
+	void ChallengerMovement()
+	{
+		input.x = Input.GetAxis("Horizontal");
+		input.y = Input.GetAxis("Vertical");
+		if (input.x != 0 || input.y != 0)
+		{
+			walk = true;
+			idle = false;
+		}
+		else if (input.x == 0 && input.y == 0)
+		{
+			idle = true;
+			walk = false;
+		}
+		// set speed to both vertical and horizontal inputs
+		if (useCharacterForward) speed = Mathf.Abs(input.x) + input.y;
+		else 
+			speed = Mathf.Abs(input.x) + Mathf.Abs(input.y);
+
+		//speed = Mathf.Clamp(speed, 0f, 1f);
+
+		speed = Mathf.SmoothDamp(anim.GetFloat("Speed"), speed, ref velocity, 0.1f);
+		anim.SetFloat("Speed", speed);
+
+			
+		if (input.y < 0f && useCharacterForward)
+			direction = input.y;
+		else
+			direction = 0f;
+
+		//anim.SetFloat("Direction", direction);
+
+		// set sprinting
+		anim.SetBool("isSprinting", isSprinting);
+
+		// Update target direction relative to the camera view (or not if the Keep Direction option is checked)
+		UpdateTargetDirection();
+		if (input != Vector2.zero && targetDirection.magnitude > 0.1f)
+		{
+			Vector3 lookDirection = targetDirection.normalized;
+			freeRotation = Quaternion.LookRotation(lookDirection, transform.up);
+			var diferenceRotation = freeRotation.eulerAngles.y - transform.eulerAngles.y;
+			var eulerY = transform.eulerAngles.y;
+
+			if (diferenceRotation < 0 || diferenceRotation > 0) eulerY = freeRotation.eulerAngles.y;
+			var euler = new Vector3(0, eulerY, 0);
+
+			transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(euler),
+				turnSpeed * turnSpeedMultiplier * Time.deltaTime);
+		}
+	}
+	
 	/// <summary>
 	/// Controller perspective control
 	/// </summary>
@@ -717,14 +729,12 @@ public class Movement : NetworkBehaviour
 	{
 		if (GameObject.Find("Client"))
 		{
-			UpdateBeginServerRpc();
+			UpdateSetupServerRpc();
 			UpdateTurnServerRpc();
 			return true;
 		}
 		else
 		{
-			GameManager.instance.CreateMaze();
-			hostCanMove = true;
 			Debug.Log("No Obstructionist enter the game, need one more player");
 			return false;
 		}
@@ -800,7 +810,8 @@ public class Movement : NetworkBehaviour
 		SceneManager.LoadScene("ControllerWin");
 	}
 
-	public bool GetIsSprinting(){
-		return isSprinting;
+	public void Begin()
+	{
+		UpdateBeginServerRpc();
 	}
 }

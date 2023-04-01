@@ -654,15 +654,15 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   m_MinimumDistanceFromTarget: 0.1
-  m_AvoidObstacles: 0
+  m_AvoidObstacles: 1
   m_DistanceLimit: 0
-  m_MinimumOcclusionTime: 0
+  m_MinimumOcclusionTime: 1
   m_CameraRadius: 0.1
-  m_Strategy: 2
-  m_MaximumEffort: 4
-  m_SmoothingTime: 0.5
-  m_Damping: 0
-  m_DampingWhenOccluded: 0.5
+  m_Strategy: 0
+  m_MaximumEffort: 1
+  m_SmoothingTime: 0.8
+  m_Damping: 1
+  m_DampingWhenOccluded: 1
   m_OptimalTargetDistance: 0
 --- !u!1 &1734147993906428370
 GameObject:
@@ -1703,7 +1703,7 @@ MonoBehaviour:
   ChallengerTime: 30
   ControllerTime: 10
   delayTime: 10
-  turnCount: 10
+  turnCount: 30
 --- !u!54 &3773526321731676171
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1719,7 +1719,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 112
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!136 &5826192456271246791
 CapsuleCollider:
   m_ObjectHideFlags: 0

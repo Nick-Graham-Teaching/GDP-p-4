@@ -94,7 +94,6 @@ public class cardControlCli : MonoBehaviour
             card1Comp.transform.localScale /= 1.5f;
             isMagnifiedC1 = false;
             card1Comp.SetActive(false);
-        
         }
 
 

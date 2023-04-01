@@ -28,20 +28,13 @@ public class thisCardClient : MonoBehaviour
             int randomInt = Random.Range(5, 11);
             this_Card.Add(CardData.cardList[randomInt]);
         }
-
-
-
     }
 
     // Update is called once per frame
     void Update()
     {
-
         cardName = this_Card[index].cardName;
         thisSprite = this_Card[index].thisImage;
         thatImage.sprite = thisSprite;
-
-     
-
     }
 }
