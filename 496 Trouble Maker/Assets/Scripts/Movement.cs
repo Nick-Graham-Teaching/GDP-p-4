@@ -643,9 +643,23 @@ public class Movement : NetworkBehaviour
 			walk = false;
 		}
 		// set speed to both vertical and horizontal inputs
-		if (useCharacterForward) speed = Mathf.Abs(input.x) + input.y;
-		else 
-			speed = Mathf.Abs(input.x) + Mathf.Abs(input.y);
+		if (useCharacterForward)
+		{
+			if (Mathf.Abs(input.x) > Mathf.Abs(input.y))
+			{
+				speed = Mathf.Abs(input.x);
+			}
+			else speed = Mathf.Abs(input.y);
+
+		}
+		else
+		{ 
+			if (Mathf.Abs(input.x) > Mathf.Abs(input.y))
+			{
+				speed = Mathf.Abs(input.x);
+			}
+			else speed = Mathf.Abs(input.y);
+		}
 
 		//speed = Mathf.Clamp(speed, 0f, 1f);
 
