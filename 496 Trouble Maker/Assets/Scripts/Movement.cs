@@ -38,6 +38,7 @@ public class Movement : NetworkBehaviour
 	private bool walk;
 	private bool idle;
 	private bool isSprinting = false;
+	private bool isShooting = false;
 	private Animator anim;
 	private Vector3 targetDirection;
 	private Vector2 input;
@@ -451,10 +452,11 @@ public class Movement : NetworkBehaviour
 	{
 		if (isC) // Challenger
 		{
-			ChallengerMovement();
+			
 			// Change turn
 			if (begin)
 			{
+				ChallengerMovement();
 				timer += Time.deltaTime;
 				if (timer > delayTime)
 				{
@@ -528,13 +530,16 @@ public class Movement : NetworkBehaviour
 				{
 					Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 					RaycastHit hit;
+					isShooting = true;
 					if (Physics.Raycast(ray, out hit,Mathf.Infinity,1 << 0,QueryTriggerInteraction.Ignore) && hit.transform.name != "Player")
 					{
 						Vector3 point = hit.point;
 						UpdateMarkServerRpc(point);
 						// Debug.Log(hit.transform.name);
+						
 					}
 				}
+				isShooting = false;
 			}
 		}
 
@@ -676,6 +681,15 @@ public class Movement : NetworkBehaviour
 
 		// set sprinting
 		anim.SetBool("isSprinting", isSprinting);
+
+		// set slow down
+		anim.SetBool("isSlowed", slow);
+
+		// set stunned
+		anim.SetBool("isStunned", stun);
+
+		// set shooting
+		anim.SetBool("isShooting", isShooting);
 
 		// Update target direction relative to the camera view (or not if the Keep Direction option is checked)
 		UpdateTargetDirection();

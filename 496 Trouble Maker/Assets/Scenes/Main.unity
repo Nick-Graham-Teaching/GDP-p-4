@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.02495846, g: 0.02274444, b: 0.07047759, a: 1}
+  m_IndirectSpecularColor: {r: 0.024901927, g: 0.022690432, b: 0.07040433, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1957,8 +1957,8 @@ MonoBehaviour:
   mazeEnd1: {fileID: 6201213900599659400, guid: f8a38bac9155f2b41a4fd4cbd08e0857, type: 3}
   mazeEnd2: {fileID: 6201213900599659400, guid: afbdac7a1f94c5645b45096b1e0ce48f, type: 3}
   mazeEnd3: {fileID: 6201213900599659400, guid: f0a6079db4a0d4445867ffb3bb07f5d5, type: 3}
-  trap: {fileID: 4539516752407736043, guid: ca80a75ef1d53a8478effea89c7b7e1b, type: 3}
-  mark: {fileID: 7469861445056596322, guid: e383558ecc53fe3458f142c6e5fb47be, type: 3}
+  trap: {fileID: 3911877898332524364, guid: cdb52987c7ca6604f9b3e8d9b8d26e9a, type: 3}
+  mark: {fileID: 5916880090852830707, guid: 6c47903946fc703499f808663faf18f8, type: 3}
   activate: {fileID: 2100000, guid: 23b2d31b555781b44901f21c2b0687d3, type: 2}
   GameReadyUI: {fileID: 672305944}
   ipAddressText: {fileID: 1993313650}
