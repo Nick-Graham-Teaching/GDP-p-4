@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Net.WebSockets;
 using System.Numerics;
 using Cinemachine;
+using TMPro;
 using Unity.Mathematics;
 using UnityEngine;
 using Unity.Netcode;
@@ -31,7 +32,8 @@ public class Movement : NetworkBehaviour
 	private bool isC;
 	private bool hostCanMove = false;
 	private bool begin = false;
-	
+	private int trapNum = 0;
+
 	private float turnSpeedMultiplier;
 	private float speed = 0f;
 	private float direction = 0f;
@@ -67,11 +69,32 @@ public class Movement : NetworkBehaviour
 	private int obstacleActivateNum = 0;
 	private string obstacle;
 
+	private GameObject challengerTurnUI;
+	private GameObject controllerTurnUI;
+	private GameObject chaosUI;
+	private GameObject teleportUI;
+	private GameObject slowUI;
+	private GameObject obstacleUI;
+	private GameObject eraseUI;
+	private GameObject blindUI;
+	private GameObject trapNumberUI;
+	private GameObject UI;
+
 	// Use this for initialization
 	void Start ()
 	{
 		anim = GetComponent<Animator>();
 		mainCamera = transform.parent.Find("Camera").GetComponent<Camera>();
+		challengerTurnUI = GameObject.Find("Canvas").transform.Find("Challenger Turn Image").gameObject;
+		controllerTurnUI = GameObject.Find("Canvas").transform.Find("Controller Turn Image").gameObject;
+		UI = GameObject.Find("Canvas").transform.Find("UI").gameObject;
+		chaosUI = UI.transform.Find("Chaos").gameObject;
+		teleportUI = UI.transform.Find("Teleport").gameObject;
+		slowUI = UI.transform.Find("Slow").gameObject;
+		obstacleUI = UI.transform.Find("Obstacle").gameObject;
+		eraseUI = UI.transform.Find("Erase").gameObject;
+		blindUI = UI.transform.Find("Blind").gameObject;
+		trapNumberUI = GameObject.Find("Canvas").transform.Find("Trap Number").gameObject;
 	}
 
 	public bool GetHostCanMove
@@ -140,6 +163,7 @@ public class Movement : NetworkBehaviour
 		{
 			GameManager.instance.server = false;
 			GameObject.Find("Canvas").transform.Find("ClientCards").gameObject.SetActive(true);
+			GameObject.Find("Canvas").transform.Find("Trap").gameObject.SetActive(true);
 		}
 	}
 
@@ -153,6 +177,7 @@ public class Movement : NetworkBehaviour
 		GameObject.Find("Client").transform.Find("Player").GetComponent<Movement>().begin = true;
 		GameObject.Find("Canvas").transform.Find("Wait").gameObject.SetActive(false);
 		GameObject.Find("Canvas").transform.Find("Timer").gameObject.SetActive(true);
+		challengerTurnUI.SetActive(true);
 	}
 
 	/// <summary>
@@ -169,6 +194,7 @@ public class Movement : NetworkBehaviour
 		bool canMove = GameObject.Find("Client").transform.Find("Player").GetComponent<Movement>().hostCanMove;
 		if (canMove) GameObject.Find("Client").transform.Find("Player").GetComponent<Movement>().hostCanMove = false;
 		else if (!canMove) GameObject.Find("Client").transform.Find("Player").GetComponent<Movement>().hostCanMove = true;
+		ActiveUI();
 		if (!hostCanMove)
 		{ 
 			if (isSprinting) isSprinting = false;
@@ -181,6 +207,8 @@ public class Movement : NetworkBehaviour
 			GameObject.Find("Client").transform.Find("Player").GetComponent<Movement>().delayTime = ControllerTime;
 			GameManager.instance.SetClientCanUse(true);
 			GameManager.instance.SetServerCanUse(false);
+			challengerTurnUI.SetActive(false);
+			controllerTurnUI.SetActive(true);
 		}
 		else if (hostCanMove)
 		{
@@ -192,6 +220,8 @@ public class Movement : NetworkBehaviour
 			GameObject.Find("Client").transform.Find("Player").GetComponent<Movement>().delayTime = ChallengerTime;
 			GameManager.instance.SetClientCanUse(false);
 			GameManager.instance.SetServerCanUse(true);
+			challengerTurnUI.SetActive(true);
+			controllerTurnUI.SetActive(false);
 		}
 		GameManager.instance.Draw();
 	}
@@ -309,6 +339,7 @@ public class Movement : NetworkBehaviour
 		speed = 0f;
 		isSprinting = false;
 		Destroy(GameObject.Find(str).gameObject);
+		GameObject.Find("Client").transform.Find("Player").GetComponent<Movement>().trapNum -= 1;
 	}
 
 	/// <summary>
@@ -334,10 +365,10 @@ public class Movement : NetworkBehaviour
 	/// Create Marks
 	/// </summary>
 	[ServerRpc]
-	void UpdateMarkServerRpc(Vector3 pos) { MarkClientRpc(pos); }
+	void UpdateMarkServerRpc(Vector3 pos, Vector3 v) { MarkClientRpc(pos,v); }
 
 	[ClientRpc]
-	void MarkClientRpc(Vector3 pos) { GameManager.instance.CreateMark(pos); }
+	void MarkClientRpc(Vector3 pos, Vector3 v) { GameManager.instance.CreateMark(pos,v); }
 
 	
 	/// <summary>
@@ -452,7 +483,6 @@ public class Movement : NetworkBehaviour
 	{
 		if (isC) // Challenger
 		{
-			
 			// Change turn
 			if (begin)
 			{
@@ -534,8 +564,9 @@ public class Movement : NetworkBehaviour
 					if (Physics.Raycast(ray, out hit,Mathf.Infinity,1 << 0,QueryTriggerInteraction.Ignore) && hit.transform.name != "Player")
 					{
 						Vector3 point = hit.point;
-						UpdateMarkServerRpc(point);
-						// Debug.Log(hit.transform.name);
+						Vector3 v  = hit.transform.eulerAngles;
+						UpdateMarkServerRpc(point, v);
+						Debug.Log(hit.transform.name);
 						
 					}
 				}
@@ -562,12 +593,11 @@ public class Movement : NetworkBehaviour
 				{
 					Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 					RaycastHit hit;
-					if (Physics.Raycast(ray, out hit,Mathf.Infinity, 1<<3,QueryTriggerInteraction.Ignore))
+					if (Physics.Raycast(ray, out hit,Mathf.Infinity, 1<<3,QueryTriggerInteraction.Ignore) && trapNum < 2)
 					{
-						// Debug.Log(hit.transform.name);
 						Vector3 point = hit.point;
 						UpdatePlaceTrapServerRpc(point);
-						
+						trapNum += 1;
 					}
 				}
 
@@ -583,6 +613,9 @@ public class Movement : NetworkBehaviour
 					}
 				}
 			}
+
+			int i = 10 - GameObject.FindGameObjectsWithTag("Trap").Length;
+			trapNumberUI.GetComponent<TextMeshProUGUI>().text = i.ToString();
 		}
 
 		UpdateInputServerRpc(speed, walk, isSprinting, transform.position, transform.rotation);
@@ -770,7 +803,7 @@ public class Movement : NetworkBehaviour
 	
 	public void Purify()
 	{
-		if (hostCanMove) UpdatePurifyServerRpc();
+		if (hostCanMove) {UpdatePurifyServerRpc();}
 	}
 
 	public void Accelerate()
@@ -795,37 +828,57 @@ public class Movement : NetworkBehaviour
 	
 	public void Slow()
 	{
-		if (!hostCanMove) UpdateSlowDownServerRpc();
+		if (!hostCanMove)
+		{
+			ActiveUI(slowUI);
+			UpdateSlowDownServerRpc();
+		}
 	}
 
 	public void Chaos()
 	{
-		if (!hostCanMove) UpdateChaosStatusServerRpc();
+
+		if (!hostCanMove)
+		{
+			ActiveUI(chaosUI);
+			UpdateChaosStatusServerRpc();
+		}
 	}
 	
 	public void Blind()
 	{
-		if (!hostCanMove) UpdateBlindServerRpc();
+		if (!hostCanMove)
+		{
+			ActiveUI(blindUI);
+			UpdateBlindServerRpc();
+		}
 	}
 
 	public void Teleport()
 	{
-		if (!hostCanMove) UpdateTeleportServerRpc(lastPos);
+		if (!hostCanMove)
+		{
+			UpdateTeleportServerRpc(lastPos);
+			ActiveUI(teleportUI);
+		}
 	}
 
 	public void Obstacle()
 	{
-		if (!hostCanMove) obstacleCanUse = true;
+		if (!hostCanMove)
+		{
+			ActiveUI(obstacleUI);
+			obstacleCanUse = true;
+		}
 	}
 
 	public void Erase()
 	{
-		if (!hostCanMove) UpdateEraseMarkServerRpc();
-	}
-
-	public void Trap()
-	{
-		if (!hostCanMove) trapCanUse = true;
+		if (!hostCanMove)
+		{
+			ActiveUI(eraseUI);
+			UpdateEraseMarkServerRpc();
+		}
 	}
 
 	void ChallengerWin()
@@ -841,5 +894,16 @@ public class Movement : NetworkBehaviour
 	public void Begin()
 	{
 		UpdateBeginServerRpc();
+	}
+
+	void ActiveUI(GameObject g = null)
+	{
+		foreach (Transform ui in UI.transform)
+		{
+			ui.gameObject.SetActive(false);
+		}
+
+		if (g == null) return;
+		g.SetActive(true);
 	}
 }

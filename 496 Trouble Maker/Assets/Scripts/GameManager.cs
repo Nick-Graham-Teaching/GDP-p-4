@@ -33,6 +33,8 @@ public class GameManager : MonoBehaviour
     public GameObject mark;
     public Material activate;
     public GameObject GameReadyUI;
+    public GameObject instruction;
+    public GameObject controllerUI;
     
     string ipAddress;
     [SerializeField] TextMeshProUGUI ipAddressText;
@@ -127,7 +129,8 @@ public class GameManager : MonoBehaviour
     {
         if (GameObject.FindGameObjectsWithTag("Trap").Length <= 10)
         {
-            Instantiate(trap, pos, default);
+            GameObject g = Instantiate(trap, pos, default);
+            g.transform.eulerAngles = new Vector3(90, 0, 0);
             Debug.Log("Placed trap");
         }
         else
@@ -136,9 +139,10 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void CreateMark(Vector3 pos)
+    public void CreateMark(Vector3 pos, Vector3 v)
     {
-        Instantiate(mark, pos, default);
+        GameObject g = Instantiate(mark, pos, default);
+        g.transform.eulerAngles = v;
     }
 
     public void EraseMarks()
@@ -237,6 +241,7 @@ public class GameManager : MonoBehaviour
         ipAddressText.text = ipAddress;
         GameReadyUI.SetActive(true);
         CloseCamera();
+        instruction.SetActive(true);
     }
 
     public void OnClientButtonClick()
@@ -248,6 +253,8 @@ public class GameManager : MonoBehaviour
         {
             GameObject.Find("ConnectMenuUI").gameObject.SetActive(false);
             GameObject.Find("Canvas").transform.Find("Wait").gameObject.SetActive(true);
+            instruction.SetActive(true);
+            controllerUI.SetActive(true);
         }
         else Debug.Log("Client connect failed");
         CloseCamera();

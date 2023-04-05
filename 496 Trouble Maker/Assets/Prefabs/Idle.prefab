@@ -1703,7 +1703,7 @@ MonoBehaviour:
   ChallengerTime: 30
   ControllerTime: 10
   delayTime: 10
-  turnCount: 30
+  turnCount: 20
 --- !u!54 &3773526321731676171
 Rigidbody:
   m_ObjectHideFlags: 0
