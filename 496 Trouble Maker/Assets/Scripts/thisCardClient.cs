@@ -23,10 +23,24 @@ public class thisCardClient : MonoBehaviour
     {
         originalScale = transform.localScale;
         index = 0;
+        int count = 0;
         for (int i = 0; i < 15; i++)
         {
             int randomInt = Random.Range(5, 11);
-            this_Card.Add(CardData.cardList[randomInt]);
+            if (randomInt == 10 && count == 0)
+            {
+                count += 1;
+                this_Card.Add(CardData.cardList[randomInt]);
+            }
+            if (randomInt != 10 && count == 0) {
+                this_Card.Add(CardData.cardList[randomInt]);
+            }
+            else if(count ==1)
+            {
+                randomInt = Random.Range(5, 10);
+                this_Card.Add(CardData.cardList[randomInt]);
+            }
+            
         }
     }
 

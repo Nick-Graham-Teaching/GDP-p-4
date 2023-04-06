@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class cardControl : MonoBehaviour
 {
 
@@ -13,7 +13,9 @@ public class cardControl : MonoBehaviour
     public bool canUse;
     private GameObject host;
 
-
+    public GameObject hint;
+    public Text hintNameText;
+    public Text hintEffectText;
     // Start is called before the first frame update
 
 
@@ -71,6 +73,55 @@ public class cardControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        string name;
+        string function;
+
+        if (!isMagnifiedC1 && !isMagnifiedC2 && !isMagnifiedC3 && !isMagnifiedC4 && !isMagnifiedC5)
+        {
+            hint.SetActive(false);
+        }
+        else
+        {
+            hint.SetActive(true);
+            if (isMagnifiedC1)
+            {
+
+                name = card1Comp.GetComponent<thisCard>().cardName;
+                function = card1Comp.GetComponent<thisCard>().cardEffect;
+                Debug.Log("Card 1 Name: " + name);
+                hintNameText.text = "Card Name: " + name;
+                hintEffectText.text = "Effect: " + function + "-- Press enter to use";
+            }
+            if (isMagnifiedC2)
+            {
+                name = card2Comp.GetComponent<thisCard>().cardName;
+                function = card2Comp.GetComponent<thisCard>().cardEffect;
+                hintNameText.text = "Card Name: " + name;
+                hintEffectText.text = "Effect: " + function + "-- Press enter to use";
+            }
+            if (isMagnifiedC3)
+            {
+                name = card3Comp.GetComponent<thisCard>().cardName;
+                function = card3Comp.GetComponent<thisCard>().cardEffect;
+                hintNameText.text = "Card Name: " + name;
+                hintEffectText.text = "Effect: " + function + "-- Press enter to use";
+            }
+            if (isMagnifiedC4)
+            {
+                name = card4Comp.GetComponent<thisCard>().cardName;
+                function = card4Comp.GetComponent<thisCard>().cardEffect;
+                hintNameText.text = "Card Name: " + name;
+                hintEffectText.text = "Effect: " + function + "-- Press enter to use";
+            }
+            if (isMagnifiedC5)
+            {
+                name = card5Comp.GetComponent<thisCard>().cardName;
+                function = card5Comp.GetComponent<thisCard>().cardEffect;
+                Debug.Log("Card 5 Name: " + name);
+                hintNameText.text = "Card Name: " + name;
+                hintEffectText.text = "Effect: " + function + "-- Press enter to use";
+            }
+        }
         //CARD1
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
