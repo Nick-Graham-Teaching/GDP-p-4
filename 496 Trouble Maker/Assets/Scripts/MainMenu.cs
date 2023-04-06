@@ -10,7 +10,12 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene("Main");
     }
 
-    public void QuitGmae()
+    public void GoTutorial()
+    {
+        SceneManager.LoadScene("Tutorial");
+    }
+
+    public void QuitGame()
     {
         Application.Quit();
     }
