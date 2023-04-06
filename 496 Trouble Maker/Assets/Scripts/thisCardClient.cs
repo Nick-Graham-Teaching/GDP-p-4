@@ -10,7 +10,7 @@ public class thisCardClient : MonoBehaviour
     // Start is called before the first frame update
     public List<Card> this_Card = new List<Card>();
     public string cardName;
-
+    public string cardEffect;
     public int index;
     public bool used;
     public Sprite thisSprite;
@@ -34,6 +34,7 @@ public class thisCardClient : MonoBehaviour
     void Update()
     {
         cardName = this_Card[index].cardName;
+        cardEffect = this_Card[index].effect;
         thisSprite = this_Card[index].thisImage;
         thatImage.sprite = thisSprite;
     }

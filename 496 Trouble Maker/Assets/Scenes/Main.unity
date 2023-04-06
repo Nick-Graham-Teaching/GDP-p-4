@@ -2720,6 +2720,7 @@ MonoBehaviour:
   card5: {fileID: 976195906}
   hint: {fileID: 1816938044}
   hintNameText: {fileID: 1648373205}
+  hintEffectText: {fileID: 1420473699}
   canUse: 0
   cardList: []
   getCardSound: {fileID: 157688803}

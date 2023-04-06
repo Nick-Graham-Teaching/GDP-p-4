@@ -14,6 +14,7 @@ public class cardControlCli : MonoBehaviour
 
     public GameObject hint;
     public Text hintNameText;
+    public Text hintEffectText;
 
     public bool canUse;
 
@@ -87,6 +88,7 @@ public class cardControlCli : MonoBehaviour
         isMagnifiedC4 = card4MouseControll.magnified;
         isMagnifiedC5 = card5MouseControll.magnified;
         string name;
+        string function;
 
         if (!isMagnifiedC1 && !isMagnifiedC2 && !isMagnifiedC3 && !isMagnifiedC4 && !isMagnifiedC5)
         {
@@ -99,29 +101,39 @@ public class cardControlCli : MonoBehaviour
             {
 
                 name = card1Comp.GetComponent<thisCardClient>().cardName;
+                function = card1Comp.GetComponent<thisCardClient>().cardEffect;
                 Debug.Log("Card 1 Name: " + name);
                 hintNameText.text = "Card Name: " + name;
+                hintEffectText.text = "Effect: " + function + "--Right-click to use";
             }
             if (isMagnifiedC2)
             {
                 name = card2Comp.GetComponent<thisCardClient>().cardName;
+                function = card2Comp.GetComponent<thisCardClient>().cardEffect;
                 hintNameText.text = "Card Name: " + name;
+                hintEffectText.text = "Effect: " + function + "--Right-click to use";
             }
             if (isMagnifiedC3)
             {
                 name = card3Comp.GetComponent<thisCardClient>().cardName;
+                function = card3Comp.GetComponent<thisCardClient>().cardEffect;
                 hintNameText.text = "Card Name: " + name;
+                hintEffectText.text = "Effect: " + function + "--Right-click to use";
             }
             if (isMagnifiedC4)
             {
                 name = card4Comp.GetComponent<thisCardClient>().cardName;
+                function = card4Comp.GetComponent<thisCardClient>().cardEffect;
                 hintNameText.text = "Card Name: " + name;
+                hintEffectText.text = "Effect: " + function + "--Right-click to use";
             }
             if (isMagnifiedC5)
             {
                 name = card5Comp.GetComponent<thisCardClient>().cardName;
+                function = card5Comp.GetComponent<thisCardClient>().cardEffect;
                 Debug.Log("Card 5 Name: " + name);
                 hintNameText.text = "Card Name: " + name;
+                hintEffectText.text = "Effect: " + function + "--Right-click to use";
             }
         }
         //CARD1
