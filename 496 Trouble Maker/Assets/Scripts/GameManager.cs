@@ -35,6 +35,7 @@ public class GameManager : MonoBehaviour
     public GameObject GameReadyUI;
     public GameObject instruction;
     public GameObject controllerUI;
+    public GameObject challengerUI;
     
     string ipAddress;
     [SerializeField] TextMeshProUGUI ipAddressText;
@@ -242,6 +243,7 @@ public class GameManager : MonoBehaviour
         GameReadyUI.SetActive(true);
         CloseCamera();
         instruction.SetActive(true);
+        challengerUI.SetActive(true);
     }
 
     public void OnClientButtonClick()
