@@ -215,7 +215,7 @@ public class cardControlCli : MonoBehaviour
         {
             for (int i = 0; i < 5; i++)
             {
-
+                //Debug.Log(activeList.Count);
                 if (activeList[i] == 0 && count < 2)
                 {
                     count += 1;
