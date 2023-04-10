@@ -123,68 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &6751377
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6751379}
-  - component: {fileID: 6751378}
-  m_Layer: 0
-  m_Name: ScreenLogger
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!114 &6751378
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6751377}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa0afa61f775305429a6c5930482c488, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ShowLog: 1
-  ShowInEditor: 1
-  Height: 0.5
-  Width: 0.5
-  Margin: 20
-  AnchorPosition: 3
-  FontSize: 14
-  BackgroundOpacity: 0.5
-  BackgroundColor: {r: 0, g: 0, b: 0, a: 1}
-  LogMessages: 1
-  LogWarnings: 1
-  LogErrors: 1
-  MessageColor: {r: 1, g: 1, b: 1, a: 1}
-  WarningColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  ErrorColor: {r: 1, g: 0.5, b: 0.5, a: 1}
-  StackTraceMessages: 0
-  StackTraceWarnings: 0
-  StackTraceErrors: 1
---- !u!4 &6751379
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6751377}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &37711282
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1157,7 +1095,7 @@ RectTransform:
   - {fileID: 831979988}
   - {fileID: 1640961631}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1939,7 +1877,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &309247267
 PrefabInstance:
@@ -4266,68 +4204,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!1 &770734699
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 770734701}
-  - component: {fileID: 770734700}
-  m_Layer: 0
-  m_Name: ScreenLoggerPrefab(Clone)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &770734700
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 770734699}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa0afa61f775305429a6c5930482c488, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ShowLog: 1
-  ShowInEditor: 1
-  Height: 0.5
-  Width: 0.5
-  Margin: 20
-  AnchorPosition: 2
-  FontSize: 14
-  BackgroundOpacity: 0.607
-  BackgroundColor: {r: 0, g: 0, b: 0, a: 1}
-  LogMessages: 1
-  LogWarnings: 1
-  LogErrors: 1
-  MessageColor: {r: 1, g: 1, b: 1, a: 1}
-  WarningColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  ErrorColor: {r: 1, g: 0.5, b: 0.5, a: 1}
-  StackTraceMessages: 0
-  StackTraceWarnings: 0
-  StackTraceErrors: 1
---- !u!4 &770734701
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 770734699}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &778153623
 GameObject:
   m_ObjectHideFlags: 0
@@ -7385,7 +7261,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1510007430
 GameObject:
@@ -9347,68 +9223,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 242380623417444664, guid: 3a14759c932f1ce418289296db9f0e83, type: 3}
   m_PrefabInstance: {fileID: 1566161781}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1966872943
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1966872945}
-  - component: {fileID: 1966872944}
-  m_Layer: 0
-  m_Name: ScreenLoggerPrefab(Clone)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!114 &1966872944
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1966872943}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa0afa61f775305429a6c5930482c488, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ShowLog: 1
-  ShowInEditor: 1
-  Height: 0.5
-  Width: 0.5
-  Margin: 20
-  AnchorPosition: 2
-  FontSize: 14
-  BackgroundOpacity: 0.607
-  BackgroundColor: {r: 0, g: 0, b: 0, a: 1}
-  LogMessages: 1
-  LogWarnings: 1
-  LogErrors: 1
-  MessageColor: {r: 1, g: 1, b: 1, a: 1}
-  WarningColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
-  ErrorColor: {r: 1, g: 0.5, b: 0.5, a: 1}
-  StackTraceMessages: 0
-  StackTraceWarnings: 0
-  StackTraceErrors: 0
---- !u!4 &1966872945
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1966872943}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1993313648
 GameObject:
   m_ObjectHideFlags: 0

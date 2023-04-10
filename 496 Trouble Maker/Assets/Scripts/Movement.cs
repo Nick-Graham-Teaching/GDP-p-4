@@ -144,16 +144,12 @@ public class Movement : NetworkBehaviour
 	///  Game Start
 	/// </summary>
 	[ServerRpc]
-	void UpdateSetupServerRpc() { SetupClientRpc(); }
+	void UpdateSetupServerRpc(int i, int j, int k, int l) { SetupClientRpc(i,j,k,l); }
 
 	[ClientRpc]
-	void SetupClientRpc()
+	void SetupClientRpc(int i, int j, int k,int l)
 	{
 		Debug.Log("Game Start");
-		int i = Random.Range(0, 3);
-		int j = Random.Range(0, 3);
-		int k = Random.Range(0, 3);
-		int l = Random.Range(0, 3);
 		GameObject maze = GameManager.instance.CreateMaze(i,j,k,l);
 		transform.position = maze.transform.Find("StartPos").transform.position;
 		GameObject.Find("Client").transform.Find("Camera").position = maze.transform.Find("Overview").transform.position;
@@ -795,7 +791,11 @@ public class Movement : NetworkBehaviour
 	{
 		if (GameObject.Find("Client"))
 		{
-			UpdateSetupServerRpc();
+			int i = Random.Range(0, 3);
+			int j = Random.Range(0, 3);
+			int k = Random.Range(0, 3);
+			int l = Random.Range(0, 3);
+			UpdateSetupServerRpc(i,j,k,l);
 			UpdateTurnServerRpc();
 			return true;
 		}
