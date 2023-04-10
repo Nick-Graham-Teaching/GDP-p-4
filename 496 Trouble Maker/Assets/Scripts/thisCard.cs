@@ -13,7 +13,7 @@ public class thisCard : MonoBehaviour
     public bool used;
     public Sprite thisSprite;
     public Image thatImage;
-
+    public string cardEffect;
     private bool isMagnified = false;
     private Vector3 originalScale;
 
@@ -38,6 +38,7 @@ public class thisCard : MonoBehaviour
     {
 
         cardName = this_Card[index].cardName;
+        cardEffect = this_Card[index].effect;
         thisSprite = this_Card[index].thisImage;
         thatImage.sprite = thisSprite;
 

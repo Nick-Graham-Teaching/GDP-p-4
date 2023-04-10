@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3335742527795548239}
   - component: {fileID: 1865945666424266730}
   - component: {fileID: 4468095277591767840}
+  - component: {fileID: 3809881975707624739}
   m_Layer: 0
   m_Name: marknew
   m_TagString: Mark
@@ -83,3 +84,15 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &3809881975707624739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2666448237192973045}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6e0ee4995829fa4b8056d8f284e0d55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

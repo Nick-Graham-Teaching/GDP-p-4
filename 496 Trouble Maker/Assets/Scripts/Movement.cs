@@ -150,7 +150,11 @@ public class Movement : NetworkBehaviour
 	void SetupClientRpc()
 	{
 		Debug.Log("Game Start");
-		GameObject maze = GameManager.instance.CreateMaze();
+		int i = Random.Range(0, 3);
+		int j = Random.Range(0, 3);
+		int k = Random.Range(0, 3);
+		int l = Random.Range(0, 3);
+		GameObject maze = GameManager.instance.CreateMaze(i,j,k,l);
 		transform.position = maze.transform.Find("StartPos").transform.position;
 		GameObject.Find("Client").transform.Find("Camera").position = maze.transform.Find("Overview").transform.position;
 		lastPos = transform.position;
@@ -565,6 +569,7 @@ public class Movement : NetworkBehaviour
 					{
 						Vector3 point = hit.point;
 						Vector3 v  = hit.transform.eulerAngles;
+						v = new Vector3(v.x, v.y-90, v.z);
 						UpdateMarkServerRpc(point, v);
 						Debug.Log(hit.transform.name);
 						

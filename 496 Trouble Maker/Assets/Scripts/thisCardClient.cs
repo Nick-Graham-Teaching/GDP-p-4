@@ -10,7 +10,7 @@ public class thisCardClient : MonoBehaviour
     // Start is called before the first frame update
     public List<Card> this_Card = new List<Card>();
     public string cardName;
-
+    public string cardEffect;
     public int index;
     public bool used;
     public Sprite thisSprite;
@@ -23,10 +23,24 @@ public class thisCardClient : MonoBehaviour
     {
         originalScale = transform.localScale;
         index = 0;
+        int count = 0;
         for (int i = 0; i < 15; i++)
         {
             int randomInt = Random.Range(5, 11);
-            this_Card.Add(CardData.cardList[randomInt]);
+            if (randomInt == 10 && count == 0)
+            {
+                count += 1;
+                this_Card.Add(CardData.cardList[randomInt]);
+            }
+            if (randomInt != 10 && count == 0) {
+                this_Card.Add(CardData.cardList[randomInt]);
+            }
+            else if(count ==1)
+            {
+                randomInt = Random.Range(5, 10);
+                this_Card.Add(CardData.cardList[randomInt]);
+            }
+            
         }
     }
 
@@ -34,6 +48,7 @@ public class thisCardClient : MonoBehaviour
     void Update()
     {
         cardName = this_Card[index].cardName;
+        cardEffect = this_Card[index].effect;
         thisSprite = this_Card[index].thisImage;
         thatImage.sprite = thisSprite;
     }

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class cardControlCli : MonoBehaviour
 {
@@ -10,6 +11,10 @@ public class cardControlCli : MonoBehaviour
     public GameObject card3;
     public GameObject card4;
     public GameObject card5;
+
+    public GameObject hint;
+    public Text hintNameText;
+    public Text hintEffectText;
 
     public bool canUse;
 
@@ -29,6 +34,11 @@ public class cardControlCli : MonoBehaviour
     private bool isMagnifiedC5;
     //private bool isMagnifiedC6;
 
+    private mouseControll card1MouseControll;
+    private mouseControll card2MouseControll;
+    private mouseControll card3MouseControll;
+    private mouseControll card4MouseControll;
+    private mouseControll card5MouseControll;
 
     public List<Card> cardList = new List<Card>();
     private List<int> activeList = new List<int>();
@@ -46,13 +56,15 @@ public class cardControlCli : MonoBehaviour
         activeList.Add(0);
         //activeList.Add(0);
 
+        card1MouseControll = card1.GetComponent<mouseControll>();
+        card2MouseControll = card2.GetComponent<mouseControll>();
+        card3MouseControll = card3.GetComponent<mouseControll>();
+        card4MouseControll = card4.GetComponent<mouseControll>();
+        card5MouseControll = card5.GetComponent<mouseControll>();
+
         client = GameObject.Find("Client").transform.Find("Player").gameObject;
 
-        isMagnifiedC1 = false;
-        isMagnifiedC2 = false;
-        isMagnifiedC3 = false;
-        isMagnifiedC4 = false;
-        isMagnifiedC5 = false;
+
         //isMagnifiedC6 = false;
         card1Comp = card1.transform.Find("cardClient").gameObject;
         card2Comp = card2.transform.Find("cardClient").gameObject;
@@ -64,150 +76,133 @@ public class cardControlCli : MonoBehaviour
         card4Comp.SetActive(false);
         card5Comp.SetActive(false);
         //card6Comp.SetActive(false);
+        hint.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-        //CARD1
-        if (Input.GetKeyDown(KeyCode.Alpha1))
+        isMagnifiedC1 = card1MouseControll.magnified;
+        isMagnifiedC2 = card2MouseControll.magnified;
+        isMagnifiedC3 = card3MouseControll.magnified;
+        isMagnifiedC4 = card4MouseControll.magnified;
+        isMagnifiedC5 = card5MouseControll.magnified;
+        string name;
+        string function;
+
+        if (!isMagnifiedC1 && !isMagnifiedC2 && !isMagnifiedC3 && !isMagnifiedC4 && !isMagnifiedC5)
         {
+            hint.SetActive(false);
+        }
+        else
+        {
+            hint.SetActive(true);
             if (isMagnifiedC1)
             {
-                card1Comp.transform.localScale /= 1.5f;
-                isMagnifiedC1 = false;
-                
+
+                name = card1Comp.GetComponent<thisCardClient>().cardName;
+                function = card1Comp.GetComponent<thisCardClient>().cardEffect;
+                Debug.Log("Card 1 Name: " + name);
+                hintNameText.text = "Card Name: " + name;
+                hintEffectText.text = "Effect: " + function + "--Right-click to use";
             }
-            else
+            if (isMagnifiedC2)
             {
-                card1Comp.transform.localScale *= 1.5f;
-                isMagnifiedC1 = true;
-                
+                name = card2Comp.GetComponent<thisCardClient>().cardName;
+                function = card2Comp.GetComponent<thisCardClient>().cardEffect;
+                hintNameText.text = "Card Name: " + name;
+                hintEffectText.text = "Effect: " + function + "--Right-click to use";
+            }
+            if (isMagnifiedC3)
+            {
+                name = card3Comp.GetComponent<thisCardClient>().cardName;
+                function = card3Comp.GetComponent<thisCardClient>().cardEffect;
+                hintNameText.text = "Card Name: " + name;
+                hintEffectText.text = "Effect: " + function + "--Right-click to use";
+            }
+            if (isMagnifiedC4)
+            {
+                name = card4Comp.GetComponent<thisCardClient>().cardName;
+                function = card4Comp.GetComponent<thisCardClient>().cardEffect;
+                hintNameText.text = "Card Name: " + name;
+                hintEffectText.text = "Effect: " + function + "--Right-click to use";
+            }
+            if (isMagnifiedC5)
+            {
+                name = card5Comp.GetComponent<thisCardClient>().cardName;
+                function = card5Comp.GetComponent<thisCardClient>().cardEffect;
+                Debug.Log("Card 5 Name: " + name);
+                hintNameText.text = "Card Name: " + name;
+                hintEffectText.text = "Effect: " + function + "--Right-click to use";
             }
         }
+        //CARD1
+        
 
-        if (Input.GetKeyDown(KeyCode.Return) && isMagnifiedC1 == true && canUse)
+
+        if (Input.GetMouseButtonDown(1) && isMagnifiedC1 == true && canUse)
         {
-            
+
             castCard(card1Comp);
             activeList[0] = 0;
-            card1Comp.transform.localScale /= 1.5f;
-            isMagnifiedC1 = false;
             card1Comp.SetActive(false);
         }
 
 
         //CARD2
-        if (Input.GetKeyDown(KeyCode.Alpha2))
-        {
-            if (isMagnifiedC2)
-            {
-                card2Comp.transform.localScale /= 1.5f;
-                isMagnifiedC2 = false;
-                //Debug.Log(isMagnifiedC2);
-            }
-            else
-            {
-                card2Comp.transform.localScale *= 1.5f;
-                isMagnifiedC2 = true;
-                //Debug.Log(isMagnifiedC2);
-            }
-        }
 
-        if (Input.GetKeyDown(KeyCode.Return) && isMagnifiedC2 == true && canUse)
+
+        if (Input.GetMouseButtonDown(1) && isMagnifiedC2 == true && canUse)
         {
-            
+
             castCard(card2Comp);
             activeList[1] = 0;
-            card2Comp.transform.localScale /= 1.5f;
-            isMagnifiedC2 = false;
+
             card2Comp.SetActive(false);
-          
+
         }
 
 
         //CARD3
-        if (Input.GetKeyDown(KeyCode.Alpha3))
-        {
-            if (isMagnifiedC3)
-            {
-                card3Comp.transform.localScale /= 1.5f;
-                isMagnifiedC3 = false;
-                //Debug.Log(isMagnifiedC3);
-            }
-            else
-            {
-                card3Comp.transform.localScale *= 1.5f;
-                isMagnifiedC3 = true;
-                //Debug.Log(isMagnifiedC3);
-            }
-        }
 
-        if (Input.GetKeyDown(KeyCode.Return) && isMagnifiedC3 == true && canUse)
+
+        if (Input.GetMouseButtonDown(1) && isMagnifiedC3 == true && canUse)
         {
-            
+
             castCard(card3Comp);
             activeList[2] = 0;
-            card3Comp.transform.localScale /= 1.5f;
-            isMagnifiedC3 = false;
+
+
             card3Comp.SetActive(false);
-        
+
         }
 
         //CARD4
-        if (Input.GetKeyDown(KeyCode.Alpha4))
-        {
-            if (isMagnifiedC4)
-            {
-                card4Comp.transform.localScale /= 1.5f;
-                isMagnifiedC4 = false;
-                //Debug.Log(isMagnifiedC4);
-            }
-            else
-            {
-                card4Comp.transform.localScale *= 1.5f;
-                isMagnifiedC4 = true;
-                //Debug.Log(isMagnifiedC4);
-            }
-        }
 
-        if (Input.GetKeyDown(KeyCode.Return) && isMagnifiedC4 == true && canUse)
+
+        if (Input.GetMouseButtonDown(1) && isMagnifiedC4 == true && canUse)
         {
-            
+
             castCard(card4Comp);
             activeList[3] = 0;
-            card4Comp.transform.localScale /= 1.5f;
-            isMagnifiedC4 = false;
+
+
             card4Comp.SetActive(false);
-          
+
         }
 
         //CARD5
-        if (Input.GetKeyDown(KeyCode.Alpha5))
-        {
-            if (isMagnifiedC5)
-            {
-                card5Comp.transform.localScale /= 1.5f;
-                isMagnifiedC5 = false;
-                //Debug.Log(isMagnifiedC5);
-            }
-            else
-            {
-                card5Comp.transform.localScale *= 1.5f;
-                isMagnifiedC5 = true;
-                //Debug.Log(isMagnifiedC5);
-            }
-        }
 
-        if (Input.GetKeyDown(KeyCode.Return) && isMagnifiedC5 == true && canUse)
+
+        if (Input.GetMouseButtonDown(1) && isMagnifiedC5 == true && canUse)
         {
-            
+
             castCard(card5Comp);
             activeList[4] = 0;
-            card5Comp.transform.localScale /= 1.5f;
-            isMagnifiedC5 = false;
+
+
             card5Comp.SetActive(false);
-           
+
         }
 
     }
@@ -220,7 +215,7 @@ public class cardControlCli : MonoBehaviour
         {
             for (int i = 0; i < 5; i++)
             {
-                
+
                 if (activeList[i] == 0 && count < 2)
                 {
                     count += 1;
@@ -256,8 +251,8 @@ public class cardControlCli : MonoBehaviour
                     }
                     //if (i == 5)
                     //{
-                      //  card6Comp.SetActive(true);
-                        //card6Comp.GetComponent<thisCard>().index += 1;
+                    //  card6Comp.SetActive(true);
+                    //card6Comp.GetComponent<thisCard>().index += 1;
                     //}
                     activeList[i] = 1;
                     getCardSound.Play();
@@ -298,4 +293,5 @@ public class cardControlCli : MonoBehaviour
         }
     }
 
+  
 }
