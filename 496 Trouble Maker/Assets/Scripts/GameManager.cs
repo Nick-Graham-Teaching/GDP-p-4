@@ -102,22 +102,20 @@ public class GameManager : MonoBehaviour
     ///  Instantiate specific maze
     /// </summary>
     /// <returns></returns>
-    public GameObject CreateMaze()
+    public GameObject CreateMaze(int i, int j, int k, int l)
     {
-        int i = Random.Range(0, mazeStarts.Count);
         GameObject m = mazeStarts[i];
         GameObject first = Instantiate(m, mazePos.position, default);
         
-        i = Random.Range(0, mazeMiddleList1.Count);
-        m = mazeMiddleList1[i];
+
+        m = mazeMiddleList1[j];
         GameObject middle1 = Instantiate(m, first.transform.Find("EndPoint").position, default);
         
-        i = Random.Range(0, mazeMiddleList2.Count);
-        m = mazeMiddleList2[i];
+
+        m = mazeMiddleList2[k];
         GameObject middle2 = Instantiate(m, middle1.transform.Find("EndPoint").position, default);
         
-        i = Random.Range(0, mazeEnds.Count);
-        m = mazeEnds[i];
+        m = mazeEnds[l];
         Instantiate(m, middle2.transform.Find("EndPoint").position, default);
         return first;
     }

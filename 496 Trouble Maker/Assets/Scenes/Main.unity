@@ -2534,7 +2534,7 @@ MonoBehaviour:
   GameReadyUI: {fileID: 672305944}
   instruction: {fileID: 1564130956}
   controllerUI: {fileID: 831979987}
-  challengerUI: {fileID: 0}
+  challengerUI: {fileID: 1640961630}
   ipAddressText: {fileID: 1993313650}
   ip: {fileID: 1031515426}
   challengerCards: {fileID: 1568428699}
@@ -2725,7 +2725,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -395, y: -304}
+  m_AnchoredPosition: {x: -324, y: -130}
   m_SizeDelta: {x: 575.0033, y: 238.78}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &418202364
@@ -4509,7 +4509,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 86, y: -400}
+  m_AnchoredPosition: {x: 274, y: -564}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &878039810 stripped
@@ -7651,7 +7651,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -339, y: -66}
+  m_AnchoredPosition: {x: -240, y: -189}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &1566161781
@@ -7795,7 +7795,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -395, y: -304}
+  m_AnchoredPosition: {x: -395, y: -124}
   m_SizeDelta: {x: 575.0033, y: 238.78}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1568428701
@@ -7965,7 +7965,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 172, y: -399}
+  m_AnchoredPosition: {x: 273, y: -565}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1648373203
@@ -8933,7 +8933,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1880462383
 RectTransform:
   m_ObjectHideFlags: 0
